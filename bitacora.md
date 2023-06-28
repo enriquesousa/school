@@ -17,3 +17,19 @@ También customize en register en resources/views/auth/register.blade.php
 Listo!
 ## 246. Refresh Admin Template
 Listo!
+
+# S22 - Manage User
+## 247. Routing Controller and Manage Users Part 1
+Listo!
+## 248. Routing Controller and Manage Users Part 2
+
+## 249. View User Data from Database
+## 250. Insert User Data in Database Part 1
+## 251. Insert User Data in Database Part 2
+## 252. Adding Toastr In Project
+## 253. Edit and Update User Data into Database Part 1
+## 254. Edit and Update User Data into Database Part 2
+## 255. Delete User Data From Database
+## 256. Adding Sweet Alert In Project
+
+
