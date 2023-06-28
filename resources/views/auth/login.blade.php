@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../images/favicon.ico">
 
-    <title>Administración de Escuelas - Inicia Sesión </title>
+    <title>Administración de Escuelas</title>
 
     <!-- Vendors Style-->
     <link rel="stylesheet" href="{{ asset('backend/css/vendors_css.css') }}">
@@ -29,7 +29,7 @@
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-4 col-md-5 col-12">
                         <div class="content-top-agile p-10">
-                            <h2 class="text-white">Administración de Escuelas - Inicia Sesión</h2>
+                            <h2 class="text-white">Administración de Escuelas</h2>
                             <p class="text-white-50">Ingresa para iniciar sesión</p>
                         </div>
 

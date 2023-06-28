@@ -16,3 +16,4 @@ Listo!
 También customize en register en resources/views/auth/register.blade.php
 Listo!
 ## 246. Refresh Admin Template
+Listo!
