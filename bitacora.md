@@ -22,8 +22,9 @@ Listo!
 ## 247. Routing Controller and Manage Users Part 1
 Listo!
 ## 248. Routing Controller and Manage Users Part 2
-
+Listo!
 ## 249. View User Data from Database
+
 ## 250. Insert User Data in Database Part 1
 ## 251. Insert User Data in Database Part 2
 ## 252. Adding Toastr In Project

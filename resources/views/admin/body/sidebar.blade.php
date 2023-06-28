@@ -22,7 +22,7 @@
 
             {{-- Dashboard - Panel de Control --}}
             <li>
-                <a href="index.html">
+                <a href="{{ route('dashboard') }}">
                     <i data-feather="pie-chart"></i>
                     <span>Panel</span>
                 </a>
