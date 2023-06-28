@@ -13,4 +13,6 @@ Listo!
 ## 244. User Logout Option
 Listo!
 ## 245. Customize Login Form
+También customize en register en resources/views/auth/register.blade.php
+Listo!
 ## 246. Refresh Admin Template
