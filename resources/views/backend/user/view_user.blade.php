@@ -25,36 +25,32 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th width="5%">Serie</th>
+                                            <th>Rol</th>
+                                            <th>Nombre</th>
+                                            <th>Correo</th>
+                                            <th width="25%">Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
+                                        @foreach ($allData as $key => $item)
+                                            <tr>
+                                                <td>{{ $key+1 }}</td>
+                                                <td>{{ $item->usertype }}</td>
+                                                <td>{{ $item->name }}</td>
+                                                <td>{{ $item->email }}</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info">Editar</a>
+                                                    <a href="" class="btn btn-danger">Eliminar</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
 
                                     </tbody>
 
                                     <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
+
                                     </tfoot>
 
                                 </table>
