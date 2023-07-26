@@ -19,6 +19,11 @@ class UserController extends Controller
         return view('backend.user.view_user', $data);
     }
 
+    // UserAdd
+    public function UserAdd(){
+        return view('backend.user.add_user');
+    }
+
 
 
 }
