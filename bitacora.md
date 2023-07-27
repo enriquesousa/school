@@ -178,8 +178,74 @@ Listo!
 ## 251. Insert User Data in Database Part 2
 Listo!
 ## 252. Adding Toaster In Project
+Para que funcione los mensajes Toaster tenemos que agregar
+En resources/views/admin/admin_master.blade.php
+```php
+<!-- Style-->
+...
+{{-- Toaster cdn, después de los Style en el header --}}
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
+{{-- Y antes que cierre de </body> --}}
+ {{-- Toaster cdn --}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    {{-- Toaster script --}}
+    <script>
+        @if(Session::has('message'))
+                var type = "{{ Session::get('alert-type','info') }}"
+                    switch(type){
+                    case 'info':
+                    toastr.info(" {{ Session::get('message') }} ");
+                    break;
+
+                    case 'success':
+                    toastr.success(" {{ Session::get('message') }} ");
+                    break;
+
+                    case 'warning':
+                    toastr.warning(" {{ Session::get('message') }} ");
+                    break;
+
+                    case 'error':
+                    toastr.error(" {{ Session::get('message') }} ");
+                    break;
+                }
+            @endif
+    </script>
+
+</body>
+```
+
+Para mandar un menaje, por ejemplo después de grabar con éxito un registro en 'users' en app/Http/Controllers/Backend/UserController.php:
+```php
+public function UserStore(Request $request)
+{
+    $validateData = $request->validate([
+        'email' => 'required|unique:users',
+        'name' => 'required',
+    ]);
+
+    $data = new User();
+    $data->usertype = $request->usertype;
+    $data->name = $request->name;
+    $data->email = $request->email;
+    $data->password = Hash::make($request->password);
+    $data->save();
+
+    // aquí va el mensaje de toaster para avisar que ya se grabo a base de datos
+    $notification = array(
+        'message' => 'Usuario agregado con éxito!',
+        'alert-type' => 'success'
+    );
+    return redirect()->route('user.view')->with($notification);
+
+}
+```
+Listo!
 ## 253. Edit and Update User Data into Database Part 1
+
+
 ## 254. Edit and Update User Data into Database Part 2
 ## 255. Delete User Data From Database
 ## 256. Adding Sweet Alert In Project

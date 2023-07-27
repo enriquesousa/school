@@ -42,9 +42,12 @@ class UserController extends Controller
         $data->password = Hash::make($request->password);
         $data->save();
 
-        // aquí va el mensaje de toster para avisar que ya se grabo a base de datos
-
-        return redirect()->route('user.view');
+        // aquí va el mensaje de toaster para avisar que ya se grabo a base de datos
+        $notification = array(
+            'message' => 'Usuario agregado con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('user.view')->with($notification);
 
     }
 
