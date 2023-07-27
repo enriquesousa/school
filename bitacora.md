@@ -176,8 +176,9 @@ En resources/views/backend/user/add_user.blade.php
 ```
 Listo!
 ## 251. Insert User Data in Database Part 2
+Listo!
+## 252. Adding Toaster In Project
 
-## 252. Adding Toastr In Project
 ## 253. Edit and Update User Data into Database Part 1
 ## 254. Edit and Update User Data into Database Part 2
 ## 255. Delete User Data From Database

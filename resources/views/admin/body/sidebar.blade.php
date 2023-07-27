@@ -39,7 +39,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ route('user.view') }}"><i class="ti-more"></i>Lista de Usuarios</a></li>
-                    <li><a href="#"><i class="ti-more"></i>Añadir Usuario</a></li>
+                    <li><a href="{{ route('user.add') }}"><i class="ti-more"></i>Agregar Usuario</a></li>
                 </ul>
             </li>
 
