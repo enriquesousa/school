@@ -51,6 +51,13 @@ class UserController extends Controller
 
     }
 
+    // UserEdit
+    public function UserEdit($id){
+        $editData = User::findOrFail($id);
+        return view('backend.user.edit_user', compact('editData'));
+    }
+
+
 
 
 }

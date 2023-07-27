@@ -35,8 +35,7 @@
                           <h5>Rol de Usuario <span class="text-danger">*</span></h5>
                           <div class="controls">
                             <select name="usertype" id="usertype" required="" class="form-control">
-                              <option value="" selected="" disabled="">Seleccionar Rol
-                              </option>
+                              <option value="" selected="" disabled="">Seleccionar Rol</option>
                               <option value="Admin">Admin</option>
                               <option value="User">User</option>
                             </select>
@@ -79,8 +78,7 @@
                               required="">
                             @error('email')
                             <div class="form-control-feedback invalid-feedback">
-                              <small>Campo
-                                <code>requerido </code>{{ $message }}</small>
+                              <small>{{ $message }}</small>
                             </div>
                             @enderror
 

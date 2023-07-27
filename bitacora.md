@@ -244,9 +244,9 @@ public function UserStore(Request $request)
 ```
 Listo!
 ## 253. Edit and Update User Data into Database Part 1
-
-
+Listo!
 ## 254. Edit and Update User Data into Database Part 2
+
 ## 255. Delete User Data From Database
 ## 256. Adding Sweet Alert In Project
 

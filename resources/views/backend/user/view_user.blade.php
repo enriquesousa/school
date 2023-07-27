@@ -44,8 +44,13 @@
                           <td>{{ $item->name }}</td>
                           <td>{{ $item->email }}</td>
                           <td>
-                            <a href="" class="btn btn-info">Editar</a>
+
+                            {{-- Botón Editar --}}
+                            <a href="{{ route('user.edit', $item->id) }}" class="btn btn-info">Editar</a>
+
+                            {{-- Botón Eliminar --}}
                             <a href="" class="btn btn-danger">Eliminar</a>
+
                           </td>
                         </tr>
                       @endforeach
