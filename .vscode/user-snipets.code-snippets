@@ -1,0 +1,84 @@
+{
+    /* User global snippets
+    * Copiarlos a global user snippets
+    */
+
+    "Insertar Hugo Image": {
+        "prefix": "md",
+        "body": ["![Widgets](/phpforbegginers/$1)"],
+        "description": "Insertar Hugo Image"
+    },
+
+    "Code PHP": {
+        "prefix": "md",
+        "body": ["```php", " ", "```"],
+        "description": "Code PHP"
+    },
+
+    "php code tag": {
+        "prefix": "php-code_tag",
+        "body": ["<?php", " ", "?>"],
+        "description": "PHP Tag <?php .. ?>"
+    },
+
+    "php tag inline": {
+        "prefix": "php-tag_inline",
+        "body": ["<?=  ?>"],
+        "description": "PHP Tag <?=  ?>"
+    },
+
+    "php array": {
+        "prefix": "php-array",
+        "body": ["${1:array} = [", " ", "];"],
+        "description": "PHP Array"
+    },
+
+    "php array_asociativo": {
+        "prefix": "php-key_value",
+        "body": ["'${1:key}' => '${2:value}',"],
+        "description": "PHP Key Value Array"
+    },
+
+    "php dd": {
+        "prefix": "php-dd",
+        "body": ["dd(\\$$1);"],
+        "description": "PHP Dump and Die"
+    },
+
+    "php include": {
+        "prefix": "php-include",
+        "body": ["<?php include(\"$1/$2\") ?>"],
+        "description": "PHP Include File"
+    },
+
+    "php arrow": {
+        "prefix": "php-arrow",
+        "body": ["\\$$1->"],
+        "description": "Arrow Char"
+    },
+
+    "php break": {
+        "prefix": "php-break",
+        "body": ["<br>"],
+        "description": "Break Line"
+    },
+
+    "php array propiedad": {
+        "prefix": "php-array-prop",
+        "body": ["\\$$1['$2']"],
+        "description": "Array Propiedad"
+    },
+
+    "php public function": {
+        "prefix": "php-pf",
+        "body": ["// $1", "public function $1(){", "   ", "}"],
+        "description": "Public Function"
+    },
+
+    "laravel return view": {
+        "prefix": "php-view",
+        "body": ["return view('backend.user.$1', compact('$2'));"],
+        "description": "laravel return view"
+    }
+
+}

@@ -295,6 +295,246 @@ y cop paste el codigo de sweetalart2 que mas nos haya gustado!
 ```
 Listo!
 
+# S23 - Manage User Profile
+## 257. User Profile Image Upload Edit Update Database Part 1
+Listo!
+## 258. User Profile Image Upload Edit Update Database Part 2
+
+## 259. User Profile Image Upload Edit Update Database Part 3
+## 260. User Profile Image Upload Edit Update Database Part 4
+## 261. User Profile Change password Part 1
+## 262. User Profile Change password Part 2
+## 263. Sidebar Menu Active non Active Option
+## 264. Add Project in GitHub
+
+# S24 - Student Class Management
+## 265. Student Class Management Option Part 1
+## 266. Student Class Management Option Part 2
+## 267. Student Class Management Option Part 3
+
+# S25 - Student Year Management
+## 268. Student Year Management Option Part 1
+## 269. Student Year Management Option Part 2
+
+# S26 - Student Group Management
+## 270. Student Group Management Option Part 1
+## 271. Student Group Management Option Part 2
+
+# S27 - Student Shift Management
+## 272. Student Shift Management Option Part 1
+## 273. Student Shift Management Option Part 2
+
+# S28 - Student Fee Category Option
+## 274. Working Fee Category Option Part 1
+## 275. Working Fee Category Option Part 2
+
+# S29 - Manage Student Fee Category Amount
+## 276. Manage Fee Category Amount Part 1
+## 277. Manage Fee Category Amount Part 2
+## 278. Manage Fee Category Amount Part 3
+## 279. Manage Fee Category Amount Part 4
+## 280. Manage Fee Category Amount Part 5
+## 281. Manage Fee Category Amount Part 6
+## 282. Manage Fee Category Amount Part 7
+## 283. Manage Fee Category Amount Part 8
+
+# S30 - Manage Student Exam Type
+## 284. Working Exam Type Part 1
+## 285. Working Exam Type Part 2
+
+# S31 - Manage Student Subjects
+## 286. Working Subjects Part 1
+## 287. Working Subjects Part 1
+
+# S32 - Manage Student Assign Subject
+## 288. Student Assign Subjects Part 1
+## 289. Student Assign Subjects Part 2
+## 290. Student Assign Subjects Part 3
+## 291. Student Assign Subjects Part 4
+## 292. Student Assign Subjects Part 5
+
+# S33 - Manage Designation
+## 293. Working Designation Part 1
+## 294. Working Designation Part 2
+
+# S34 - Student Registration Management
+## 295. Student Registration Part 1
+## 296. Student Registration Part 2
+## 297. Student Registration Part 3
+## 298. Student Registration Part 4
+## 299. Student Registration Part 5
+## 300. Student Registration Part 6
+## 301. Student Registration Part 7
+## 302. Student Registration Part 8
+## 303. Student Registration Part 9
+## 304. Student Registration Part 10
+## 305. Student Registration Part 11
+## 306. Student Registration Part 12
+## 307. Student Registration Part 13
+## 308. Student Registration Edit Part 1
+## 309. Student Registration Edit Part 2
+## 310. Student Registration Edit Part 3
+## 311. Student Promotion Option
+
+# S35 - Student PDF Generate
+## 312. Student PDF Generate Part 1
+## 313. Student PDF Generate Part 2
+
+# S36 - Student PDF Generate
+## 314. Student Roll Generate Part 1
+## 315. Student Roll Generate Part 2
+## 316. Student Roll Generate Part 3
+## 317. Student Roll Generate Part 4
+
+# S37 - Student Registration Fee
+## 318. Student Registration Fee Part 1
+## 319. Student Registration Fee Part 2
+## 320. Student Registration Fee Part 3
+## 321. Student Registration Fee Part 4
+
+# S38 - Student Monthly Fee Option
+## 322. Student Monthly Fee Part 1
+## 323. Student Monthly Fee Part 2
+
+# S39 - Student Exam Fee Option
+## 324. Student Exam Fee Part 1
+## 325. Student Exam Fee Part 2
+## 326. update Route authentication
+
+# S40 - Manage Employee Registration
+## 327. Employee Registration Part 1
+## 328. Employee Registration Part 2
+## 329. Employee Registration Part 3
+## 330. Employee Registration Part 4
+## 331. Employee Registration Part 5
+## 332. Employee Registration Part 6
+## 333. Employee Registration Part 7
+
+# S41 - Manage Employee Salary Increment
+## 334. Employee Salary Increment and Details Part 1
+## 335. Employee Salary Increment and Details Part 2
+## 336. Employee Salary Increment and Details Part 3
+## 337. Employee Salary Increment and Details Part 4
+
+# S42 - Manage Employee Leave Management
+## 338. Employee Leave Management Part 1
+## 339. Employee Leave Management Part 2
+## 340. Employee Leave Management Part 3
+## 341. Employee Leave Management Part 4
+## 342. Employee Leave Management Part 5
+## 343. Employee Leave Management Part 6
+
+# S43 - Employee Attendance Management
+## 344. Employee Attendance Part 1
+## 345. Employee Attendance Part 2
+## 346. Employee Attendance Part 3
+## 347. Employee Attendance Part 4
+## 348. Employee Attendance Part 5
+## 349. Employee Attendance Part 6
+## 350. Employee Attendance Part 7
+
+# S44 - Employee Monthly Salary Management
+## 351. Employee Monthly Salary Part 1
+## 352. Employee Monthly Salary Part 2
+## 353. Employee Monthly Salary Part 3
+
+# S45 - Manage Student Marks Entry
+## 354. Student Marks Entry Part 1
+## 355. Student Marks Entry Part 2
+## 356. Student Marks Entry Part 3
+## 357. Student Marks Entry Part 4
+## 358. Student Marks Entry Part 5
+## 359. Student Marks Edit Part 1
+## 360. Student Marks Edit Part 2
+## 361. Update Route Active Menu
+
+# S46 - Manage Student Grade Point
+## 362. Student Grade Point Part 1
+## 363. Student Grade Point Part 2
+## 364. Student Grade Point Part 3
+
+# S47 - Manage Student Fee
+## 365. Students Fee Part 1
+## 366. Students Fee Part 2
+## 367. Students Fee Part 3
+## 368. Students Fee Part 4
+## 369. Students Fee Part 5
+
+# S48 - Manage Employees Salary
+## 370. Employees Salary Part 1
+## 371. Employees Salary Part 2
+## 372. Employees Salary Part 3
+## 373. Employees Salary Part 4
+## 374. Error Solve for Student Fee and Employee Salary
+
+# S49 - Manage Others Cost
+## 375. Others Cost Part 1
+## 376. Others Cost Part 2
+## 377. Others Cost Part 3
+## 378. Others Cost Part 4
+
+# S50 - Manage Monthly and Yearly Profit
+## 379. Monthly and Yearly Profit Part 1
+## 380. Monthly and Yearly Profit Part 2
+## 381. Monthly and Yearly Profit Part 3
+## 382. Monthly and Yearly Profit Part 4
+
+# S51 - Manage Student Mark Sheet Generate
+## 383. Student Mark Sheet Generate Part 1
+## 384. Student Mark Sheet Generate Part 2
+## 385. Student Mark Sheet Generate Part 3
+## 386. Student Mark Sheet Generate Part 4
+## 387. Student Mark Sheet Generate Part 5
+## 388. Student Mark Sheet Generate Part 6
+
+# S52 - Employee Attendance Report
+## 389. Employee Attendance Report Part 1
+## 390. Employee Attendance Report Part 2
+## 391. Employee Attendance Report Part 3
+
+# S53 - Manage Students Result
+## 392. Students Result Part 1
+## 393. Students Result Part 2
+## 394. Students Result Part 3
+
+# S54 - Manage Students ID Card Generate
+## 395. Students ID Card Generate Part 1
+## 396. Students ID Card Generate Part 2
+## 397. Students ID Card Generate Part 3
+
+# S55 - Updated Videos - Student Demand
+## 398. Prevent Browser Back Button After Logout
+## 399. How to Run Project Localhost from Source Code
+## 400. Happy Learning
+## 401. What is coming next?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

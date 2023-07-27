@@ -1,0 +1,44 @@
+{
+	"files": [
+		{
+			"path": "app/Http/Controllers/Backend/UserController.php",
+			"bookmarks": [
+				{
+					"line": 32,
+					"column": 44,
+					"label": "validate user email and name en controller"
+				},
+				{
+					"line": 41,
+					"column": 29,
+					"label": "Save hash password en base de datos"
+				},
+				{
+					"line": 45,
+					"column": 30,
+					"label": "Notificacion toater en controller para UserStore"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/user/add_user.blade.php",
+			"bookmarks": [
+				{
+					"line": 52,
+					"column": 51,
+					"label": "validate user name en view"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/admin_master.blade.php",
+			"bookmarks": [
+				{
+					"line": 67,
+					"column": 10,
+					"label": "Toaster cdn y Script antes de body en admin_master.blade.php"
+				}
+			]
+		}
+	]
+}
