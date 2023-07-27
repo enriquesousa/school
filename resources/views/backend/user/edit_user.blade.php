@@ -21,8 +21,8 @@
             <div class="row">
               <div class="col">
 
-                <form method="post" action="{{ route('user.store') }}">
-                  @csrf
+                <form method="post" action="{{ route('user.update', $editData->id) }}">
+                @csrf
 
                   <div class="row">
                     <div class="col-12">

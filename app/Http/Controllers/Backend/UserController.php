@@ -49,12 +49,36 @@ class UserController extends Controller
         );
         return redirect()->route('user.view')->with($notification);
 
+
     }
 
     // UserEdit
     public function UserEdit($id){
         $editData = User::findOrFail($id);
         return view('backend.user.edit_user', compact('editData'));
+    }
+
+    // UserUpdate
+    public function UserUpdate(Request $request, $id){
+
+        $validateData = $request->validate([
+            'email' => 'required|unique:users',
+            'name' => 'required',
+        ]);
+
+        $data = User::find($id);
+        $data->usertype = $request->usertype;
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->save();
+
+        // aquí va el mensaje de toaster para avisar que ya se grabo a base de datos
+        $notification = array(
+            'message' => 'Usuario actualizado con éxito!',
+            'alert-type' => 'info'
+        );
+        return redirect()->route('user.view')->with($notification);
+
     }
 
 
