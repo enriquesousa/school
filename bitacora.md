@@ -248,7 +248,7 @@ Listo!
 ## 254. Edit and Update User Data into Database Part 2
 Listo!
 ## 255. Delete User Data From Database
-
+Listo!
 ## 256. Adding Sweet Alert In Project
 
 

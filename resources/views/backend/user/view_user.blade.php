@@ -49,7 +49,7 @@
                             <a href="{{ route('user.edit', $item->id) }}" class="btn btn-info">Editar</a>
 
                             {{-- Botón Eliminar --}}
-                            <a href="" class="btn btn-danger">Eliminar</a>
+                            <a href="{{ route('user.delete', $item->id) }}" class="btn btn-danger">Eliminar</a>
 
                           </td>
                         </tr>
