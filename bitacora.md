@@ -250,5 +250,52 @@ Listo!
 ## 255. Delete User Data From Database
 Listo!
 ## 256. Adding Sweet Alert In Project
+Para soportar el sweetalart2 en resources/views/admin/admin_master.blade.php
+```php
+...
+abajo en los scrips antes del toaster.
+
+{{-- Toaster cdn --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(document).on("click", "#delete", function (e) {
+            e.preventDefault();
+            var link = $(this).attr("href");
+
+            Swal.fire({
+                title: "Estas seguro?",
+                text: "Que deseas eliminar este registro?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Si, Eliminarlo!",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = link;
+                    Swal.fire("Eliminado!", "El registro fue eliminado.", "success");
+                }
+            });
+
+        });
+    });
+    </script>
+
+{{-- Toaster script --}}
+```
+
+Y en resources/views/backend/user/view_user.blade.php agregar id=delete al boton
+y cop paste el codigo de sweetalart2 que mas nos haya gustado!
+```php
+...
+{{-- Botón Eliminar --}}
+<a href="{{ route('user.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+...
+```
+Listo!
+
+
+
 
 
