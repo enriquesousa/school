@@ -1,32 +1,12 @@
 {
 	"files": [
 		{
-			"path": "app/Http/Controllers/Backend/UserController.php",
+			"path": "resources/views/admin/body/sidebar.blade.php",
 			"bookmarks": [
 				{
-					"line": 32,
-					"column": 44,
-					"label": "validate user email and name en controller"
-				},
-				{
-					"line": 41,
-					"column": 29,
-					"label": "Save hash password en base de datos"
-				},
-				{
-					"line": 45,
-					"column": 30,
-					"label": "Notificacion toater en controller para UserStore"
-				}
-			]
-		},
-		{
-			"path": "resources/views/backend/user/add_user.blade.php",
-			"bookmarks": [
-				{
-					"line": 52,
-					"column": 51,
-					"label": "validate user name en view"
+					"line": 33,
+					"column": 48,
+					"label": "font awesome icon"
 				}
 			]
 		},
@@ -34,9 +14,69 @@
 			"path": "resources/views/admin/admin_master.blade.php",
 			"bookmarks": [
 				{
+					"line": 20,
+					"column": 20,
+					"label": "Toaster cdn en header en admin_master.blade.php"
+				},
+				{
 					"line": 67,
-					"column": 10,
-					"label": "Toaster cdn y Script antes de body en admin_master.blade.php"
+					"column": 27,
+					"label": "sweetalert2 no olvidar poner el id=delete en el boton de Eliminar"
+				},
+				{
+					"line": 94,
+					"column": 25,
+					"label": "Toaster cdn script en admin_master.blade.php"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/user/view_user.blade.php",
+			"bookmarks": [
+				{
+					"line": 51,
+					"column": 34,
+					"label": "sweetalert2 con el id=\"delete\" en el admin_master.blade podemos tener el codigo de JS de sweetalert2"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/user/edit_user.blade.php",
+			"bookmarks": [
+				{
+					"line": 23,
+					"column": 16,
+					"label": "user edit form"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/ProfileController.php",
+			"bookmarks": [
+				{
+					"line": 11,
+					"column": 69,
+					"label": "Para que Laravel redirects to home page si la sesión ya expiro"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/user/view_profile.blade.php",
+			"bookmarks": [
+				{
+					"line": 30,
+					"column": 16,
+					"label": "Display $user->image si hay si no despliega no_image.jpg en vista"
+				}
+			]
+		},
+		{
+			"path": "resources/views/admin/body/header.blade.php",
+			"bookmarks": [
+				{
+					"line": 116,
+					"column": 50,
+					"label": "imagen de usuario en el header"
 				}
 			]
 		}
