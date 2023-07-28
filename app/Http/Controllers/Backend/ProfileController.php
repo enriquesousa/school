@@ -31,5 +31,10 @@ class ProfileController extends Controller
         return view('backend.user.edit_profile', compact('editData'));
     }
 
+    // ProfileAdvanceForm
+    public function ProfileAdvanceForm(){
+       return view('backend.user.advance_form');
+    }
+
 
 }

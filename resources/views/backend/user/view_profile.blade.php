@@ -8,7 +8,7 @@
       <section class="content">
         <div class="row">
 
-          <div class="col-9">
+          <div class="col-12">
 
             <div class="box box-widget widget-user">
               <!-- Add the bg color to the header using any of the bg-* classes -->
@@ -62,13 +62,8 @@
             </div>
 
           </div>
-          <!-- col-6 -->
+          <!-- col-12 -->
 
-          <div class="col-3">
-
-
-          </div>
-          <!-- col-6 -->
 
         </div>
         <!-- /.row -->

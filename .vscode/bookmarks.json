@@ -19,12 +19,12 @@
 					"label": "Toaster cdn en header en admin_master.blade.php"
 				},
 				{
-					"line": 67,
+					"line": 84,
 					"column": 27,
 					"label": "sweetalert2 no olvidar poner el id=delete en el boton de Eliminar"
 				},
 				{
-					"line": 94,
+					"line": 111,
 					"column": 25,
 					"label": "Toaster cdn script en admin_master.blade.php"
 				}
@@ -77,6 +77,21 @@
 					"line": 116,
 					"column": 50,
 					"label": "imagen de usuario en el header"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/user/edit_profile.blade.php",
+			"bookmarks": [
+				{
+					"line": 198,
+					"column": 26,
+					"label": "Format phone number con JS"
+				},
+				{
+					"line": 206,
+					"column": 34,
+					"label": "Funcionalidad con la imagen JS en vista"
 				}
 			]
 		}
