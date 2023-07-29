@@ -55,7 +55,7 @@
         <ul class="treeview-menu">
           <li><a href="{{ route('profile.view') }}"><i class="ti-more"></i>Tu Perfil</a></li>
           {{-- <li><a href="{{ route('profile.advance.form') }}"><i class="ti-more"></i>Advanced Form</a></li> --}}
-          <li><a href="mailbox_compose.html"><i class="ti-more"></i>Cambiar contraseña</a></li>
+          <li><a href="{{ route('password.view') }}"><i class="ti-more"></i>Cambiar contraseña</a></li>
         </ul>
       </li>
 
