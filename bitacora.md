@@ -338,13 +338,26 @@ En resources/views/admin/body/sidebar.blade.php
 ```
 Listo!
 ## 264. Add Project in GitHub
+```php
+# Proceso Manual
+## File upload process
+- git init
+- git add
+- git commit -m "first commit"
+- git remote add origin git@github.com:enriquesousa/school.git
+- git push -u origin master
 
-
-
-
+## From Local Host site Work
+- git status
+- git add .
+- git commit -m "modificaciones"
+- git push -u origin master
+```
+Listo!
 
 # S24 - Student Class Management
 ## 265. Student Class Management Option Part 1
+
 ## 266. Student Class Management Option Part 2
 ## 267. Student Class Management Option Part 3
 
