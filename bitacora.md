@@ -311,8 +311,37 @@ Listo!
 ## 262. User Profile Change password Part 2
 Listo!
 ## 263. Sidebar Menu Active non Active Option
-
+En resources/views/admin/body/sidebar.blade.php
+```php
+@php
+    $prefix = Request::route()->getPrefix();
+    $route = Request::route()->getName();
+@endphp
+...
+{{-- Dashboard - Panel de Control --}}
+<li class="{{ ($route == 'dashboard') ? 'active' : '' }}">
+    <a href="{{ route('dashboard') }}">
+        <i data-feather="pie-chart"></i>
+        <span>Panel</span>
+    </a>
+</li>
+...
+{{-- Manejar Usuarios --}}
+<li class="treeview {{ ($prefix == 'users') ? 'active' : '' }}">
+   ...
+</li>
+...
+{{-- Manejar Perfil --}}
+<li class="treeview {{ ($prefix == 'profile') ? 'active' : '' }}">
+    ...
+</li>
+```
+Listo!
 ## 264. Add Project in GitHub
+
+
+
+
 
 # S24 - Student Class Management
 ## 265. Student Class Management Option Part 1

@@ -4,7 +4,12 @@
 			"path": "resources/views/admin/body/sidebar.blade.php",
 			"bookmarks": [
 				{
-					"line": 33,
+					"line": 0,
+					"column": 40,
+					"label": "Para colorear el menu donde estamos en sidebar de admin"
+				},
+				{
+					"line": 40,
 					"column": 48,
 					"label": "font awesome icon"
 				}

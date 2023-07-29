@@ -1,3 +1,10 @@
+{{-- Para colorear el menu donde estamos  --}}
+@php
+    $prefix = Request::route()->getPrefix();
+    $route = Request::route()->getName();
+@endphp
+{{-- @dd($prefix, $route); --}}
+
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
 
@@ -21,7 +28,7 @@
     <ul class="sidebar-menu" data-widget="tree">
 
       {{-- Dashboard - Panel de Control --}}
-      <li>
+      <li class="{{ ($route == 'dashboard') ? 'active' : '' }}">
         <a href="{{ route('dashboard') }}">
           <i data-feather="pie-chart"></i>
           <span>Panel</span>
@@ -29,7 +36,7 @@
       </li>
 
       {{-- Manejar Usuarios --}}
-      <li class="treeview">
+      <li class="treeview {{ ($prefix == 'users') ? 'active' : '' }}">
         <a href="#">
           <i class="fa fa-user-o"></i>
           <span>Manejar Usuarios</span>
@@ -44,7 +51,7 @@
       </li>
 
       {{-- Manejar Perfil --}}
-      <li class="treeview">
+      <li class="treeview {{ ($prefix == 'profile') ? 'active' : '' }}">
         <a href="#">
           {{-- <i data-feather="mail"></i>  --}}
           <i class="fa fa-vcard-o" aria-hidden="true"></i><span>Manejar Perfil</span>
