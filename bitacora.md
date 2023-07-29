@@ -304,7 +304,10 @@ Listo!
 En resources/views/backend/user/edit_profile.blade.php
 Listo!
 ## 260. User Profile Image Upload Edit Update Database Part 4
+Instale Codeium en vez de Tabnine porque es gratis!
+Listo!
 ## 261. User Profile Change password Part 1
+
 ## 262. User Profile Change password Part 2
 ## 263. Sidebar Menu Active non Active Option
 ## 264. Add Project in GitHub

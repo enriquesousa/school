@@ -57,6 +57,16 @@
 					"line": 11,
 					"column": 69,
 					"label": "Para que Laravel redirects to home page si la sesión ya expiro"
+				},
+				{
+					"line": 49,
+					"column": 8,
+					"label": "image unlink imagen anterior y reemplazar por la nueva"
+				},
+				{
+					"line": 59,
+					"column": 33,
+					"label": "Desplegar notificación toaster notification"
 				}
 			]
 		},
@@ -74,15 +84,20 @@
 			"path": "resources/views/admin/body/header.blade.php",
 			"bookmarks": [
 				{
-					"line": 116,
-					"column": 50,
-					"label": "imagen de usuario en el header"
+					"line": 113,
+					"column": 20,
+					"label": "en Header para identificar al user y display su image"
 				}
 			]
 		},
 		{
 			"path": "resources/views/backend/user/edit_profile.blade.php",
 			"bookmarks": [
+				{
+					"line": 28,
+					"column": 101,
+					"label": "enctype=\"multipart/form-data\" en form para poder mandar por post la imagen"
+				},
 				{
 					"line": 198,
 					"column": 26,
