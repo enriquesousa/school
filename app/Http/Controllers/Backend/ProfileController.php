@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -58,7 +59,7 @@ class ProfileController extends Controller
         $data->save();
 
         // Desplegar notificación
-       $notification = array(
+        $notification = array(
             'message' => 'Perfil de Usuario Actualizado con éxito!',
             'alert-type' => 'success'
         );
@@ -71,6 +72,42 @@ class ProfileController extends Controller
         return view('backend.user.edit_password');
     }
 
+    // PasswordUpdate
+    public function PasswordUpdate(Request $request){
+
+        $validateData = $request->validate([
+            'old_password' => 'required',
+            'password' => 'required|confirmed',
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if (Hash::check($request->old_password, $hashedPassword)) {
+            $id = Auth::user()->id;
+            $data = User::findOrFail($id);
+            $data->password = Hash::make($request->password);
+            $data->save();
+
+            // Desplegar notificación
+            $notification = array(
+                'message' => 'Contraseña cambio con éxito!',
+                'alert-type' => 'success'
+            );
+
+            Auth::logout();
+            return redirect()->route('login')->with($notification);
+
+
+        }else{
+
+            // Desplegar notificación
+            $notification = array(
+                'message' => 'La Contraseña No Coincide!',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification);
+        }
+
+    }
 
 
 }

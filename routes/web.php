@@ -57,6 +57,7 @@ Route::prefix('profile')->group(function () {
     // Route::get('/advance/form', [ProfileController::class, 'ProfileAdvanceForm'])->name('profile.advance.form');
     Route::post('/store', [ProfileController::class, 'ProfileStore'])->name('profile.store');
     Route::get('/password/view', [ProfileController::class, 'PasswordView'])->name('password.view');
+    Route::post('/update/password', [ProfileController::class, 'PasswordUpdate'])->name('profile.update.password');
 
 });
 

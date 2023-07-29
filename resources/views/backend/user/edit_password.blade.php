@@ -21,7 +21,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('user.store') }}">
+                            <form method="post" action="{{ route('profile.update.password') }}">
                             @csrf
 
                                 <div class="row">
@@ -31,7 +31,7 @@
                                         <div class="form-group">
                                             <h5>Contraseña Actual <span class="text-danger">*</span></h5>
                                             <div class="controls">
-                                                <input type="password" name="old_password" id="current_password" class="form-control" required="">
+                                                <input type="password" name="old_password" id="current_password" class="form-control">
                                                 @error('old_password')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
@@ -42,7 +42,7 @@
                                         <div class="form-group">
                                             <h5>Contraseña Nueva <span class="text-danger">*</span></h5>
                                             <div class="controls">
-                                                <input type="password" name="password" id="password" class="form-control" required="">
+                                                <input type="password" name="password" id="password" class="form-control">
                                                 @error('password')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
@@ -53,7 +53,7 @@
                                         <div class="form-group">
                                             <h5>Confirmar Contraseña <span class="text-danger">*</span></h5>
                                             <div class="controls">
-                                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required="">
+                                                <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                                                 @error('password_confirmation')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror

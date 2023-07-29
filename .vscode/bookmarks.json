@@ -27,6 +27,11 @@
 					"line": 111,
 					"column": 25,
 					"label": "Toaster cdn script en admin_master.blade.php"
+				},
+				{
+					"line": 115,
+					"column": 12,
+					"label": "Toaster tipos de mensajes en master.blade"
 				}
 			]
 		},
@@ -54,17 +59,17 @@
 			"path": "app/Http/Controllers/Backend/ProfileController.php",
 			"bookmarks": [
 				{
-					"line": 11,
+					"line": 12,
 					"column": 69,
 					"label": "Para que Laravel redirects to home page si la sesión ya expiro"
 				},
 				{
-					"line": 49,
+					"line": 50,
 					"column": 8,
 					"label": "image unlink imagen anterior y reemplazar por la nueva"
 				},
 				{
-					"line": 59,
+					"line": 60,
 					"column": 33,
 					"label": "Desplegar notificación toaster notification"
 				}

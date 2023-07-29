@@ -309,7 +309,9 @@ Listo!
 ## 261. User Profile Change password Part 1
 Listo!
 ## 262. User Profile Change password Part 2
+Listo!
 ## 263. Sidebar Menu Active non Active Option
+
 ## 264. Add Project in GitHub
 
 # S24 - Student Class Management
