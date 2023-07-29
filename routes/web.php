@@ -5,18 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\Setup\StudentClassController;
 
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('auth.login');
@@ -58,6 +49,13 @@ Route::prefix('profile')->group(function () {
     Route::post('/store', [ProfileController::class, 'ProfileStore'])->name('profile.store');
     Route::get('/password/view', [ProfileController::class, 'PasswordView'])->name('password.view');
     Route::post('/update/password', [ProfileController::class, 'PasswordUpdate'])->name('profile.update.password');
+
+});
+
+// Setups - Configuraciones
+Route::prefix('setups')->group(function () {
+
+    Route::get('/student/class/view', [StudentClassController::class, 'StudentClassView'])->name('student.class.view');
 
 });
 

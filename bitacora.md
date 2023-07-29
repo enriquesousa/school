@@ -357,7 +357,7 @@ Listo!
 
 # S24 - Student Class Management
 ## 265. Student Class Management Option Part 1
-
+Listo!
 ## 266. Student Class Management Option Part 2
 ## 267. Student Class Management Option Part 3
 
