@@ -359,12 +359,12 @@ Listo!
 ## 265. Student Class Management Option Part 1
 Listo!
 ## 266. Student Class Management Option Part 2
+Listo!
 ## 267. Student Class Management Option Part 3
 
 # S25 - Student Year Management
 ## 268. Student Year Management Option Part 1
 ## 269. Student Year Management Option Part 2
-
 # S26 - Student Group Management
 ## 270. Student Group Management Option Part 1
 ## 271. Student Group Management Option Part 2

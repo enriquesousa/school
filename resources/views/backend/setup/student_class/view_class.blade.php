@@ -20,7 +20,7 @@
                             <h3 class="box-title">Estudiantes - Lista de Materias</h3>
 
                             {{-- botón agregar usuario --}}
-                            <a href="{{ route('user.add') }}" class="btn btn-rounded btn-success mb-5"
+                            <a href="{{ route('student.class.add') }}" class="btn btn-rounded btn-success mb-5"
                                 style="float: right;">Agregar Materia</a>
 
                         </div>
@@ -44,7 +44,7 @@
                                             <td>
 
                                                 {{-- Botón Editar --}}
-                                                <a href="{{ route('user.edit', $item->id) }}"
+                                                <a href="{{ route('student.class.edit', $item->id) }}"
                                                     class="btn btn-info">Editar</a>
 
                                                 {{-- Botón Eliminar --}}

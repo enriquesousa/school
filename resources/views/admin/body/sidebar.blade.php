@@ -30,8 +30,8 @@
       {{-- Dashboard - Panel de Control --}}
       <li class="{{ ($route == 'dashboard') ? 'active' : '' }}">
         <a href="{{ route('dashboard') }}">
-          <i data-feather="pie-chart"></i>
-          <span>Panel</span>
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span>Panel</span>
         </a>
       </li>
 
