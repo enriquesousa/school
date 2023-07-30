@@ -514,7 +514,9 @@ CRUD - Tabla 'student_years'
 View (List), Add and Edit Student Year
 Listo! 
 ## 269. Student Year Management Option Part 2
-
+CRUD - Tabla 'student_years'
+Update and Delete - Student Year
+Listo! 
 
 # S26 - Student Group Management
 ## 270. Student Group Management Option Part 1
