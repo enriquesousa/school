@@ -119,6 +119,16 @@
 					"label": "Funcionalidad con la imagen JS en vista"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/setup/year/add_year.blade.php",
+			"bookmarks": [
+				{
+					"line": 33,
+					"column": 0,
+					"label": "input mask año 4 digitos en add_year.blade.php"
+				}
+			]
 		}
 	]
 }

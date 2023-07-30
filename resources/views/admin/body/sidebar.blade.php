@@ -77,6 +77,7 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Materias</a></li>
+          <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Año</a></li>
         </ul>
       </li>
 

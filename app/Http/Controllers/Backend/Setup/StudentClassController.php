@@ -79,4 +79,6 @@ class StudentClassController extends Controller
         return redirect()->back()->with($notification);
     }
 
+
+
 }

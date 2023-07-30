@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
+use App\Http\Controllers\Backend\Setup\StudentYearController;
 
 
 
@@ -55,12 +56,21 @@ Route::prefix('profile')->group(function () {
 // Setups - Configuraciones
 Route::prefix('setups')->group(function () {
 
+    // Materias - Student Class - CRUD
     Route::get('/student/class/view', [StudentClassController::class, 'StudentClassView'])->name('student.class.view');
     Route::get('/student/class/add', [StudentClassController::class, 'StudentClassAdd'])->name('student.class.add');
     Route::post('/store/student/class', [StudentClassController::class, 'StoreStudentClass'])->name('store.student.class');
     Route::get('/student/class/edit/{id}', [StudentClassController::class, 'StudentClassEdit'])->name('student.class.edit');
     Route::post('/update/student/class/{id}', [StudentClassController::class, 'UpdateStudentClass'])->name('update.student.class');
     Route::get('/delete/student/class/{id}', [StudentClassController::class, 'DeleteStudentClass'])->name('student.class.delete');
+
+    // Año - Student Year - CRUD
+    Route::get('/student/year/view', [StudentYearController::class, 'StudentYearView'])->name('student.year.view');
+    Route::get('/student/year/add', [StudentYearController::class, 'StudentYearAdd'])->name('student.year.add');
+    Route::post('/store/student/year', [StudentYearController::class, 'StudentStoreYear'])->name('store.student.year');
+    Route::get('/student/year/edit/{id}', [StudentYearController::class, 'StudentYearEdit'])->name('student.year.edit');
+    Route::post('/update/student/year/{id}', [StudentYearController::class, 'UpdateStudentYear'])->name('update.student.year');
+    Route::get('/delete/student/year/{id}', [StudentYearController::class, 'DeleteStudentYear'])->name('student.year.delete');
 
 });
 
