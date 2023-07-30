@@ -84,7 +84,8 @@
                             <div class="input-group-addon">
                               <i class="fa fa-phone"></i>
                             </div>
-                            <input type="text" name="mobile" id="tel" class="form-control" value="{{ $editData->mobile }}">
+                            {{-- <input type="text" name="mobile" id="tel" class="form-control" value="{{ $editData->mobile }}"> --}}
+                            <input type="text" name="mobile" class="form-control" data-inputmask="'mask':[ '(999) 999-9999']" data-mask="" value="{{ $editData->mobile }}">
                           </div>
                         </div>
 
@@ -152,7 +153,7 @@
 
                     </div>
 
-                    {{-- Renglón 4 - Fecha y Hora --}}
+                    {{-- Renglón 4 - Fecha y Hora y Celular --}}
                     {{-- <div class="row">
 
                       <div class="col-md-6">
@@ -169,7 +170,17 @@
                         </div>
                       </div>
 
+                      <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <input type="text" class="form-control" data-inputmask="'mask':[ '(999) 999-9999']" data-mask="">
+                        </div>
+                      </div>
+
                     </div> --}}
+
 
                   </div>
                 </div>

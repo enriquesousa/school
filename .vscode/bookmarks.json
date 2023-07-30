@@ -24,17 +24,17 @@
 					"label": "Toaster cdn en header en admin_master.blade.php"
 				},
 				{
-					"line": 84,
+					"line": 92,
 					"column": 27,
 					"label": "sweetalert2 no olvidar poner el id=delete en el boton de Eliminar"
 				},
 				{
-					"line": 111,
+					"line": 119,
 					"column": 25,
 					"label": "Toaster cdn script en admin_master.blade.php"
 				},
 				{
-					"line": 115,
+					"line": 123,
 					"column": 12,
 					"label": "Toaster tipos de mensajes en master.blade"
 				}
@@ -109,12 +109,12 @@
 					"label": "enctype=\"multipart/form-data\" en form para poder mandar por post la imagen"
 				},
 				{
-					"line": 198,
+					"line": 209,
 					"column": 26,
 					"label": "Format phone number con JS"
 				},
 				{
-					"line": 206,
+					"line": 217,
 					"column": 34,
 					"label": "Funcionalidad con la imagen JS en vista"
 				}

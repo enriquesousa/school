@@ -361,9 +361,156 @@ Listo!
 ## 266. Student Class Management Option Part 2
 Listo!
 ## 267. Student Class Management Option Part 3
+Ya arregle que no me daba el format (input mask) del telefono o celular
+lo arregle agregando correctamente en resources/views/admin/admin_master.blade.php
+```php
+<!-- Vendor JS -->
+<script src="{{ asset('backend/js/vendors.min.js') }}"></script>
+<script src="{{ asset('../assets/icons/feather-icons/feather.min.js') }}"></script>
+
+<script src="{{ asset('../assets/vendor_components/easypiechart/dist/jquery.easypiechart.js') }}"></script>
+<script src="{{ asset('../assets/vendor_components/apexcharts-bundle/irregular-data-series.js') }}"></script>
+<script src="{{ asset('../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js') }}"></script>
+
+{{-- para data table --}}
+<script src="{{asset('../assets/vendor_components/datatable/datatables.min.js')}}"></script>
+
+
+{{-- para forms_advance input mask --}}
+<script src="{{ asset('../assets/vendor_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js') }}"></script>
+<script src="{{ asset('../assets/vendor_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js') }}"></script>
+<script src="{{ asset('../assets/vendor_components/select2/dist/js/select2.full.js') }}"></script>
+
+<script src="{{ asset('../assets/vendor_plugins/input-mask/jquery.inputmask.js') }}"></script>
+<script src="{{ asset('../assets/vendor_plugins/input-mask/jquery.inputmask.date.extensions.js') }}"></script>
+<script src="{{ asset('../assets/vendor_plugins/input-mask/jquery.inputmask.extensions.js') }}"></script>
+
+<script src="{{ asset('../assets/vendor_components/moment/min/moment.min.js') }}"></script>
+<script src="{{ asset('../assets/vendor_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+<script src="{{ asset('../assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ asset('../assets/vendor_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
+<script src="{{ asset('../assets/vendor_plugins/timepicker/bootstrap-timepicker.min.js') }}"></script>
+<script src="{{ asset('../assets/vendor_plugins/iCheck/icheck.min.js') }}"></script>
+<script src="{{ asset('backend/js/pages/advanced-form-element.js') }}"></script>
+
+{{-- para data table --}}
+<script src="{{asset('backend/js/pages/data-table.js')}}"></script>
+
+
+<!-- Sunny Admin App -->
+<script src="{{ asset('backend/js/template.js') }}"></script>
+<script src="{{ asset('backend/js/pages/dashboard.js') }}"></script>
+
+
+
+
+
+{{-- Plugin sweetalert2 para el botón de Delete, cdn en https://sweetalert2.github.io/v10.html --}}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script type="text/javascript">
+$(function () {
+    $(document).on("click", "#delete", function (e) {
+        e.preventDefault();
+        var link = $(this).attr("href");
+
+        Swal.fire({
+            title: "Estas seguro?",
+            text: "Que deseas eliminar este registro?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Si, Eliminarlo!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = link;
+                Swal.fire("Eliminado!", "El registro fue eliminado.", "success");
+            }
+        });
+
+    });
+});
+</script>
+
+{{-- Toaster cdn --}}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+{{-- Toaster script --}}
+<script>
+    @if(Session::has('message'))
+            var type = "{{ Session::get('alert-type','info') }}"
+                switch(type){
+                case 'info':
+                toastr.info(" {{ Session::get('message') }} ");
+                break;
+
+                case 'success':
+                toastr.success(" {{ Session::get('message') }} ");
+                break;
+
+                case 'warning':
+                toastr.warning(" {{ Session::get('message') }} ");
+                break;
+
+                case 'error':
+                toastr.error(" {{ Session::get('message') }} ");
+                break;
+            }
+        @endif
+</script>
+
+
+
+</body>
+```
+
+y en resources/views/backend/user/edit_profile.blade.php
+```php
+{{-- Renglón 2 - Celular y Dirección --}}
+<div class="row">
+
+    {{-- Primer Columna --}}
+    <div class="col-md-6">
+
+    <!-- Celular -->
+    <div class="form-group">
+        <label>Celular</label>
+        <div class="input-group">
+        <div class="input-group-addon">
+            <i class="fa fa-phone"></i>
+        </div>
+        {{-- <input type="text" name="mobile" id="tel" class="form-control" value="{{ $editData->mobile }}"> --}}
+        <input type="text" name="mobile" class="form-control" data-inputmask="'mask':[ '(999) 999-9999']" data-mask="" value="{{ $editData->mobile }}">
+        </div>
+    </div>
+
+    </div>
+
+    {{-- Segunda Columna --}}
+    <div class="col-md-6">
+
+    <!-- Dirección -->
+    <div class="form-group">
+        <label>Dirección</label>
+        <div class="input-group">
+        <div class="input-group-addon">
+            <i class="fa fa-address-card" aria-hidden="true"></i>
+        </div>
+        <input type="text" name="address" class="form-control" value="{{ $editData->address }}">
+        </div>
+    </div>
+
+    </div>
+
+</div>
+```
+
+El botón delete ya quedo 
+listo!
 
 # S25 - Student Year Management
 ## 268. Student Year Management Option Part 1
+
 ## 269. Student Year Management Option Part 2
 # S26 - Student Group Management
 ## 270. Student Group Management Option Part 1

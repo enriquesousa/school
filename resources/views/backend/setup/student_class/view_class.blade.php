@@ -48,7 +48,7 @@
                                                     class="btn btn-info">Editar</a>
 
                                                 {{-- Botón Eliminar --}}
-                                                <a href="{{ route('user.delete', $item->id) }}" class="btn btn-danger"
+                                                <a href="{{ route('student.class.delete', $item->id) }}" class="btn btn-danger"
                                                     id="delete">Eliminar</a>
 
                                             </td>
