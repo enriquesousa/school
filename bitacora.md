@@ -524,9 +524,13 @@ Group
 Vie, Add, Edit
 Listo!
 ## 271. Student Group Management Option Part 2
+Group
+Update, Delete
+Listo!
 
 # S27 - Student Shift Management
 ## 272. Student Shift Management Option Part 1
+
 ## 273. Student Shift Management Option Part 2
 
 # S28 - Student Fee Category Option
