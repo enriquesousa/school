@@ -39,5 +39,42 @@ class FeeCategoryController extends Controller
         return redirect()->route('fee.category.view')->with($notification);
     }
 
+    // FeeCategoryEdit
+    public function FeeCategoryEdit($id){
+        $editData = FeeCategory::find($id);
+        return view('backend.setup.fee_category.edit_fee_category', compact('editData'));
+    }
+
+    // UpdateFeeCategory
+    public function UpdateFeeCategory(Request $request, $id){
+        $data = FeeCategory::find($id);
+
+        $validateData = $request->validate([
+            'name' => 'required|unique:fee_categories,name,' . $data->id,
+        ]);
+
+        $data->name = $request->name;
+        $data->save();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Categoría de Cobro Actualizada con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('fee.category.view')->with($notification);
+    }
+
+    // DeleteFeeCategory
+    public function DeleteFeeCategory($id){
+        $data = FeeCategory::find($id);
+        $data->delete();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Categoría de Cobro Eliminada con éxito!',
+            'alert-type' => 'info'
+        );
+        return redirect()->back()->with($notification);
+    }
 
 }

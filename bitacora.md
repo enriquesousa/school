@@ -544,9 +544,13 @@ FeeCategory - Tabla 'fee_categories'
 View, Add
 Listo!
 ## 275. Working Fee Category Option Part 2
+FeeCategory - Tabla 'fee_categories'
+Edit, Update, Delete
+Listo!
 
 # S29 - Manage Student Fee Category Amount
 ## 276. Manage Fee Category Amount Part 1
+
 ## 277. Manage Fee Category Amount Part 2
 ## 278. Manage Fee Category Amount Part 3
 ## 279. Manage Fee Category Amount Part 4
