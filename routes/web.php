@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
 use App\Http\Controllers\Backend\Setup\StudentShiftController;
+use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 
 
 
@@ -89,6 +90,11 @@ Route::prefix('setups')->group(function () {
     Route::get('/student/shift/edit/{id}', [StudentShiftController::class, 'StudentShiftEdit'])->name('student.shift.edit');
     Route::post('/update/student/shift/{id}', [StudentShiftController::class, 'UpdateStudentShift'])->name('update.student.shift');
     Route::get('/delete/student/shift/{id}', [StudentShiftController::class, 'DeleteStudentShift'])->name('student.shift.delete');
+
+    // Fee Category - Categoría de Cobro - CRUD
+    Route::get('/fee/category/view', [FeeCategoryController::class, 'FeeCategoryView'])->name('fee.category.view');
+    Route::get('/fee/category/add', [FeeCategoryController::class, 'FeeCategoryAdd'])->name('fee.category.add');
+    Route::post('/store/fee/category', [FeeCategoryController::class, 'StoreFeeCategory'])->name('store.fee.category');
 
 });
 

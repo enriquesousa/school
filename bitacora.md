@@ -540,7 +540,9 @@ Listo!
 
 # S28 - Student Fee Category Option
 ## 274. Working Fee Category Option Part 1
-
+FeeCategory - Tabla 'fee_categories'
+View, Add
+Listo!
 ## 275. Working Fee Category Option Part 2
 
 # S29 - Manage Student Fee Category Amount
