@@ -153,7 +153,7 @@
 
                     </div>
 
-                    {{-- Renglón 4 - Fecha y Hora y Celular --}}
+                    {{-- Renglón 4 - Fecha y HorPa y Celular --}}
                     {{-- <div class="row">
 
                       <div class="col-md-6">

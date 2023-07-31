@@ -109,6 +109,11 @@
 					"label": "enctype=\"multipart/form-data\" en form para poder mandar por post la imagen"
 				},
 				{
+					"line": 155,
+					"column": 49,
+					"label": "fecha y Hora Format en ediit_profile"
+				},
+				{
 					"line": 209,
 					"column": 26,
 					"label": "Format phone number con JS"

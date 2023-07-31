@@ -521,7 +521,7 @@ Listo!
 # S26 - Student Group Management
 ## 270. Student Group Management Option Part 1
 Group
-Vie, Add, Edit
+View, Add, Edit
 Listo!
 ## 271. Student Group Management Option Part 2
 Group
@@ -530,8 +530,11 @@ Listo!
 
 # S27 - Student Shift Management
 ## 272. Student Shift Management Option Part 1
-
+Shift - Tabla 'student_shifts'
+View, Add, Edit
+Listo!
 ## 273. Student Shift Management Option Part 2
+
 
 # S28 - Student Fee Category Option
 ## 274. Working Fee Category Option Part 1

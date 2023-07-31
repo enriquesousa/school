@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
+use App\Http\Controllers\Backend\Setup\StudentShiftController;
 
 
 
@@ -57,7 +58,7 @@ Route::prefix('profile')->group(function () {
 // Setups - Configuraciones
 Route::prefix('setups')->group(function () {
 
-    // Materias - Student Class - CRUD
+    // Student Class - Clases - CRUD
     Route::get('/student/class/view', [StudentClassController::class, 'StudentClassView'])->name('student.class.view');
     Route::get('/student/class/add', [StudentClassController::class, 'StudentClassAdd'])->name('student.class.add');
     Route::post('/store/student/class', [StudentClassController::class, 'StoreStudentClass'])->name('store.student.class');
@@ -65,7 +66,7 @@ Route::prefix('setups')->group(function () {
     Route::post('/update/student/class/{id}', [StudentClassController::class, 'UpdateStudentClass'])->name('update.student.class');
     Route::get('/delete/student/class/{id}', [StudentClassController::class, 'DeleteStudentClass'])->name('student.class.delete');
 
-    // Año - Student Year - CRUD
+    // Student Year - Año - CRUD
     Route::get('/student/year/view', [StudentYearController::class, 'StudentYearView'])->name('student.year.view');
     Route::get('/student/year/add', [StudentYearController::class, 'StudentYearAdd'])->name('student.year.add');
     Route::post('/store/student/year', [StudentYearController::class, 'StudentStoreYear'])->name('store.student.year');
@@ -73,13 +74,19 @@ Route::prefix('setups')->group(function () {
     Route::post('/update/student/year/{id}', [StudentYearController::class, 'UpdateStudentYear'])->name('update.student.year');
     Route::get('/delete/student/year/{id}', [StudentYearController::class, 'DeleteStudentYear'])->name('student.year.delete');
 
-     // Grupo - Student Group - CRUD
+     // Student Group - Materias - CRUD
      Route::get('/student/group/view', [StudentGroupController::class, 'StudentGroupView'])->name('student.group.view');
      Route::get('/student/group/add', [StudentGroupController::class, 'StudentGroupAdd'])->name('student.group.add');
      Route::post('/store/student/group', [StudentGroupController::class, 'StudentStoreGroup'])->name('store.student.group');
      Route::get('/student/group/edit/{id}', [StudentGroupController::class, 'StudentGroupEdit'])->name('student.group.edit');
      Route::post('/update/student/group/{id}', [StudentGroupController::class, 'UpdateStudentGroup'])->name('update.student.group');
      Route::get('/delete/student/group/{id}', [StudentGroupController::class, 'DeleteStudentGroup'])->name('student.group.delete');
+
+    // Student Shift - Horario (Turno) - CRUD
+    Route::get('/student/shift/view', [StudentShiftController::class, 'StudentShiftView'])->name('student.shift.view');
+    Route::get('/student/shift/add', [StudentShiftController::class, 'StudentShiftAdd'])->name('student.shift.add');
+    Route::post('/store/student/shift', [StudentShiftController::class, 'StoreStudentShift'])->name('store.student.shift');
+    Route::get('/student/shift/edit/{id}', [StudentShiftController::class, 'StudentShiftEdit'])->name('student.shift.edit');
 
 
 });
