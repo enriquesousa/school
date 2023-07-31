@@ -534,10 +534,13 @@ Shift - Tabla 'student_shifts'
 View, Add, Edit
 Listo!
 ## 273. Student Shift Management Option Part 2
-
+Shift - Tabla 'student_shifts'
+Update, Delete
+Listo!
 
 # S28 - Student Fee Category Option
 ## 274. Working Fee Category Option Part 1
+
 ## 275. Working Fee Category Option Part 2
 
 # S29 - Manage Student Fee Category Amount

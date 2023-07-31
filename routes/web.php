@@ -87,7 +87,8 @@ Route::prefix('setups')->group(function () {
     Route::get('/student/shift/add', [StudentShiftController::class, 'StudentShiftAdd'])->name('student.shift.add');
     Route::post('/store/student/shift', [StudentShiftController::class, 'StoreStudentShift'])->name('store.student.shift');
     Route::get('/student/shift/edit/{id}', [StudentShiftController::class, 'StudentShiftEdit'])->name('student.shift.edit');
-
+    Route::post('/update/student/shift/{id}', [StudentShiftController::class, 'UpdateStudentShift'])->name('update.student.shift');
+    Route::get('/delete/student/shift/{id}', [StudentShiftController::class, 'DeleteStudentShift'])->name('student.shift.delete');
 
 });
 

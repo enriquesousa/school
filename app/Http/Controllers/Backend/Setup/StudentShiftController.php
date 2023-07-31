@@ -43,5 +43,37 @@ class StudentShiftController extends Controller
         return view('backend.setup.shift.edit_shift', compact('editData'));
     }
 
+    // UpdateStudentShift
+    public function UpdateStudentShift(Request $request, $id){
+        $data = StudentShift::find($id);
+
+        $validateData = $request->validate([
+            'name' => 'required|unique:student_shifts,name,' . $data->id,
+        ]);
+
+        $data->name = $request->name;
+        $data->save();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Horario Actualizado con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('student.shift.view')->with($notification);
+    }
+
+    // DeleteStudentShift
+    public function DeleteStudentShift($id){
+        $data = StudentShift::find($id);
+        $data->delete();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Horario Eliminado con éxito!',
+            'alert-type' => 'info'
+        );
+        return redirect()->back()->with($notification);
+    }
+
 
 }
