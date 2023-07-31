@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\Setup\StudentYearController;
 use App\Http\Controllers\Backend\Setup\StudentGroupController;
 use App\Http\Controllers\Backend\Setup\StudentShiftController;
 use App\Http\Controllers\Backend\Setup\FeeCategoryController;
+use App\Http\Controllers\Backend\Setup\FeeAmountController;
 
 
 
@@ -98,6 +99,11 @@ Route::prefix('setups')->group(function () {
     Route::get('/fee/category/edit/{id}', [FeeCategoryController::class, 'FeeCategoryEdit'])->name('fee.category.edit');
     Route::post('/update/fee/category/{id}', [FeeCategoryController::class, 'UpdateFeeCategory'])->name('update.fee.category');
     Route::get('/delete/fee/category/{id}', [FeeCategoryController::class, 'DeleteFeeCategory'])->name('fee.category.delete');
+
+    // Fee Category Amount - monto de Cobro - CRUD
+    Route::get('/fee/amount/view', [FeeAmountController::class, 'FeeAmountView'])->name('fee.amount.view');
+    Route::get('/fee/amount/add', [FeeAmountController::class, 'FeeAmountAdd'])->name('fee.amount.add');
+
 
 });
 

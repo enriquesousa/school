@@ -550,8 +550,9 @@ Listo!
 
 # S29 - Manage Student Fee Category Amount
 ## 276. Manage Fee Category Amount Part 1
-
+Listo!
 ## 277. Manage Fee Category Amount Part 2
+
 ## 278. Manage Fee Category Amount Part 3
 ## 279. Manage Fee Category Amount Part 4
 ## 280. Manage Fee Category Amount Part 5
