@@ -134,6 +134,16 @@
 					"label": "input mask año 4 digitos en add_year.blade.php"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/user/add_user.blade.php",
+			"bookmarks": [
+				{
+					"line": 32,
+					"column": 24,
+					"label": "Basic Select Rol de Usuario"
+				}
+			]
 		}
 	]
 }
