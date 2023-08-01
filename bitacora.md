@@ -583,7 +583,8 @@ Agregar nuevo CRUD para tabla 'exam_types'
 View, Add, Store
 Listo!
 ## 285. Working Exam Type Part 2
-
+Edit, Update, y Delete
+Listo!
 # S31 - Manage Student Subjects
 ## 286. Working Subjects Part 1
 ## 287. Working Subjects Part 1
