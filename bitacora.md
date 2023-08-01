@@ -574,9 +574,12 @@ Listo!
 Update
 Listo!
 ## 283. Manage Fee Category Amount Part 8
+Ver Detalles de la Categoría de Cobro
+Listo!
 
 # S30 - Manage Student Exam Type
 ## 284. Working Exam Type Part 1
+
 ## 285. Working Exam Type Part 2
 
 # S31 - Manage Student Subjects

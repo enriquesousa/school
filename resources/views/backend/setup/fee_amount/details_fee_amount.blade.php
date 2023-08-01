@@ -15,7 +15,7 @@
                     <div class="box">
                         <div class="box-header with-border">
 
-                            <h3 class="box-title">Lista - Monto de Cobro</h3>
+                            <h3 class="box-title">Detalles - Monto de Cobro</h3>
 
                             {{-- botón agregar usuario --}}
                             <a href="{{ route('fee.amount.add') }}" class="btn btn-rounded btn-success mb-5"
@@ -24,30 +24,25 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
+
+                            <h4><strong>Categoría de cobro: </strong>{{ $detailsData[0]->fee_category->name }}</h4>
+
                             <div class="table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
+                                <table class="table table-bordered table-striped">
+                                    <thead class="thead-light">
                                         <tr>
                                             <th width="5%">Serie</th>
-                                            <th>Categoría de Cobro</th>
-                                            <th width="25%">Acción</th>
+                                            <th>Nombre de Clase</th>
+                                            <th width="25%">Monto</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
-                                        @foreach ($allData as $key => $item)
+                                        @foreach ($detailsData as $key => $item)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td> {{ $item['fee_category']['name'] }}</td>
-                                            <td>
-
-                                                {{-- Botón Editar por Grupo con $item->fee_category_id --}}
-                                                <a href="{{ route('fee.amount.edit',$item->fee_category_id) }}" class="btn btn-info">Edit</a>
-
-                                                {{-- Botón Eliminar --}}
-                                                <a href="{{ route('fee.amount.details', $item->fee_category_id) }}" class="btn btn-primary">Detalles</a>
-
-                                            </td>
+                                            <td> {{ $item->student_class->name }}</td>
+                                            <td> {{ $item->amount }}</td>
                                         </tr>
                                         @endforeach
 

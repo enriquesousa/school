@@ -106,5 +106,11 @@ class FeeAmountController extends Controller
 
     }
 
+    // FeeAmountDetails
+    public function FeeAmountDetails($fee_category_id){
+        $data['detailsData'] = FeeCategoryAmount::where('fee_category_id', $fee_category_id)->orderBy('class_id', 'asc')->get();
+        return view('backend.setup.fee_amount.details_fee_amount', $data);
+    }
+
 
 }
