@@ -15,8 +15,7 @@
                 <div class="box-header with-border">
                     <h4 class="box-title">Agregar Monto de Cobro</h4>
                     <h6 class="box-subtitle">Para agregar Monto de Cobro a estudiante en la <a class="text-warning"
-                            href="#">base
-                            de datos </a>
+                            href="#">base de datos </a>
                     </h6>
                 </div>
 
@@ -25,7 +24,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('store.fee.category') }}" id="myForm">
+                            <form method="post" action="{{ route('store.fee.amount') }}">
                                 @csrf
 
                                 <div class="row">
@@ -39,9 +38,14 @@
                                                     <select name="fee_category_id" required="" class="form-control">
                                                         <option value="" selected="" disabled="">Seleccionar Categoría</option>
                                                         @foreach ($fee_categories as $item)
-                                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                         @endforeach
                                                     </select>
+                                                    @error('fee_category_id')
+                                                        <div class="form-control-feedback invalid-feedback">
+                                                            <small>Campo<code>requerido</code>{{ $message }}</small>
+                                                        </div>
+                                                    @enderror
                                                 </div>
                                             </div>
 
@@ -58,9 +62,14 @@
                                                             <select name="class_id[]" required="" class="form-control">
                                                                 <option value="" selected="" disabled="">Seleccionar Clase</option>
                                                                 @foreach ($classes as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                                 @endforeach
                                                             </select>
+                                                            @error('class_id')
+                                                                <div class="form-control-feedback invalid-feedback">
+                                                                    <small>Campo<code>requerido</code>{{ $message }}</small>
+                                                                </div>
+                                                            @enderror
                                                         </div>
                                                     </div> <!-- // end form group -->
 
@@ -70,12 +79,27 @@
                                                 <div class="col-md-5">
 
                                                     {{-- Monto --}}
-                                                    <div class="form-group">
+                                                    {{-- amount lo pasamos como array porque va a poder tener multiples valores --}}
+                                                    {{-- <div class="form-group">
                                                         <h5>Monto <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            {{-- amount lo pasamos como array porque va a poder tener multiples valores --}}
-                                                            <input type="text" name="amount[]" class="form-control">
-                                                        </div> <!-- // end form group -->
+                                                            <input id="cantidad" type="text" name="amount[]" class="form-control">
+                                                        </div>
+                                                    </div> --}}
+
+                                                    {{-- Monto --}}
+                                                    <div class="form-group validate">
+                                                        <h5>Monto <span class="text-danger">*</span></h5>
+                                                        <div class="input-group"> <span class="input-group-addon">$</span>
+                                                            <input type="number" name="amount[]" class="form-control" required=""
+                                                                data-validation-required-message="Este campo es requerido" aria-invalid="false"> <span
+                                                                class="input-group-addon">.00</span>
+                                                            @error('amount')
+                                                                <div class="form-control-feedback invalid-feedback">
+                                                                    <small>Campo<code>requerido y solo numérico</code>{{ $message }}</small>
+                                                                </div>
+                                                            @enderror
+                                                        </div>
                                                     </div>
 
                                                 </div> <!-- End col-md-5 -->
@@ -93,7 +117,7 @@
                                 </div> <!-- End Row -->
 
                                 <div class="text-xs-right">
-                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Enviar">
+                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Guardar">
                                 </div>
 
                             </form>
@@ -142,11 +166,21 @@
                 <div class="col-md-5">
 
                     {{-- Monto --}}
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <h5>Monto <span class="text-danger">*</span></h5>
                         <div class="controls">
                             <input type="text" name="amount[]" class="form-control">
-                        </div> <!-- // end form group -->
+                        </div>
+                    </div> --}}
+
+                    {{-- Monto --}}
+                    <div class="form-group validate">
+                        <h5>Monto <span class="text-danger">*</span></h5>
+                        <div class="input-group"> <span class="input-group-addon">$</span>
+                            <input type="number" name="amount[]" class="form-control" required=""
+                                data-validation-required-message="Este campo es requerido" aria-invalid="false"> <span
+                                class="input-group-addon">.00</span>
+                        </div>
                     </div>
 
                 </div><!-- End col-md-5 -->
@@ -179,7 +213,6 @@
 
  	});
 </script>
-
 
 
 @endsection

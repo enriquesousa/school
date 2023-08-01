@@ -149,7 +149,7 @@
 			"path": "resources/views/backend/setup/fee_amount/add_fee_amount.blade.php",
 			"bookmarks": [
 				{
-					"line": 165,
+					"line": 199,
 					"column": 69,
 					"label": "JS para desplegar mas renglones div con el botón vender de +Plus"
 				}
