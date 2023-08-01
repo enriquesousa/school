@@ -585,8 +585,12 @@ Listo!
 ## 285. Working Exam Type Part 2
 Edit, Update, y Delete
 Listo!
+
 # S31 - Manage Student Subjects
 ## 286. Working Subjects Part 1
+Agregar nuevo CRUD para tabla 'school_subjects'
+View, Add, Store
+Listo!
 ## 287. Working Subjects Part 1
 
 # S32 - Manage Student Assign Subject

@@ -84,6 +84,7 @@ $route = Request::route()->getName();
                     <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Categoría de Cobro</a></li>
                     <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Monto de Cobro</a></li>
                     <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Tipo de Examen</a></li>
+                    <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Cursos</a></li>
                 </ul>
             </li>
 
