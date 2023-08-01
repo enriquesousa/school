@@ -42,10 +42,10 @@
                                             <td>
 
                                                 {{-- Botón Editar --}}
-                                                <a href="{{ route('exam.type.edit', $item->id) }}" class="btn btn-info">Editar</a>
+                                                <a href="{{ route('school.subject.edit', $item->id) }}" class="btn btn-info">Editar</a>
 
                                                 {{-- Botón Eliminar --}}
-                                                <a href="{{ route('exam.type.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+                                                <a href="{{ route('school.subject.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
 
                                             </td>
                                         </tr>

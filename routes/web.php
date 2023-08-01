@@ -121,9 +121,9 @@ Route::prefix('setups')->group(function () {
     Route::get('/school/subject/view', [SchoolSubjectController::class, 'SchoolSubjectView'])->name('school.subject.view');
     Route::get('/school/subject/add', [SchoolSubjectController::class, 'SchoolSubjectAdd'])->name('school.subject.add');
     Route::post('/store/school/subject', [SchoolSubjectController::class, 'StoreSchoolSubject'])->name('store.school.subject');
-    // Route::get('/exam/type/edit/{id}', [ExamTypeController::class, 'ExamTypeEdit'])->name('exam.type.edit');
-    // Route::post('/update/exam/type/{id}', [ExamTypeController::class, 'UpdateExamType'])->name('update.exam.type');
-    // Route::get('/delete/exam/type/{id}', [ExamTypeController::class, 'DeleteExamType'])->name('exam.type.delete');
+    Route::get('/school/subject/edit/{id}', [SchoolSubjectController::class, 'SchoolSubjectEdit'])->name('school.subject.edit');
+    Route::post('/update/school/subject/{id}', [SchoolSubjectController::class, 'UpdateSchoolSubject'])->name('update.school.subject');
+    Route::get('/delete/school/subject/{id}', [SchoolSubjectController::class, 'DeleteSchoolSubject'])->name('school.subject.delete');
 
 
 });

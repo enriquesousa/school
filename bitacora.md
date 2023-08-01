@@ -591,7 +591,9 @@ Listo!
 Agregar nuevo CRUD para tabla 'school_subjects'
 View, Add, Store
 Listo!
-## 287. Working Subjects Part 1
+## 287. Working Subjects Part 2
+Edit, Update, y Delete
+Listo!
 
 # S32 - Manage Student Assign Subject
 ## 288. Student Assign Subjects Part 1
