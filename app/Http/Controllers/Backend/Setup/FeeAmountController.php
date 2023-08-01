@@ -66,5 +66,45 @@ class FeeAmountController extends Controller
 
     }
 
+    // UpdateFeeAmount
+    public function UpdateFeeAmount(Request $request, $fee_category_id)
+    {
+
+        if ($request->class_id == null) {
+
+            // Desplegar notificación
+            $notification = array(
+                'message' => 'Tienes que seleccionar al menos una clase!',
+                'alert-type' => 'error'
+            );
+            return redirect()->route('fee.amount.edit', $fee_category_id)->with($notification);
+
+        } else {
+
+            $countClass = count($request->class_id);
+
+            // primero borrar todos los datos anteriores
+            FeeCategoryAmount::where('fee_category_id', $fee_category_id)->delete();
+
+            // ahora grabar todos los datos que estén presentes en la forma.e
+            for ($i = 0; $i < $countClass; $i++) {
+                $fee_amount = new FeeCategoryAmount();
+                $fee_amount->fee_category_id = $request->fee_category_id;
+                $fee_amount->class_id = $request->class_id[$i];
+                $fee_amount->amount = $request->amount[$i];
+                $fee_amount->save();
+            }
+
+        }
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Datos Actualizados con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('fee.amount.view')->with($notification);
+
+    }
+
 
 }

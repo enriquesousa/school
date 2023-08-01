@@ -571,7 +571,8 @@ Listo!
 resources/views/backend/setup/fee_amount/edit_fee_amount.blade.php
 Listo!
 ## 282. Manage Fee Category Amount Part 7
-
+Update
+Listo!
 ## 283. Manage Fee Category Amount Part 8
 
 # S30 - Manage Student Exam Type

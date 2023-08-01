@@ -24,7 +24,8 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('store.fee.amount') }}">
+                            {{-- $editData[0]->fee_category_id para poder tomar todos los registros de este grupo fee_category_id --}}
+                            <form method="post" action="{{ route('update.fee.amount', $editData[0]->fee_category_id) }}">
                                 @csrf
 
                                 <div class="row">
