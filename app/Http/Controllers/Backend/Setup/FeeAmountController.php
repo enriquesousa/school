@@ -9,10 +9,11 @@ use App\Models\StudentClass;
 use App\Models\FeeCategoryAmount;
 
 
-class   FeeAmountController extends Controller
+class FeeAmountController extends Controller
 {
     // FeeAmountView
-    public function FeeAmountView(){
+    public function FeeAmountView()
+    {
         // $data['allData'] = FeeCategoryAmount::all();
         $data['allData'] = FeeCategoryAmount::select('fee_category_id')->groupBy('fee_category_id')->get();
 
@@ -20,7 +21,8 @@ class   FeeAmountController extends Controller
     }
 
     // FeeAmountAdd
-    public function FeeAmountAdd(){
+    public function FeeAmountAdd()
+    {
         $data['fee_categories'] = FeeCategory::all();
         $data['classes'] = StudentClass::all();
 
@@ -28,12 +30,12 @@ class   FeeAmountController extends Controller
     }
 
     // StoreFeeAmount
-    public function StoreFeeAmount(Request $request){
-
+    public function StoreFeeAmount(Request $request)
+    {
 
         $countClass = count($request->class_id);
         if ($countClass != null) {
-            for ($i=0; $i < $countClass; $i++) {
+            for ($i = 0; $i < $countClass; $i++) {
                 $fee_amount = new FeeCategoryAmount();
                 $fee_amount->fee_category_id = $request->fee_category_id;
                 $fee_amount->class_id = $request->class_id[$i];
@@ -48,6 +50,19 @@ class   FeeAmountController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->route('fee.amount.view')->with($notification);
+
+    }
+
+
+    public function EditFeeAmount($fee_category_id)
+    {
+        $data['editData'] = FeeCategoryAmount::where('fee_category_id', $fee_category_id)->orderBy('class_id', 'asc')->get();
+        // dd($data['editData']->toArray());
+
+        $data['fee_categories'] = FeeCategory::all();
+        $data['classes'] = StudentClass::all();
+
+        return view('backend.setup.fee_amount.edit_fee_amount', $data);
 
     }
 
