@@ -558,8 +558,17 @@ Listo!
 ## 279. Manage Fee Category Amount Part 4
 Listo!
 ## 280. Manage Fee Category Amount Part 5
-
+relación con el 'id' de la tabla 'fee_categories
+En app/Models/FeeCategoryAmount.php
+```php
+// relación con el 'id' de la tabla 'fee_categories'
+public function fee_category() {
+    return $this->belongsTo(FeeCategory::class, 'fee_category_id', 'id');
+}
+```
+Listo!
 ## 281. Manage Fee Category Amount Part 6
+
 ## 282. Manage Fee Category Amount Part 7
 ## 283. Manage Fee Category Amount Part 8
 

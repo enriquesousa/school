@@ -38,16 +38,16 @@
                                         @foreach ($allData as $key => $item)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $item->fee_category_id }}</td>
+                                            <td>{{ $item->fee_category->name }}</td>
                                             <td>
 
                                                 {{-- Botón Editar --}}
-                                                <a href="{{ route('fee.category.edit', $item->id) }}"
-                                                    class="btn btn-info">Editar</a>
+                                                {{-- <a href="{{ route('fee.category.edit', $item->id) }}" class="btn btn-info">Editar</a> --}}
+                                                <a href="" class="btn btn-info">Editar</a>
 
                                                 {{-- Botón Eliminar --}}
-                                                <a href="{{ route('fee.category.delete', $item->id) }}"
-                                                    class="btn btn-danger" id="delete">Eliminar</a>
+                                                {{-- <a href="{{ route('fee.category.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
+                                                <a href="" class="btn btn-danger" id="delete">Eliminar</a>
 
                                             </td>
                                         </tr>
