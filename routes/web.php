@@ -11,7 +11,7 @@ use App\Http\Controllers\Backend\Setup\StudentGroupController;
 use App\Http\Controllers\Backend\Setup\StudentShiftController;
 use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\FeeAmountController;
-
+use App\Http\Controllers\Backend\Setup\ExamTypeController;
 
 
 Route::get('/', function () {
@@ -107,6 +107,14 @@ Route::prefix('setups')->group(function () {
     Route::get('/fee/amount/edit/{fee_category_id}', [FeeAmountController::class, 'EditFeeAmount'])->name('fee.amount.edit');
     Route::post('/update/fee/amount/{fee_category_id}', [FeeAmountController::class, 'UpdateFeeAmount'])->name('update.fee.amount');
     Route::get('/fee/amount/details/{fee_category_id}', [FeeAmountController::class, 'FeeAmountDetails'])->name('fee.amount.details');
+
+    // Exam Type - Tipo de Examen - CRUD
+    Route::get('/exam/type/view', [ExamTypeController::class, 'ExamTypeView'])->name('exam.type.view');
+    Route::get('/exam/type/add', [ExamTypeController::class, 'ExamTypeAdd'])->name('exam.type.add');
+    Route::post('/store/exam/type', [ExamTypeController::class, 'StoreExamType'])->name('store.exam.type');
+    Route::get('/exam/type/edit/{id}', [ExamTypeController::class, 'ExamTypeEdit'])->name('exam.type.edit');
+    Route::post('/update/exam/type/{id}', [ExamTypeController::class, 'UpdateExamType'])->name('update.exam.type');
+    Route::get('/delete/exam/type/{id}', [ExamTypeController::class, 'DeleteExamType'])->name('exam.type.delete');
 
 
 });

@@ -579,7 +579,9 @@ Listo!
 
 # S30 - Manage Student Exam Type
 ## 284. Working Exam Type Part 1
-
+Agregar nuevo CRUD para tabla 'exam_types'
+View, Add, Store
+Listo!
 ## 285. Working Exam Type Part 2
 
 # S31 - Manage Student Subjects
