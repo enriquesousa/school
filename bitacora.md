@@ -597,7 +597,13 @@ Listo!
 
 # S32 - Manage Student Assign Subject
 ## 288. Student Assign Subjects Part 1
+Crear nueva tabla 'assign_subjects' con su controlador y modelo
+Controlador: AssignSubjectController
+Modelo: AssignSubject
+Crear la Vista: resources/views/backend/setup/assign_subject/view_assign_subject.blade.php
+Listo!
 ## 289. Student Assign Subjects Part 2
+
 ## 290. Student Assign Subjects Part 3
 ## 291. Student Assign Subjects Part 4
 ## 292. Student Assign Subjects Part 5

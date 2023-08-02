@@ -13,7 +13,7 @@ use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\FeeAmountController;
 use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
-
+use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -125,6 +125,13 @@ Route::prefix('setups')->group(function () {
     Route::post('/update/school/subject/{id}', [SchoolSubjectController::class, 'UpdateSchoolSubject'])->name('update.school.subject');
     Route::get('/delete/school/subject/{id}', [SchoolSubjectController::class, 'DeleteSchoolSubject'])->name('school.subject.delete');
 
+    // Assign Subject - Asignar Materias - CRUD
+    Route::get('/assign/subject/view', [AssignSubjectController::class, 'AssignSubjectView'])->name('assign.subject.view');
+    // Route::get('/fee/amount/add', [FeeAmountController::class, 'FeeAmountAdd'])->name('fee.amount.add');
+    // Route::post('/store/fee/amount', [FeeAmountController::class, 'StoreFeeAmount'])->name('store.fee.amount');
+    // Route::get('/fee/amount/edit/{fee_category_id}', [FeeAmountController::class, 'EditFeeAmount'])->name('fee.amount.edit');
+    // Route::post('/update/fee/amount/{fee_category_id}', [FeeAmountController::class, 'UpdateFeeAmount'])->name('update.fee.amount');
+    // Route::get('/fee/amount/details/{fee_category_id}', [FeeAmountController::class, 'FeeAmountDetails'])->name('fee.amount.details');
 
 });
 
