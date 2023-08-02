@@ -606,8 +606,33 @@ Listo!
 Crear la Vista: resources/views/backend/setup/assign_subject/add_assign_subject.blade.php
 Listo!
 ## 290. Student Assign Subjects Part 3
+Relación con el 'id' de la tabla 'student_classes'
+En app/Models/AssignSubject.php
+```php
+// relación con el 'id' de la tabla 'student_classes'
+public function student_class() {
+    return $this->belongsTo(StudentClass::class, 'class_id', 'id');
+}
+```
 
+Agrupamos por Clase.
+En app/Http/Controllers/Backend/Setup/AssignSubjectController.php
+```php
+public function AssignSubjectView(){
+    // $data['allData'] = AssignSubject::all();
+    $data['allData'] = AssignSubject::select('class_id')->groupBy('class_id')->get();
+    return view('backend.setup.assign_subject.view_assign_subject', $data);
+}
+```
+
+Y desplegamos en la vista: resources/views/backend/setup/assign_subject/view_assign_subject.blade.php
+```php
+<td> {{ $item->student_class->name }}</td>
+```
+Listo!
 ## 291. Student Assign Subjects Part 4
+
+
 ## 292. Student Assign Subjects Part 5
 
 # S33 - Manage Designation

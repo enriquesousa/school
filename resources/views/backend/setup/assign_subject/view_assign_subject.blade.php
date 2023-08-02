@@ -38,7 +38,7 @@
                                         @foreach ($allData as $key => $item)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td> {{ $item->class_id }}</td>
+                                            <td> {{ $item->student_class->name }}</td>
                                             <td>
 
                                                 {{-- Botón Editar por Grupo con $item->fee_category_id --}}
