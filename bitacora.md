@@ -631,9 +631,12 @@ Y desplegamos en la vista: resources/views/backend/setup/assign_subject/view_ass
 ```
 Listo!
 ## 291. Student Assign Subjects Part 4
-
-
+Listo!
 ## 292. Student Assign Subjects Part 5
+
+
+
+
 
 # S33 - Manage Designation
 ## 293. Working Designation Part 1

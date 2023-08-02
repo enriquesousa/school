@@ -42,8 +42,7 @@
                                             <td>
 
                                                 {{-- Botón Editar por Grupo con $item->fee_category_id --}}
-                                                {{-- <a href="{{ route('fee.amount.edit',$item->fee_category_id) }}" class="btn btn-info">Edit</a> --}}
-                                                <a href="" class="btn btn-info">Edit</a>
+                                                <a href="{{ route('assign.subject.edit', $item->class_id) }}" class="btn btn-info">Edit</a>
 
                                                 {{-- Botón Eliminar --}}
                                                 {{-- <a href="{{ route('fee.amount.details', $item->fee_category_id) }}" class="btn btn-primary">Detalles</a> --}}

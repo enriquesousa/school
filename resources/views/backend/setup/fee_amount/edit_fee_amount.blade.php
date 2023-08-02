@@ -50,52 +50,54 @@
 
                                             {{-- Rows de Clases y Monto --}}
                                             @foreach ($editData as $edit)
-                                            <div class="delete_whole_extra_item_add" id="delete_whole_extra_item_add">
-                                                <div class="row">
+                                                <div class="delete_whole_extra_item_add" id="delete_whole_extra_item_add">
 
-                                                    {{-- Select Clases --}}
-                                                    <div class="col-md-5">
+                                                    <div class="row">
 
-                                                        {{-- Select - Clases --}}
-                                                        <div class="form-group">
-                                                            <h5>Clases <span class="text-danger">*</span></h5>
-                                                            <div class="controls">
-                                                                {{-- class_id lo pasamos como array porque va a poder tener
-                                                                multiples valores --}}
-                                                                <select name="class_id[]" required="" class="form-control">
-                                                                    <option value="" selected="" disabled="">Seleccionar Clase</option>
-                                                                    @foreach($classes as $class)
-                                                                        <option value="{{ $class->id }}" {{ ($edit->class_id == $class->id) ? "selected" : "" }} >{{ $class->name }}</option>
-                                                                    @endforeach
-                                                                </select>
+                                                        {{-- Select Clases --}}
+                                                        <div class="col-md-5">
 
+                                                            {{-- Select - Clases --}}
+                                                            <div class="form-group">
+                                                                <h5>Clases <span class="text-danger">*</span></h5>
+                                                                <div class="controls">
+                                                                    {{-- class_id lo pasamos como array porque va a poder tener
+                                                                    multiples valores --}}
+                                                                    <select name="class_id[]" required="" class="form-control">
+                                                                        <option value="" selected="" disabled="">Seleccionar Clase</option>
+                                                                        @foreach($classes as $class)
+                                                                            <option value="{{ $class->id }}" {{ ($edit->class_id == $class->id) ? "selected" : "" }} >{{ $class->name }}</option>
+                                                                        @endforeach
+                                                                    </select>
+
+                                                                </div>
+                                                            </div> <!-- // end form group -->
+
+                                                        </div> <!-- End col-md-5 -->
+
+                                                        {{-- Monto --}}
+                                                        <div class="col-md-5">
+
+                                                            <div class="form-group validate">
+                                                                <h5>Monto <span class="text-danger">*</span></h5>
+                                                                <div class="input-group">
+                                                                    <span class="input-group-addon">$</span>
+                                                                    <input type="number" name="amount[]" value="{{ $edit->amount }}" class="form-control" required="" data-validation-required-message="Este campo es requerido" aria-invalid="false">
+                                                                    <span class="input-group-addon">.00</span>
+                                                                </div>
                                                             </div>
-                                                        </div> <!-- // end form group -->
 
-                                                    </div> <!-- End col-md-5 -->
+                                                        </div> <!-- End col-md-5 -->
 
-                                                    {{-- Monto --}}
-                                                    <div class="col-md-5">
+                                                        {{-- fa-plus-circle y fa-minus-circle --}}
+                                                        <div class="col-md-2" style="padding-top: 25px;">
+                                                            <span class="btn btn-success addEventMore"><i class="fa fa-plus-circle"></i></span>
+                                                            <span class="btn btn-danger removeEventMore"><i class="fa fa-minus-circle"></i></span>
+                                                        </div> <!-- End col-md-2 -->
 
-                                                        <div class="form-group validate">
-                                                            <h5>Monto <span class="text-danger">*</span></h5>
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon">$</span>
-                                                                <input type="number" name="amount[]" value="{{ $edit->amount }}" class="form-control" required="" data-validation-required-message="Este campo es requerido" aria-invalid="false">
-                                                                <span class="input-group-addon">.00</span>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> <!-- End col-md-5 -->
-
-                                                    {{-- fa-plus-circle y fa-minus-circle --}}
-                                                    <div class="col-md-2" style="padding-top: 25px;">
-                                                        <span class="btn btn-success addEventMore"><i class="fa fa-plus-circle"></i></span>
-                                                        <span class="btn btn-danger removeEventMore"><i class="fa fa-minus-circle"></i></span>
-                                                    </div> <!-- End col-md-2 -->
+                                                    </div>
 
                                                 </div>
-                                            </div>
                                             @endforeach
 
                                         </div> <!-- End add_item -->
