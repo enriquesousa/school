@@ -18,7 +18,7 @@
                             <h3 class="box-title">Lista - Asignación de Materias</h3>
 
                             {{-- botón agregar usuario --}}
-                            <a href="{{ route('fee.amount.add') }}" class="btn btn-rounded btn-success mb-5"
+                            <a href="{{ route('assign.subject.add') }}" class="btn btn-rounded btn-success mb-5"
                                 style="float: right;">Agregar Asignar Materias</a>
 
                         </div>

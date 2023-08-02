@@ -603,8 +603,10 @@ Modelo: AssignSubject
 Crear la Vista: resources/views/backend/setup/assign_subject/view_assign_subject.blade.php
 Listo!
 ## 289. Student Assign Subjects Part 2
-
+Crear la Vista: resources/views/backend/setup/assign_subject/add_assign_subject.blade.php
+Listo!
 ## 290. Student Assign Subjects Part 3
+
 ## 291. Student Assign Subjects Part 4
 ## 292. Student Assign Subjects Part 5
 
