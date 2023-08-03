@@ -32,6 +32,7 @@
                         <th>Rol</th>
                         <th>Nombre</th>
                         <th>Correo</th>
+                        <th>Código</th>
                         <th width="25%">Acción</th>
                       </tr>
                     </thead>
@@ -40,9 +41,10 @@
                       @foreach ($allData as $key => $item)
                         <tr>
                           <td>{{ $key + 1 }}</td>
-                          <td>{{ $item->usertype }}</td>
+                          <td>{{ $item->role }}</td>
                           <td>{{ $item->name }}</td>
                           <td>{{ $item->email }}</td>
+                          <td>{{ $item->code }}</td>
                           <td>
 
                             {{-- Botón Editar --}}

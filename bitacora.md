@@ -732,8 +732,9 @@ Schema::create('discount_students', function (Blueprint $table) {
 ```
 Listo!
 ## 297. Student Registration Part 3
-
+listo!
 ## 298. Student Registration Part 4
+
 ## 299. Student Registration Part 5
 ## 300. Student Registration Part 6
 ## 301. Student Registration Part 7

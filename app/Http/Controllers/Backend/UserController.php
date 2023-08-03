@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
+
+
 
 class UserController extends Controller
 {
@@ -17,7 +21,7 @@ class UserController extends Controller
         // return view('backend.user.view_user', compact('allData'));
 
         // Otra forma de pasar datos es cargando un array
-        $data['allData'] = User::all();
+        $data['allData'] = User::where('usertype','Admin')->get();
         return view('backend.user.view_user', $data);
     }
 
@@ -36,10 +40,13 @@ class UserController extends Controller
         ]);
 
         $data = new User();
-        $data->usertype = $request->usertype;
+        $code = rand(0000, 9999);
+        $data->usertype = 'Admin';
+        $data->role = $request->role;
         $data->name = $request->name;
         $data->email = $request->email;
-        $data->password = Hash::make($request->password);
+        $data->password = Hash::make($code);
+        $data->code = $code;
         $data->save();
 
         // aquí va el mensaje de toaster para avisar que ya se grabo a base de datos
@@ -62,14 +69,17 @@ class UserController extends Controller
     public function UserUpdate(Request $request, $id){
 
         $validateData = $request->validate([
-            'email' => 'required|unique:users',
+            'email' => [
+                'required',
+                Rule::unique('users')->ignore($request->target_user_id),
+            ],
             'name' => 'required',
         ]);
 
         $data = User::find($id);
-        $data->usertype = $request->usertype;
         $data->name = $request->name;
         $data->email = $request->email;
+        $data->role = $request->role;
         $data->save();
 
         // aquí va el mensaje de toaster para avisar que ya se grabo a base de datos
