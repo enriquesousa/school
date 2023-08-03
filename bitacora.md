@@ -701,8 +701,38 @@ Schema::create('users', function (Blueprint $table) {
 ```
 Listo!
 ## 296. Student Registration Part 2
+Crear nuevo modelo: AssignStudent con su migration
+En database/migrations/2023_08_03_153241_create_assign_students_table.php:
+```php
+Schema::create('assign_students', function (Blueprint $table) {
+    $table->id();
 
+    $table->integer('student_id')->comment('user_id=student_id');
+    $table->integer('roll')->nullable();
+    $table->integer('class_id');
+    $table->integer('year_id');
+    $table->integer('group_id')->nullable();
+    $table->integer('shift_id')->nullable();
+
+    $table->timestamps();
+});
+```
+
+En database/migrations/2023_08_03_153916_create_discount_students_table.php
+```php
+Schema::create('discount_students', function (Blueprint $table) {
+    $table->id();
+
+    $table->integer('assign_student_id');
+    $table->integer('fee_category_id')->nullable();
+    $table->double('discount')->nullable();
+
+    $table->timestamps();
+});
+```
+Listo!
 ## 297. Student Registration Part 3
+
 ## 298. Student Registration Part 4
 ## 299. Student Registration Part 5
 ## 300. Student Registration Part 6
