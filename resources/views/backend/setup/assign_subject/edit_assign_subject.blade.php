@@ -90,7 +90,7 @@
                                                     {{-- subjective_mark / Evaluación subjetiva--}}
                                                     <div class="col-md-2">
                                                         <div class="form-group validate">
-                                                            <h5>Evaluación subjetiva <span class="text-danger">*</span></h5>
+                                                            <h5>Evaluación Subjetiva <span class="text-danger">*</span></h5>
                                                             <div class="input-group"> <span class="input-group-addon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
                                                                 <input type="number" name="subjective_mark[]" value="{{ $edit->subjective_mark }}" class="form-control" required="" data-validation-required-message="Este campo es requerido" aria-invalid="false">
                                                                 <span class="input-group-addon">.00</span>

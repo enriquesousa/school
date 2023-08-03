@@ -71,7 +71,7 @@ $route = Request::route()->getName();
             <li class="treeview {{ ($prefix == 'setups') ? 'active' : '' }}">
                 <a href="#">
                     {{-- <i data-feather="mail"></i> --}}
-                    <i class="fa fa-cog" aria-hidden="true"></i><span>Config. Estudiantes</span>
+                    <i class="fa fa-cog" aria-hidden="true"></i><span>Configuración</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>

@@ -103,4 +103,10 @@ class AssignSubjectController extends Controller
         return redirect()->route('assign.subject.view')->with($notification);
     }
 
+    // DetailsAssignSubject
+    public function DetailsAssignSubject($class_id){
+        $data['detailsData'] = AssignSubject::where('class_id', $class_id)->orderBy('subject_id', 'asc')->get();
+        return view('backend.setup.assign_subject.details_assign_subject', $data);
+    }
+
 }
