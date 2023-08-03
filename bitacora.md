@@ -660,8 +660,48 @@ Listo!
 
 # S34 - Student Registration Management
 ## 295. Student Registration Part 1
+nuevo menu en resources/views/admin/body/sidebar.blade.php
+```php
+<li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Registro de Estudiantes</a></li>
+```
 
+nuevos campos en tabla database/migrations/2014_10_12_000000_create_users_table.php
+```php
+Schema::create('users', function (Blueprint $table) {
+    $table->id();
+
+    $table->string('usertype')->nullable()->comment('Student or Admin or Employee');
+    $table->string('name')->nullable();
+    $table->string('email')->unique()->nullable();
+    $table->timestamp('email_verified_at')->nullable();
+    $table->string('password');
+
+    $table->string('mobile')->nullable();
+    $table->string('address')->nullable();
+    $table->string('gender')->nullable();
+    $table->string('image')->nullable();
+    $table->string('fname')->nullable()->comment('Father Name');
+    $table->string('mname')->nullable()->comment('Mother Name');
+    $table->string('religion')->nullable()->comment('Religion');
+    $table->string('id_no')->nullable()->comment('ID number');
+    $table->date('dob')->nullable()->comment('Date of Birth');
+    $table->string('code')->nullable()->comment('Para generar user password');
+    $table->string('role')->nullable()->comment('admin: head of software, operator: computer operator, user: employee');
+    $table->date('join_date')->nullable();
+    $table->integer('designation_id')->nullable();
+    $table->double('salary')->nullable();
+    $table->boolean('status')->default(1)->comment('0: Inactive, 1: Active');
+
+    $table->rememberToken();
+    $table->foreignId('current_team_id')->nullable();
+    $table->string('profile_photo_path', 2048)->nullable();
+
+    $table->timestamps();
+});
+```
+Listo!
 ## 296. Student Registration Part 2
+
 ## 297. Student Registration Part 3
 ## 298. Student Registration Part 4
 ## 299. Student Registration Part 5

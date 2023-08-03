@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 use App\Http\Controllers\Backend\Setup\DesignationController;
+use App\Http\Controllers\Backend\Student\StudentRegController;
 
 
 Route::get('/', function () {
@@ -145,6 +146,12 @@ Route::prefix('setups')->group(function () {
 
 });
 
+// Admin Estudiantes
+Route::prefix('students')->group(function () {
+
+    Route::get('/registration/view', [StudentRegController::class, 'StudentRegistrationView'])->name('student.registration.view');
+
+});
 
 
 

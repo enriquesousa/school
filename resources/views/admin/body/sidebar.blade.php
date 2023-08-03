@@ -1,7 +1,7 @@
 {{-- Para colorear el menu donde estamos --}}
 @php
-$prefix = Request::route()->getPrefix();
-$route = Request::route()->getName();
+    $prefix = Request::route()->getPrefix();
+    $route = Request::route()->getName();
 @endphp
 {{-- @dd($prefix, $route); --}}
 
@@ -35,11 +35,11 @@ $route = Request::route()->getName();
                 </a>
             </li>
 
-            {{-- Manejar Usuarios --}}
+            {{-- Admin Usuarios --}}
             <li class="treeview {{ ($prefix == 'users') ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-user-o"></i>
-                    <span>Manejar Usuarios</span>
+                    <span>Admin Usuarios</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -50,11 +50,11 @@ $route = Request::route()->getName();
                 </ul>
             </li>
 
-            {{-- Manejar Perfil --}}
+            {{-- Admin Perfil --}}
             <li class="treeview {{ ($prefix == 'profile') ? 'active' : '' }}">
                 <a href="#">
                     {{-- <i data-feather="mail"></i> --}}
-                    <i class="fa fa-vcard-o" aria-hidden="true"></i><span>Manejar Perfil</span>
+                    <i class="fa fa-vcard-o" aria-hidden="true"></i><span>Admin Perfil</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
@@ -87,6 +87,20 @@ $route = Request::route()->getName();
                     <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Materias</a></li>
                     <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Asignar Materias</a></li>
                     <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designación</a></li>
+                </ul>
+            </li>
+
+            {{-- Admin Estudiantes --}}
+            <li class="treeview {{ ($prefix == 'students') ? 'active' : '' }}">
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i><span>Admin Estudiantes</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Registro de Estudiantes</a></li>
+
                 </ul>
             </li>
 
