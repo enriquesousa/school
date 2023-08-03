@@ -639,7 +639,21 @@ Listo!
 
 # S33 - Manage Designation
 ## 293. Working Designation Part 1
+Crear nueva tabla 'designations' con su controlador y modelo
 
+Controlador: DesignationController
+Modelo: Designation
+
+Crear Vistas:
+- resources/views/backend/setup/designation/view_designation.blade.php
+- resources/views/backend/setup/designation/add_designation.blade.php
+
+Métodos Creados en app/Http/Controllers/Backend/Setup/DesignationController.php:
+- DesignationView
+- DesignationAdd
+- DesignationStore
+
+Listo!
 ## 294. Working Designation Part 2
 
 # S34 - Student Registration Management

@@ -14,6 +14,8 @@ use App\Http\Controllers\Backend\Setup\FeeAmountController;
 use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
+use App\Http\Controllers\Backend\Setup\DesignationController;
+
 
 Route::get('/', function () {
     return view('auth.login');
@@ -132,6 +134,14 @@ Route::prefix('setups')->group(function () {
     Route::get('/assign/subject/edit/{class_id}', [AssignSubjectController::class, 'EditAssignSubject'])->name('assign.subject.edit');
     Route::post('/update/assign/subject/{class_id}', [AssignSubjectController::class, 'UpdateAssignSubject'])->name('update.assign.subject');
     Route::get('/assign/subject/details/{class_id}', [AssignSubjectController::class, 'DetailsAssignSubject'])->name('assign.subject.details');
+
+    // Designation - Designación - CRUD
+    Route::get('/designation/view', [DesignationController::class, 'DesignationView'])->name('designation.view');
+    Route::get('/designation/add', [DesignationController::class, 'DesignationAdd'])->name('designation.add');
+    Route::post('/store/designation', [DesignationController::class, 'DesignationStore'])->name('designation.store');
+    // Route::get('/school/subject/edit/{id}', [SchoolSubjectController::class, 'SchoolSubjectEdit'])->name('school.subject.edit');
+    // Route::post('/update/school/subject/{id}', [SchoolSubjectController::class, 'UpdateSchoolSubject'])->name('update.school.subject');
+    // Route::get('/delete/school/subject/{id}', [SchoolSubjectController::class, 'DeleteSchoolSubject'])->name('school.subject.delete');
 
 });
 

@@ -86,6 +86,7 @@ $route = Request::route()->getName();
                     <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Tipo de Examen</a></li>
                     <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Materias</a></li>
                     <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Asignar Materias</a></li>
+                    <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designación</a></li>
                 </ul>
             </li>
 

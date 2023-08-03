@@ -15,11 +15,10 @@
                     <div class="box">
                         <div class="box-header with-border">
 
-                            <h3 class="box-title">Lista - Materias o Asignaturas</h3>
+                            <h3 class="box-title">Lista - Designaciones</h3>
 
-                            {{-- botón agregar usuario --}}
-                            <a href="{{ route('school.subject.add') }}" class="btn btn-rounded btn-success mb-5"
-                                style="float: right;">Agregar Materia o Asignatura</a>
+                            {{-- botón agregar designación --}}
+                            <a href="{{ route('designation.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Designación</a>
 
                         </div>
                         <!-- /.box-header -->
