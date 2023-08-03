@@ -146,10 +146,11 @@ Route::prefix('setups')->group(function () {
 
 });
 
-// Admin Estudiantes
+// Admin Registro de Estudiantes
 Route::prefix('students')->group(function () {
 
     Route::get('/registration/view', [StudentRegController::class, 'StudentRegistrationView'])->name('student.registration.view');
+    Route::get('/registration/add', [StudentRegController::class, 'StudentRegistrationAdd'])->name('student.registration.add');
 
 });
 
