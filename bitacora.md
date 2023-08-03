@@ -655,9 +655,12 @@ Métodos Creados en app/Http/Controllers/Backend/Setup/DesignationController.php
 
 Listo!
 ## 294. Working Designation Part 2
+Edit, Update y Delete
+Listo!
 
 # S34 - Student Registration Management
 ## 295. Student Registration Part 1
+
 ## 296. Student Registration Part 2
 ## 297. Student Registration Part 3
 ## 298. Student Registration Part 4

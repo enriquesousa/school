@@ -37,5 +37,43 @@ class DesignationController extends Controller
         return redirect()->route('designation.view')->with($notification);
     }
 
+    // DesignationEdit
+    public function DesignationEdit($id){
+        $editData = Designation::find($id);
+        return view('backend.setup.designation.edit_designation', compact('editData'));
+    }
+
+    // DesignationUpdate
+    public function DesignationUpdate(Request $request, $id){
+        $data = Designation::find($id);
+
+        $validateData = $request->validate([
+            'name' => 'required|unique:designations,name,' . $data->id,
+        ]);
+
+        $data->name = $request->name;
+        $data->save();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Designación Actualizada con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('designation.view')->with($notification);
+    }
+
+    // DesignationDelete
+    public function DesignationDelete($id){
+        $data = Designation::find($id);
+        $data->delete();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Designación Eliminada con éxito!',
+            'alert-type' => 'info'
+        );
+        return redirect()->back()->with($notification);
+    }
+
 
 }
