@@ -1,6 +1,8 @@
 @extends('admin.admin_master')
 @section('admin')
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <div class="container-full">
@@ -22,7 +24,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('store.student.year') }}">
+                            <form method="post" action="{{ route('store.student.registration') }}" enctype="multipart/form-data">
                             @csrf
 
                                 <div class="row">
@@ -147,18 +149,18 @@
 
                                         </div>
 
-                                         {{-- Row 4 - Año, Clase, Grupo --}}
-                                         <div class="row">
+                                        {{-- Row 4 - Año, Clase, Grupo --}}
+                                        <div class="row">
 
                                             {{-- Año --}}
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <h5>Año&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                        <select name="year_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Año</option>
                                                             @foreach ($years as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -170,10 +172,10 @@
                                                 <div class="form-group">
                                                     <h5>Clase&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                        <select name="class_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Clase</option>
                                                             @foreach ($classes as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -185,12 +187,57 @@
                                                 <div class="form-group">
                                                     <h5>Grupo&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                        <select name="group_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Grupo</option>
                                                             @foreach ($groups as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        {{-- Row 4 - Shift, --}}
+                                        <div class="row">
+
+                                            {{-- Shift --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Turno&nbsp;<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <select name="shift_id" required="" class="form-control">
+                                                            <option value="" selected="" disabled="">Seleccionar Turno</option>
+                                                            @foreach ($shifts as $item)
+                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Escoger Foto --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Foto</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                                                        </div>
+                                                        <input type="file" name="image" id="image" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Desplegar Foto --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <div class="controls">
+                                                        <img id="showImage"
+                                                            src="{{ url('upload/no_image.jpg') }}"
+                                                            alt=""
+                                                            style="width:100px; height:100px; border: 1px solid #000000;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -221,4 +268,20 @@
     </div>
 </div>
 <!-- /.content-wrapper -->
+
+
+{{-- Funcionalidad con la imagen --}}
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('#image').change(function(e){
+        var reader = new FileReader();
+        reader.onload = function(e){
+            $('#showImage').attr('src',e.target.result);
+        }
+        reader.readAsDataURL(e.target.files['0']);
+    });
+});
+</script>
+
+
 @endsection

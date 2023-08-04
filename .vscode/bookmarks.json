@@ -104,27 +104,27 @@
 			"path": "resources/views/backend/user/edit_profile.blade.php",
 			"bookmarks": [
 				{
-					"line": 28,
+					"line": 29,
 					"column": 101,
 					"label": "enctype=\"multipart/form-data\" en form para poder mandar por post la imagen"
 				},
 				{
-					"line": 86,
+					"line": 90,
 					"column": 32,
 					"label": "Telefono celular phone"
 				},
 				{
-					"line": 119,
+					"line": 127,
 					"column": 32,
 					"label": "Select Gender"
 				},
 				{
-					"line": 207,
+					"line": 222,
 					"column": 26,
 					"label": "Format phone number con JS"
 				},
 				{
-					"line": 215,
+					"line": 230,
 					"column": 34,
 					"label": "Funcionalidad con la imagen JS en vista"
 				}

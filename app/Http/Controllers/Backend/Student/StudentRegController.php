@@ -33,5 +33,10 @@ class StudentRegController extends Controller
         return view('backend.student.student_registration.student_add', $data);
     }
 
+    // StudentRegistrationStore
+    public function StudentRegistrationStore(Request $request){
+
+    }
+
 
 }
