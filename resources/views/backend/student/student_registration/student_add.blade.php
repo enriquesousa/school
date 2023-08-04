@@ -160,7 +160,7 @@
                                                         <select name="year_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Año</option>
                                                             @foreach ($years as $item)
-                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -175,7 +175,7 @@
                                                         <select name="class_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Clase</option>
                                                             @foreach ($classes as $item)
-                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -190,7 +190,7 @@
                                                         <select name="group_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Grupo</option>
                                                             @foreach ($groups as $item)
-                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -199,7 +199,7 @@
 
                                         </div>
 
-                                        {{-- Row 4 - Shift, --}}
+                                        {{-- Row 4 - Shift, Foto File, Display Foto --}}
                                         <div class="row">
 
                                             {{-- Shift --}}

@@ -40,6 +40,8 @@ class StudentRegController extends Controller
         DB::transaction(function () use ($request) {
 
             $checkYear = StudentYear::find($request->year_id)->name;
+
+            // Tomar el ultimo estudiante registrado!
             $student = User::where('usertype', 'Student')->orderBy('id', 'DESC')->first();
 
             // Para generar el ID 'id_no' del Estudiante queda del tipo: ano+1, ejemplo: 20190001
