@@ -740,7 +740,9 @@ Listo!
 ## 300. Student Registration Part 6
 Listo!
 ## 301. Student Registration Part 7
+Listo!
 ## 302. Student Registration Part 8
+
 ## 303. Student Registration Part 9
 ## 304. Student Registration Part 10
 ## 305. Student Registration Part 11
