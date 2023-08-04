@@ -74,10 +74,9 @@
                     {{-- Renglón 2 - Celular y Dirección --}}
                     <div class="row">
 
-                      {{-- Primer Columna --}}
+                      {{-- Celular --}}
                       <div class="col-md-6">
 
-                        <!-- Celular -->
                         <div class="form-group">
                           <label>Celular</label>
                           <div class="input-group">
@@ -91,10 +90,9 @@
 
                       </div>
 
-                      {{-- Segunda Columna --}}
+                      {{-- Dirección --}}
                       <div class="col-md-6">
 
-                        <!-- Dirección -->
                         <div class="form-group">
                           <label>Dirección</label>
                           <div class="input-group">

@@ -28,15 +28,173 @@
                                 <div class="row">
                                     <div class="col-12">
 
-                                        {{-- Nombre --}}
-                                        <div class="form-group">
-                                            <h5>Nombre <span class="text-danger">*</span></h5>
-                                            <div class="controls">
-                                                <input type="text" name="name" class="form-control" autofocus>
-                                                @error('name')
-                                                    <span class="text-danger">{{ $message }}</span>
-                                                @enderror
+                                        {{-- Row 1 - Nombre Estudiante, Padre y Madre --}}
+                                        <div class="row">
+
+                                            {{-- Nombre Estudiante --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Nombre Estudiante<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <input type="text" name="name" class="form-control" required autofocus>
+                                                    </div>
+                                                </div>
                                             </div>
+
+                                            {{-- Nombre del Padre --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Nombre del Padre<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <input type="text" name="fname" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Nombre de la Madre --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Nombre de la Madre<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <input type="text" name="mname" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        {{-- Row 2 - Celular, Dirección y Sexo--}}
+                                        <div class="row">
+
+                                            {{-- Teléfono Celular --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Celular</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                                                        <input type="text" name="mobile" class="form-control" data-inputmask="'mask':[ '(999) 999-9999']"
+                                                            data-mask="">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Dirección --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Dirección</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+                                                        <input type="text" name="address" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Sexo --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Sexo&nbsp;<i class="fa fa-fw fa-venus-mars"></i>&nbsp;<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <select name="gender" id="gender" required="" class="form-control">
+                                                            <option value="" selected="" disabled="">Seleccionar Sexo</option>
+                                                            <option value="Male">Masculino</option>
+                                                            <option value="Female">Femenino</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        {{-- Row 3 - Religion, Cumpleaños, Descuento --}}
+                                        <div class="row">
+
+                                            {{-- Religion --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Religion&nbsp;<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                            <option value="" selected="" disabled="">Seleccionar Religion</option>
+                                                            <option value="catolico">Cristianismo católico</option>
+                                                            <option value="cristiamo">Cristianismo evangélico, pentecostal y protestante</option>
+                                                            <option value="ateo">Ateísmo</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Cumpleaños --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Cumpleaños</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><i class="fa fa-birthday-cake" aria-hidden="true"></i></div>
+                                                        <input class="form-control" type="date" name="dob">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Descuento --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Descuento</label>
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></div>
+                                                        <input class="form-control" type="text" name="discount">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                         {{-- Row 4 - Año, Clase, Grupo --}}
+                                         <div class="row">
+
+                                            {{-- Año --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Año&nbsp;<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                            <option value="" selected="" disabled="">Seleccionar Año</option>
+                                                            @foreach ($years as $item)
+                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Clase --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Clase&nbsp;<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                            <option value="" selected="" disabled="">Seleccionar Clase</option>
+                                                            @foreach ($classes as $item)
+                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{-- Grupo --}}
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Grupo&nbsp;<span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                            <option value="" selected="" disabled="">Seleccionar Grupo</option>
+                                                            @foreach ($groups as $item)
+                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                     </div>

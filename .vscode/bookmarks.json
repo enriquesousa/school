@@ -9,7 +9,7 @@
 					"label": "Para colorear el menu donde estamos en sidebar de admin"
 				},
 				{
-					"line": 41,
+					"line": 40,
 					"column": 48,
 					"label": "font awesome icon"
 				}
@@ -44,7 +44,7 @@
 			"path": "resources/views/backend/user/view_user.blade.php",
 			"bookmarks": [
 				{
-					"line": 53,
+					"line": 51,
 					"column": 34,
 					"label": "sweetalert2 con el id=\"delete\" en el admin_master.blade podemos tener el codigo de JS de sweetalert2"
 				}
@@ -54,7 +54,7 @@
 			"path": "resources/views/backend/user/edit_user.blade.php",
 			"bookmarks": [
 				{
-					"line": 31,
+					"line": 23,
 					"column": 16,
 					"label": "user edit form"
 				}
@@ -109,17 +109,22 @@
 					"label": "enctype=\"multipart/form-data\" en form para poder mandar por post la imagen"
 				},
 				{
-					"line": 155,
-					"column": 49,
-					"label": "fecha y Hora Format en ediit_profile"
+					"line": 86,
+					"column": 32,
+					"label": "Telefono celular phone"
 				},
 				{
-					"line": 209,
+					"line": 119,
+					"column": 32,
+					"label": "Select Gender"
+				},
+				{
+					"line": 207,
 					"column": 26,
 					"label": "Format phone number con JS"
 				},
 				{
-					"line": 217,
+					"line": 215,
 					"column": 34,
 					"label": "Funcionalidad con la imagen JS en vista"
 				}
@@ -132,36 +137,6 @@
 					"line": 33,
 					"column": 0,
 					"label": "input mask año 4 digitos en add_year.blade.php"
-				}
-			]
-		},
-		{
-			"path": "resources/views/backend/user/add_user.blade.php",
-			"bookmarks": [
-				{
-					"line": 33,
-					"column": 24,
-					"label": "Basic Select Rol de Usuario"
-				}
-			]
-		},
-		{
-			"path": "resources/views/backend/setup/fee_amount/add_fee_amount.blade.php",
-			"bookmarks": [
-				{
-					"line": 191,
-					"column": 69,
-					"label": "JS para desplegar mas renglones div con el botón vender de +Plus"
-				}
-			]
-		},
-		{
-			"path": "app/Http/Controllers/Backend/UserController.php",
-			"bookmarks": [
-				{
-					"line": 73,
-					"column": 27,
-					"label": "Validation Rule ignore this id"
 				}
 			]
 		}
