@@ -92,6 +92,7 @@ class StudentRegController extends Controller
             }
             $user->save();
 
+
             $assign_student = new AssignStudent();
             $assign_student->student_id = $user->id;
             $assign_student->year_id = $request->year_id;
@@ -99,6 +100,7 @@ class StudentRegController extends Controller
             $assign_student->group_id = $request->group_id;
             $assign_student->shift_id = $request->shift_id;
             $assign_student->save();
+
 
             $discount_student = new DiscountStudent();
             $discount_student->assign_student_id = $assign_student->id;
@@ -110,7 +112,7 @@ class StudentRegController extends Controller
 
 
         $notification = array(
-            'message' => 'Student Registration Inserted Successfully',
+            'message' => 'Estudiante Registrado con éxito',
             'alert-type' => 'success'
         );
 
