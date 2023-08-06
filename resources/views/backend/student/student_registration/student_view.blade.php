@@ -32,7 +32,7 @@
                                                 <select name="year_id" required="" class="form-control">
                                                     <option value="" selected="" disabled="">Seleccionar Año</option>
                                                     @foreach ($years as $item)
-                                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                        <option value="{{ $item->id }}" {{ (@$year_id == $item->id) ? 'selected' : '' }}>{{ $item->name }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -47,7 +47,7 @@
                                                 <select name="class_id" required="" class="form-control">
                                                     <option value="" selected="" disabled="">Seleccionar Clase</option>
                                                     @foreach ($classes as $item)
-                                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                        <option value="{{ $item->id }}" {{ (@$class_id == $item->id) ? 'selected' : '' }}>{{ $item->name }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -89,6 +89,15 @@
                                             <th width="5%">Serie</th>
                                             <th>Nombre</th>
                                             <th>ID</th>
+                                            <th>Rol</th>
+                                            <th>Año</th>
+                                            <th>Clase</th>
+                                            <th>Imagen</th>
+
+                                            @if (Auth::user()->role == 'Admin')
+                                                <th>Código</th>
+                                            @endif
+
                                             <th width="25%">Acción</th>
                                         </tr>
                                     </thead>
@@ -97,8 +106,20 @@
                                         @foreach ($allData as $key => $item)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $item->class_id }}</td>
-                                            <td>{{ $item->year_id }}</td>
+
+                                            <td>{{ $item->student->name }}</td>
+                                            <td>{{ $item->student->id_no }}</td>
+                                            <td>{{ $item->roll }}</td>
+                                            <td>{{ $item->student_year->name }}</td>
+                                            <td>{{ $item->student_class->name }}</td>
+                                            <td>
+                                                <img id="showImage"
+                                                    src="{{ (!empty($item->student->image)) ? url('upload/student_images/'.$item->student->image) : url('upload/no_image.jpg') }}"
+                                                    alt=""
+                                                    style="width:70px; height:70px; border: 1px solid #000000;">
+                                            </td>
+                                            <td>{{ $item->student->code }}</td>
+
                                             <td>
 
                                                 {{-- Botón Editar --}}

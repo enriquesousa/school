@@ -119,6 +119,11 @@
 					"label": "Select Gender"
 				},
 				{
+					"line": 156,
+					"column": 74,
+					"label": "desplegar imagen con dimensiones"
+				},
+				{
 					"line": 222,
 					"column": 26,
 					"label": "Format phone number con JS"
@@ -143,6 +148,11 @@
 		{
 			"path": "resources/views/backend/student/student_registration/student_view.blade.php",
 			"bookmarks": [
+				{
+					"line": 34,
+					"column": 93,
+					"label": "selected para tener seleccion por defecto en select, puede o no tener el @"
+				},
 				{
 					"line": 57,
 					"column": 79,
