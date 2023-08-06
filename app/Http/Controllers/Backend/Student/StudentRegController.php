@@ -22,7 +22,12 @@ class StudentRegController extends Controller
 
         $data['years'] = StudentYear::all();
         $data['classes'] = StudentClass::all();
-        $data['allData'] = AssignStudent::all();
+
+        // tomar por defecto la ultima clase y año registrado
+        $data['year_id'] = StudentYear::orderBy('id', 'DESC')->first()->id;
+        $data['class_id'] = StudentYear::orderBy('id', 'DESC')->first()->id;
+
+        $data['allData'] = AssignStudent::where('year_id', $data['year_id'])->where('class_id', $data['class_id'])->get();
 
         return view('backend.student.student_registration.student_view',$data);
     }
