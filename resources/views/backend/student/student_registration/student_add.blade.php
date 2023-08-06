@@ -138,13 +138,16 @@
 
                                             {{-- Descuento --}}
                                             <div class="col-md-4">
+
                                                 <div class="form-group">
                                                     <label>Descuento</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></div>
-                                                        <input class="form-control" type="text" name="discount">
+                                                        <input class="form-control" type="number" name="discount">
+                                                        <span class="input-group-addon">%</span>
                                                     </div>
                                                 </div>
+
                                             </div>
 
                                         </div>

@@ -9,6 +9,62 @@
         <section class="content">
             <div class="row">
 
+                {{-- Color Card - Estudiante - Forma para la Búsqueda --}}
+                <div class="box bb-3 border-warning">
+                    <div class="box-header">
+                        <h4 class="box-title">Estudiantes <strong>Buscar</strong></h4>
+                    </div>
+
+                    <div class="box-body">
+
+                        <form method="" action="">
+
+                            {{-- Row 1 --}}
+                            <div class="row">
+
+                                {{-- Select Año --}}
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <h5>Año&nbsp;<span class="text-danger"></span></h5>
+                                        <div class="controls">
+                                            <select name="year_id" required="" class="form-control">
+                                                <option value="" selected="" disabled="">Seleccionar Año</option>
+                                                @foreach ($years as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- Select Clase --}}
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <h5>Clase&nbsp;<span class="text-danger"></span></h5>
+                                        <div class="controls">
+                                            <select name="class_id" required="" class="form-control">
+                                                <option value="" selected="" disabled="">Seleccionar Clase</option>
+                                                @foreach ($classes as $item)
+                                                    <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- Search Box --}}
+                                <div class="col-md-4" style="padding-top: 20px">
+                                    <input class="btn btn-rounded btn-dark mb-5" type="submit" name="search" value="Buscar">
+                                </div>
+
+                            </div>
+
+                        </form>
+
+
+                    </div>
+                </div>
+
                 <div class="col-12">
 
                     {{-- Lista de Usuarios --}}
@@ -68,7 +124,6 @@
                     <!-- /.box -->
 
                 </div>
-
 
             </div>
             <!-- /.row -->

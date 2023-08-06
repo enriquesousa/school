@@ -139,6 +139,16 @@
 					"label": "input mask año 4 digitos en add_year.blade.php"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/student/student_registration/student_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 55,
+					"column": 79,
+					"label": "style=\"padding-top: 20px\" para acomodar mejor el boton"
+				}
+			]
 		}
 	]
 }
