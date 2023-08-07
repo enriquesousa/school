@@ -159,6 +159,16 @@
 					"label": "style=\"padding-top: 20px\" para acomodar mejor el boton"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/Student/StudentRegController.php",
+			"bookmarks": [
+				{
+					"line": 152,
+					"column": 44,
+					"label": "Para incluir data de las relacion usar with()"
+				}
+			]
 		}
 	]
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\DiscountStudent;
 use App\Models\StudentClass;
 use App\Models\StudentYear;
 use App\Models\User;
@@ -25,6 +26,11 @@ class AssignStudent extends Model
     // relación con el 'id' de la tabla 'student_years'
     public function student_year() {
         return $this->belongsTo(StudentYear::class, 'year_id', 'id');
+    }
+
+    // relación con el 'assign_student_id' de la tabla 'discount_students'
+    public function discount() {
+        return $this->belongsTo(DiscountStudent::class, 'id', 'assign_student_id');
     }
 
 }

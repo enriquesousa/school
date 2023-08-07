@@ -125,8 +125,7 @@
                                                 <td>
 
                                                     {{-- Botón Editar --}}
-                                                    {{-- <a href="{{ route('student.year.edit', $item->id) }}" class="btn btn-info">Editar</a> --}}
-                                                    <a href="" class="btn btn-info">Editar</a>
+                                                    <a href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info">Editar</a>
 
                                                     {{-- Botón Eliminar --}}
                                                     {{-- <a href="{{ route('student.year.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
@@ -185,8 +184,7 @@
                                                 <td>
 
                                                     {{-- Botón Editar --}}
-                                                    {{-- <a href="{{ route('student.year.edit', $item->id) }}" class="btn btn-info">Editar</a> --}}
-                                                    <a href="" class="btn btn-info">Editar</a>
+                                                    <a href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info">Editar</a>
 
                                                     {{-- Botón Eliminar --}}
                                                     {{-- <a href="{{ route('student.year.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
