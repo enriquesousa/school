@@ -752,8 +752,9 @@ Listo!
 ## 306. Student Registration Part 12
 Listo!
 ## 307. Student Registration Part 13
-
+Listo!
 ## 308. Student Registration Edit Part 1
+
 ## 309. Student Registration Edit Part 2
 ## 310. Student Registration Edit Part 3
 ## 311. Student Promotion Option

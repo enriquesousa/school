@@ -19,7 +19,7 @@
 
                         <div class="box-body">
 
-                            <form method="" action="">
+                            <form method="GET" action="{{ route('student.year.class.wise') }}">
 
                                 {{-- Row 1 --}}
                                 <div class="row">
@@ -56,13 +56,12 @@
 
                                     {{-- Search Box --}}
                                     <div class="col-md-4" style="padding-top: 20px">
-                                        <input class="btn btn-rounded btn-dark mb-5" type="submit" name="search" value="Buscar">
+                                        <input type="submit" class="btn btn-rounded btn-dark mb-5" name="buscar" value="Buscar">
                                     </div>
 
                                 </div>
 
                             </form>
-
 
                         </div>
                     </div>
@@ -83,64 +82,129 @@
                         <!-- /.box-header - table-responsive -->
                         <div class="box-body">
                             <div class="table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th width="5%">Serie</th>
-                                            <th>Nombre</th>
-                                            <th>ID</th>
-                                            <th>Rol</th>
-                                            <th>Año</th>
-                                            <th>Clase</th>
-                                            <th>Imagen</th>
 
-                                            @if (Auth::user()->role == 'Admin')
-                                                <th>Código</th>
-                                            @endif
+                                @if (empty($buscar))
+                                    {{-- Tabla de Estudiantes por año y clase,tomar por defecto la ultima clase y año registrado  --}}
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="5%">Serie</th>
+                                                <th>Nombre</th>
+                                                <th>ID</th>
+                                                <th>Rol</th>
+                                                <th>Año</th>
+                                                <th>Clase</th>
+                                                <th>Imagen</th>
 
-                                            <th width="25%">Acción</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
+                                                @if (Auth::user()->role == 'Admin')
+                                                    <th>Código</th>
+                                                @endif
 
-                                        @foreach ($allData as $key => $item)
-                                        <tr>
-                                            <td>{{ $key + 1 }}</td>
+                                                <th width="25%">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
-                                            <td>{{ $item->student->name }}</td>
-                                            <td>{{ $item->student->id_no }}</td>
-                                            <td>{{ $item->roll }}</td>
-                                            <td>{{ $item->student_year->name }}</td>
-                                            <td>{{ $item->student_class->name }}</td>
-                                            <td>
-                                                <img id="showImage"
-                                                    src="{{ (!empty($item->student->image)) ? url('upload/student_images/'.$item->student->image) : url('upload/no_image.jpg') }}"
-                                                    alt=""
-                                                    style="width:70px; height:70px; border: 1px solid #000000;">
-                                            </td>
-                                            <td>{{ $item->student->code }}</td>
+                                            @foreach ($allData as $key => $item)
+                                            <tr>
+                                                <td>{{ $key + 1 }}</td>
 
-                                            <td>
+                                                <td>{{ $item->student->name }}</td>
+                                                <td>{{ $item->student->id_no }}</td>
+                                                <td>{{ $item->roll }}</td>
+                                                <td>{{ $item->student_year->name }}</td>
+                                                <td>{{ $item->student_class->name }}</td>
+                                                <td>
+                                                    <img id="showImage"
+                                                        src="{{ (!empty($item->student->image)) ? url('upload/student_images/'.$item->student->image) : url('upload/no_image.jpg') }}"
+                                                        alt=""
+                                                        style="width:70px; height:70px; border: 1px solid #000000;">
+                                                </td>
+                                                <td>{{ $item->student->code }}</td>
 
-                                                {{-- Botón Editar --}}
-                                                {{-- <a href="{{ route('student.year.edit', $item->id) }}" class="btn btn-info">Editar</a> --}}
-                                                <a href="" class="btn btn-info">Editar</a>
+                                                <td>
 
-                                                {{-- Botón Eliminar --}}
-                                                {{-- <a href="{{ route('student.year.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
-                                                <a href="" class="btn btn-danger" id="delete">Eliminar</a>
+                                                    {{-- Botón Editar --}}
+                                                    {{-- <a href="{{ route('student.year.edit', $item->id) }}" class="btn btn-info">Editar</a> --}}
+                                                    <a href="" class="btn btn-info">Editar</a>
 
-                                            </td>
-                                        </tr>
-                                        @endforeach
+                                                    {{-- Botón Eliminar --}}
+                                                    {{-- <a href="{{ route('student.year.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
+                                                    <a href="" class="btn btn-danger" id="delete">Eliminar</a>
 
-                                    </tbody>
+                                                </td>
+                                            </tr>
+                                            @endforeach
 
-                                    <tfoot>
+                                        </tbody>
 
-                                    </tfoot>
+                                        <tfoot>
 
-                                </table>
+                                        </tfoot>
+
+                                    </table>
+                                @else
+                                    {{-- Tabla de Estudiantes por año y clase, según parámetros de búsqueda --}}
+                                    <table id="example1" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th width="5%">Serie</th>
+                                                <th>Nombre</th>
+                                                <th>ID</th>
+                                                <th>Rol</th>
+                                                <th>Año</th>
+                                                <th>Clase</th>
+                                                <th>Imagen</th>
+
+                                                @if (Auth::user()->role == 'Admin')
+                                                    <th>Código</th>
+                                                @endif
+
+                                                <th width="25%">Acción</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach ($allData as $key => $item)
+                                            <tr>
+                                                <td>{{ $key + 1 }}</td>
+
+                                                <td>{{ $item->student->name }}</td>
+                                                <td>{{ $item->student->id_no }}</td>
+                                                <td>{{ $item->roll }}</td>
+                                                <td>{{ $item->student_year->name }}</td>
+                                                <td>{{ $item->student_class->name }}</td>
+                                                <td>
+                                                    <img id="showImage"
+                                                        src="{{ (!empty($item->student->image)) ? url('upload/student_images/'.$item->student->image) : url('upload/no_image.jpg') }}"
+                                                        alt=""
+                                                        style="width:70px; height:70px; border: 1px solid #000000;">
+                                                </td>
+                                                <td>{{ $item->student->code }}</td>
+
+                                                <td>
+
+                                                    {{-- Botón Editar --}}
+                                                    {{-- <a href="{{ route('student.year.edit', $item->id) }}" class="btn btn-info">Editar</a> --}}
+                                                    <a href="" class="btn btn-info">Editar</a>
+
+                                                    {{-- Botón Eliminar --}}
+                                                    {{-- <a href="{{ route('student.year.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
+                                                    <a href="" class="btn btn-danger" id="delete">Eliminar</a>
+
+                                                </td>
+                                            </tr>
+                                            @endforeach
+
+                                        </tbody>
+
+                                        <tfoot>
+
+                                        </tfoot>
+
+                                    </table>
+                                @endif
+
                             </div>
                         </div>
                         <!-- /.box-body -->

@@ -128,5 +128,19 @@ class StudentRegController extends Controller
         return redirect()->route('student.registration.view')->with($notification);
     }
 
+    // StudentSearchYearClassWise
+    public function StudentSearchYearClassWise(Request $request){
+        $data['years'] = StudentYear::all();
+        $data['classes'] = StudentClass::all();
+
+        // tomar los datos de búsqueda
+        $data['year_id'] = $request->year_id;
+        $data['class_id'] = $request->class_id;
+
+        $data['allData'] = AssignStudent::where('year_id', $request->year_id)->where('class_id', $request->class_id)->get();
+
+        return view('backend.student.student_registration.student_view',$data);
+    }
+
 
 }
