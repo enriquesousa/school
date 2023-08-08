@@ -169,12 +169,12 @@
 			"path": "app/Http/Controllers/Backend/Student/StudentRegController.php",
 			"bookmarks": [
 				{
-					"line": 152,
+					"line": 153,
 					"column": 44,
 					"label": "Para incluir data de las relacion usar with()"
 				},
 				{
-					"line": 176,
+					"line": 177,
 					"column": 66,
 					"label": "unlink image en student update"
 				}

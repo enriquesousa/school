@@ -127,10 +127,13 @@
                                                 <td>
 
                                                     {{-- Botón Editar --}}
-                                                    <a href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info">Editar</a>
+                                                    <a title="Editar" href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
 
                                                     {{-- Botón Promover --}}
-                                                    <a href="{{ route('student.registration.promotion', $item->student->id) }}" class="btn btn-danger">Promover</a>
+                                                    <a title="Promover" href="{{ route('student.registration.promotion', $item->student->id) }}" class="btn btn-primary"><i class="fa fa-check"></i></a>
+
+                                                    {{-- Botón Detalles --}}
+                                                    <a target="_blank" title="Detalles" href="{{ route('student.registration.details', $item->student->id) }}" class="btn btn-danger"><i class="fa fa-eye"></i></a>
 
                                                 </td>
                                             </tr>
@@ -185,10 +188,13 @@
                                                 <td>
 
                                                     {{-- Botón Editar --}}
-                                                    <a href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info">Editar</a>
+                                                    <a title="Editar" href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
 
                                                     {{-- Botón Promover --}}
-                                                    <a href="{{ route('student.registration.promotion', $item->student->id) }}" class="btn btn-danger">Promover</a>
+                                                    <a title="Promover" href="{{ route('student.registration.promotion', $item->student->id) }}" class="btn btn-primary"><i class="fa fa-check"></i></a>
+
+                                                    {{-- Botón Detalles --}}
+                                                    <a target="_blank" title="Detalles" href="{{ route('student.registration.details', $item->student->id) }}" class="btn btn-danger"><i class="fa fa-eye"></i></a>
 
                                                 </td>
                                             </tr>

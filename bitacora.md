@@ -767,8 +767,37 @@ Listo!
 
 # S35 - Student PDF Generate
 ## 312. Student PDF Generate Part 1
+Instalar niklas laravel pdf
+https://github.com/niklasravnsborg/laravel-pdf
+```php
+composer require niklasravnsborg/laravel-pdf
+```
+To start using Laravel, add the Service Provider and the Facade to your config/app.php:
+```php
+'providers' => [
+	// ...
+	niklasravnsborg\LaravelPdf\PdfServiceProvider::class
+]
 
+'aliases' => [
+	// ...
+	'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class
+]
+```
+Para probar que todos los archivos se hayan instalado correctamente:
+```php
+composer dump-autoload
+```
+Luego limpiar caché:
+```php
+php artisan config:cache
+php artisan cache:clear
+php artisan view:clear
+```
+Listo! 
 ## 313. Student PDF Generate Part 2
+
+
 
 # S36 - Student PDF Generate
 ## 314. Student Roll Generate Part 1
