@@ -155,6 +155,8 @@ Route::prefix('students')->group(function () {
     Route::get('/year/class/wise', [StudentRegController::class, 'StudentSearchYearClassWise'])->name('student.year.class.wise');
     Route::get('/registration/edit/{student_id}', [StudentRegController::class, 'StudentRegistrationEdit'])->name('student.registration.edit');
     Route::post('/update/registration/{student_id}', [StudentRegController::class, 'StudentRegistrationUpdate'])->name('update.student.registration');
+    Route::get('/registration/promotion/{student_id}', [StudentRegController::class, 'StudentRegistrationPromotion'])->name('student.registration.promotion');
+    Route::post('/promotion/registration/update/{student_id}', [StudentRegController::class, 'StudentRegistrationPromotionUpdate'])->name('promotion.student.registration.update');
 
 });
 

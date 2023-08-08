@@ -83,7 +83,9 @@
                         <div class="box-body">
                             <div class="table-responsive">
 
+                                {{-- Tabla de Estudiantes por año y clase,tomar por defecto la ultima clase y año registrado  --}}
                                 @if (empty($buscar))
+
                                     {{-- Tabla de Estudiantes por año y clase,tomar por defecto la ultima clase y año registrado  --}}
                                     <table id="example1" class="table table-bordered table-striped">
                                         <thead>
@@ -127,9 +129,8 @@
                                                     {{-- Botón Editar --}}
                                                     <a href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info">Editar</a>
 
-                                                    {{-- Botón Eliminar --}}
-                                                    {{-- <a href="{{ route('student.year.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
-                                                    <a href="" class="btn btn-danger" id="delete">Eliminar</a>
+                                                    {{-- Botón Promover --}}
+                                                    <a href="{{ route('student.registration.promotion', $item->student->id) }}" class="btn btn-danger">Promover</a>
 
                                                 </td>
                                             </tr>
@@ -186,9 +187,8 @@
                                                     {{-- Botón Editar --}}
                                                     <a href="{{ route('student.registration.edit', $item->student->id) }}" class="btn btn-info">Editar</a>
 
-                                                    {{-- Botón Eliminar --}}
-                                                    {{-- <a href="{{ route('student.year.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a> --}}
-                                                    <a href="" class="btn btn-danger" id="delete">Eliminar</a>
+                                                    {{-- Botón Promover --}}
+                                                    <a href="{{ route('student.registration.promotion', $item->student->id) }}" class="btn btn-danger">Promover</a>
 
                                                 </td>
                                             </tr>
