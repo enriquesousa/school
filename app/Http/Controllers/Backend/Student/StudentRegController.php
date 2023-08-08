@@ -12,7 +12,7 @@ use App\Models\AssignStudent;
 use App\Models\User;
 use App\Models\DiscountStudent;
 use DB;
-use niklasravnsborg\LaravelPdf\Facades\Pdf;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class StudentRegController extends Controller
@@ -279,9 +279,10 @@ class StudentRegController extends Controller
 
         $data['details'] = AssignStudent::with(['student','discount'])->where('student_id',$student_id)->first();
 
-        $pdf = Pdf::loadView('backend.student.student_registration.student_details_pdf', $data);
-	    $pdf->SetProtection(['copy', 'print'], '', 'pass');
-	    return $pdf->stream('document.pdf');
+        $pdf = PDF::loadView('backend.student.student_registration.student_details_pdf', $data);
+        // return $pdf->download('detalles.pdf');
+        return $pdf->stream('detalles.pdf');
+
     }
 
 

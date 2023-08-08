@@ -42,14 +42,16 @@
                 <h2>
                     <?php $image_path = '/upload/easyschool.png'; ?>
                     <img src="{{ public_path() . $image_path }}" width="200" height="100">
-
                 </h2>
             </td>
             <td>
+
                 <h2>Escuela Fácil EsWeb</h2>
-                <p>Dirección de la escuela</p>
-                <p>Phone : (664) 333-1111</p>
-                <p>Email : soporte@escuelafacil.com</p>
+                <p>
+                    Dirección: CARR TAMPICO-MANTE KM 10.5 S/N, AEROPUERTO INTERNACIONAL, 89339
+                    <br>Teléfono : (664) 333-1111
+                    <br>Correo : soporte@escuelafacil.com
+                </p>
 
             </td>
         </tr>
@@ -62,7 +64,7 @@
     <table id="customers">
         <tr>
             <th width="10%">Serie</th>
-            <th width="45%">Detalles Estudiante</th>
+            <th width="45%">Detalle</th>
             <th width="45%">Datos Estudiante</th>
         </tr>
         <tr>
@@ -148,7 +150,7 @@
 
     </table>
     <br> <br>
-    <i style="font-size: 10px; float: right;">Print Data : {{ date("d M Y") }}</i>
+    <i style="font-size: 10px; float: right;">Fecha: {{ date("d M Y") }}</i>
 
 </body>
 

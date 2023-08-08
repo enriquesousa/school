@@ -33,4 +33,16 @@ class AssignStudent extends Model
         return $this->belongsTo(DiscountStudent::class, 'id', 'assign_student_id');
     }
 
+    // relación con el 'id' de la tabla 'student_groups'
+    public function group()
+    {
+        return $this->belongsTo(StudentGroup::class, 'group_id', 'id');
+    }
+
+    // relación con el 'id' de la tabla 'student_shifts'
+    public function shift()
+    {
+        return $this->belongsTo(StudentShift::class, 'shift_id', 'id');
+    }
+
 }

@@ -796,11 +796,58 @@ php artisan view:clear
 ```
 Listo! 
 ## 313. Student PDF Generate Part 2
+Buscar en google 'html table border style' html para crear PDF:
+https://www.w3schools.com/Css/css_table.asp
 
+niklasravnsborg/laravel-pdf 
+Array and string offset access syntax with curly braces is no longer supported
 
+Desinstalar paquete niklasravnsborg/laravel-pdf 
+```php
+composer remove niklasravnsborg/laravel-pdf
+```
+
+Voy a usar otro paquete:
+Creating PDFs in Laravel 9: A Step-by-Step Guide using DomPDF
+https://towardsdev.com/creating-pdf-files-in-laravel-9-a-step-by-step-guide-using-dompdf-4b7a7095d04b
+
+```php
+composer require barryvdh/laravel-dompdf
+```
+
+Configure DomPDF Package in Laravel
+Once the package is installed, you need to register the service provider in the config/app.php file. 
+You can do this by adding the following line to the providers array:
+```php
+'providers' => [
+    // ...
+    Barryvdh\DomPDF\ServiceProvider::class,
+],
+```
+Next, we’ll add an alias for the package to the aliases array in the same file:
+```php
+'aliases' => [
+    // ...
+    'PDF' => Barryvdh\DomPDF\Facade::class,
+],
+```
+
+En app/Http/Controllers/Backend/Student/StudentRegController.php
+```php
+use Barryvdh\DomPDF\Facade\Pdf;
+...
+public function StudentRegistrationDetails($student_id){
+    $data['details'] = AssignStudent::with(['student','discount'])->where('student_id',$student_id)->first();
+
+    $pdf = PDF::loadView('backend.student.student_registration.student_details_pdf', $data);
+    return $pdf->download('detalles.pdf');
+}
+```
+Listo!
 
 # S36 - Student PDF Generate
 ## 314. Student Roll Generate Part 1
+
 ## 315. Student Roll Generate Part 2
 ## 316. Student Roll Generate Part 3
 ## 317. Student Roll Generate Part 4
