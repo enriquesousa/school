@@ -74,6 +74,11 @@
 					"label": "image unlink imagen anterior y reemplazar por la nueva"
 				},
 				{
+					"line": 52,
+					"column": 8,
+					"label": "unlink image"
+				},
+				{
 					"line": 60,
 					"column": 33,
 					"label": "Desplegar notificación toaster notification"
@@ -167,6 +172,11 @@
 					"line": 152,
 					"column": 44,
 					"label": "Para incluir data de las relacion usar with()"
+				},
+				{
+					"line": 176,
+					"column": 66,
+					"label": "unlink image en student update"
 				}
 			]
 		},
@@ -174,7 +184,7 @@
 			"path": "resources/views/backend/student/student_registration/student_edit.blade.php",
 			"bookmarks": [
 				{
-					"line": 100,
+					"line": 102,
 					"column": 123,
 					"label": "select por defecto en select student_edit"
 				}

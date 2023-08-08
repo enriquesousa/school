@@ -24,8 +24,10 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('store.student.registration') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update.student.registration', $editData->student_id) }}" enctype="multipart/form-data">
                             @csrf
+
+                                <input type="hidden" name="id" value="{{ $editData->id }}">
 
                                 <div class="row">
                                     <div class="col-12">
@@ -251,7 +253,7 @@
                                 </div>
 
                                 <div class="text-xs-right">
-                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Guardar">
+                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Actualizar">
                                 </div>
 
                             </form>

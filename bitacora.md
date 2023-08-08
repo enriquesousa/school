@@ -761,7 +761,7 @@ Edit
 Listo!
 ## 310. Student Registration Edit Part 3
 Update
-
+Listo!
 ## 311. Student Promotion Option
 
 # S35 - Student PDF Generate
