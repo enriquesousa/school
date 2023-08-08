@@ -169,6 +169,16 @@
 					"label": "Para incluir data de las relacion usar with()"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/student/student_registration/student_edit.blade.php",
+			"bookmarks": [
+				{
+					"line": 100,
+					"column": 123,
+					"label": "select por defecto en select student_edit"
+				}
+			]
 		}
 	]
 }

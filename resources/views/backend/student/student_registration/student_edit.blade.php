@@ -38,7 +38,7 @@
                                                 <div class="form-group">
                                                     <h5>Nombre Estudiante<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="name" class="form-control" required autofocus>
+                                                        <input type="text" name="name" class="form-control" value="{{ $editData->student->name }}" required autofocus>
                                                     </div>
                                                 </div>
                                             </div>
@@ -48,7 +48,7 @@
                                                 <div class="form-group">
                                                     <h5>Nombre del Padre<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="fname" class="form-control" required>
+                                                        <input type="text" name="fname" class="form-control" value="{{ $editData->student->fname }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,7 +58,7 @@
                                                 <div class="form-group">
                                                     <h5>Nombre de la Madre<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="mname" class="form-control" required>
+                                                        <input type="text" name="mname" class="form-control" value="{{ $editData->student->mname }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -74,7 +74,7 @@
                                                     <label>Celular</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                                        <input type="text" name="mobile" class="form-control" data-inputmask="'mask':[ '(999) 999-9999']"
+                                                        <input type="text" name="mobile" class="form-control" value="{{ $editData->student->mobile }}" data-inputmask="'mask':[ '(999) 999-9999']"
                                                             data-mask="">
                                                     </div>
                                                 </div>
@@ -86,7 +86,7 @@
                                                     <label>Dirección</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
-                                                        <input type="text" name="address" class="form-control">
+                                                        <input type="text" name="address" class="form-control" value="{{ $editData->student->address }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -98,8 +98,8 @@
                                                     <div class="controls">
                                                         <select name="gender" id="gender" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Sexo</option>
-                                                            <option value="Male">Masculino</option>
-                                                            <option value="Female">Femenino</option>
+                                                            <option value="Male" {{ $editData->student->gender == 'Male' ? 'selected' : '' }}>Masculino</option>
+                                                            <option value="Female" {{ $editData->student->gender == 'Female' ? 'selected' : '' }}>Femenino</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -117,9 +117,9 @@
                                                     <div class="controls">
                                                         <select name="religion" id="religion" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Religion</option>
-                                                            <option value="catolico">Cristianismo católico</option>
-                                                            <option value="cristiamo">Cristianismo evangélico, pentecostal y protestante</option>
-                                                            <option value="ateo">Ateísmo</option>
+                                                            <option value="católico" {{ $editData->student->religion == 'católico' ? 'selected' : '' }}>Cristianismo católico</option>
+                                                            <option value="cristiano" {{ $editData->student->religion == 'cristiano' ? 'selected' : '' }}>Cristianismo evangélico, pentecostal y protestante</option>
+                                                            <option value="ateo" {{ $editData->student->religion == 'ateo' ? 'selected' : '' }}>Ateísmo</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -131,7 +131,7 @@
                                                     <label>Cumpleaños</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-birthday-cake" aria-hidden="true"></i></div>
-                                                        <input class="form-control" type="date" name="dob">
+                                                        <input class="form-control" type="date" name="dob" value="{{ $editData->student->dob }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,7 +143,7 @@
                                                     <label>Descuento</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></div>
-                                                        <input class="form-control" type="number" name="discount">
+                                                        <input class="form-control" type="number" name="discount" value="{{ $editData->discount->discount }}">
                                                         <span class="input-group-addon">%</span>
                                                     </div>
                                                 </div>
@@ -163,7 +163,7 @@
                                                         <select name="year_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Año</option>
                                                             @foreach ($years as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ $editData->year_id == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -178,7 +178,7 @@
                                                         <select name="class_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Clase</option>
                                                             @foreach ($classes as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ $editData->class_id == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -193,7 +193,7 @@
                                                         <select name="group_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Grupo</option>
                                                             @foreach ($groups as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ $editData->group_id == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -202,7 +202,7 @@
 
                                         </div>
 
-                                        {{-- Row 4 - Shift, Foto File, Display Foto --}}
+                                        {{-- Row 4 - Shift(turno), Foto File, Display Foto --}}
                                         <div class="row">
 
                                             {{-- Shift --}}
@@ -213,7 +213,7 @@
                                                         <select name="shift_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Turno</option>
                                                             @foreach ($shifts as $item)
-                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            <option value="{{ $item->id }}" {{ $editData->shift_id == $item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -238,7 +238,7 @@
                                                 <div class="form-group">
                                                     <div class="controls">
                                                         <img id="showImage"
-                                                            src="{{ url('upload/no_image.jpg') }}"
+                                                            src="{{ (!empty($editData->student->image)) ? url('upload/student_images/'.$editData->student->image) : url('upload/no_image.jpg') }}"
                                                             alt=""
                                                             style="width:100px; height:100px; border: 1px solid #000000;">
                                                     </div>

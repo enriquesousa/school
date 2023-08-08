@@ -754,10 +754,14 @@ Listo!
 ## 307. Student Registration Part 13
 Listo!
 ## 308. Student Registration Edit Part 1
+Add
 Listo!
 ## 309. Student Registration Edit Part 2
-
+Edit
+Listo!
 ## 310. Student Registration Edit Part 3
+Update
+
 ## 311. Student Promotion Option
 
 # S35 - Student PDF Generate

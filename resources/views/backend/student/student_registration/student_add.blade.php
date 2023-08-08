@@ -117,8 +117,8 @@
                                                     <div class="controls">
                                                         <select name="religion" id="religion" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Religion</option>
-                                                            <option value="catolico">Cristianismo católico</option>
-                                                            <option value="cristiamo">Cristianismo evangélico, pentecostal y protestante</option>
+                                                            <option value="católico">Cristianismo católico</option>
+                                                            <option value="cristiano">Cristianismo evangélico, pentecostal y protestante</option>
                                                             <option value="ateo">Ateísmo</option>
                                                         </select>
                                                     </div>
