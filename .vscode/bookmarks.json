@@ -219,7 +219,12 @@
 			"path": "resources/views/backend/student/roll_generate/roll_generate_view.blade.php",
 			"bookmarks": [
 				{
-					"line": 107,
+					"line": 89,
+					"column": 79,
+					"label": "botón submit para la forma generada con JS"
+				},
+				{
+					"line": 109,
 					"column": 42,
 					"label": "JS para desplegar el div rol generado java"
 				}

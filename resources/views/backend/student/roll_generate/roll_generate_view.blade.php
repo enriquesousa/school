@@ -22,7 +22,8 @@
 
                         <div class="box-body">
 
-                            <form method="POST"" action="{{ route('student.year.class.wise') }}">
+                            <form method="POST"" action="{{ route('roll.generate.store') }}">
+                            @csrf
 
                                 {{-- Row 1 --}}
                                 <div class="row">
@@ -86,6 +87,7 @@
                                     </div>
                                 </div>
 
+                                {{-- botón submit para la forma generada con JS --}}
                                 <input type="submit" class="btn btn-info" value="Generar Rol">
 
                             </form>
