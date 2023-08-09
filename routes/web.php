@@ -164,6 +164,7 @@ Route::prefix('students')->group(function () {
 
     // Student Role Generate - Generar Rol para Estudiante
     Route::get('/roll/generate/view', [StudentRollController::class, 'StudentRollView'])->name('roll.generate.view');
+    Route::get('/reg/getstudents', [StudentRollController::class, 'GetStudents'])->name('student.registration.getstudents');
 
 
 });

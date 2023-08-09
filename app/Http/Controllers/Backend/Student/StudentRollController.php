@@ -25,6 +25,10 @@ class StudentRollController extends Controller
         $data['classes'] = StudentClass::all();
 
         return view('backend.student.roll_generate.roll_generate_view',$data);
+    }
+
+    // GetStudents
+    public function GetStudents(){
 
     }
 
