@@ -103,6 +103,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Registro de Estudiantes</a></li>
                     <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>Generar Rol</a></li>
+                    <li><a href="{{ route('registration.fee.view') }}"><i class="ti-more"></i>Cargos por Registro</a></li>
                 </ul>
             </li>
 

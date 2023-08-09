@@ -887,8 +887,43 @@ Listo!
 
 # S37 - Student Registration Fee
 ## 318. Student Registration Fee Part 1
+Vamos ahora a manejar la tabla JS con la ayuda de:
+https://handlebarsjs.com/
 
+En resources/views/backend/student/registration_fee/registration_fee_view.blade.php
+```php
+...
+{{-- Tabla con JS de Roles generados para la Búsqueda, d-none: clase para que no se despliegue el div  --}}
+<div class="row">
+    <div class="col-md-12">
+
+        {{-- Ahora vamos a usar handlebarsjs para desplegar la tabla --}}
+        <div class="DocumentResults">
+            <script id="document-template" type="text/x-handlebars-template">
+                <table class="table table-bordered table-striped" style="width: 100%">
+                    <thead>
+                        <tr>
+                            @{{{thsource}}}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{{#each this}}
+                        <tr>
+                            @{{{tdsource}}}
+                        </tr>
+                        @{{/each}}
+                    </tbody>
+                </table>
+            </script>
+        </div>
+
+    </div>
+</div>
+...
+```
+Listo!
 ## 319. Student Registration Fee Part 2
+
 ## 320. Student Registration Fee Part 3
 ## 321. Student Registration Fee Part 4
 
