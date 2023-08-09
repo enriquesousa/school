@@ -16,6 +16,8 @@ use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
 use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 use App\Http\Controllers\Backend\Setup\DesignationController;
 use App\Http\Controllers\Backend\Student\StudentRegController;
+use App\Http\Controllers\Backend\Student\StudentRollController;
+
 
 
 Route::get('/', function () {
@@ -149,6 +151,7 @@ Route::prefix('setups')->group(function () {
 // Admin Registro de Estudiantes
 Route::prefix('students')->group(function () {
 
+    // Student Registration - Registro de Estudiante
     Route::get('/registration/view', [StudentRegController::class, 'StudentRegistrationView'])->name('student.registration.view');
     Route::get('/registration/add', [StudentRegController::class, 'StudentRegistrationAdd'])->name('student.registration.add');
     Route::post('/registration/store', [StudentRegController::class, 'StudentRegistrationStore'])->name('store.student.registration');
@@ -158,6 +161,10 @@ Route::prefix('students')->group(function () {
     Route::get('/registration/promotion/{student_id}', [StudentRegController::class, 'StudentRegistrationPromotion'])->name('student.registration.promotion');
     Route::post('/promotion/registration/update/{student_id}', [StudentRegController::class, 'StudentRegistrationPromotionUpdate'])->name('promotion.student.registration.update');
     Route::get('/registration/details/{student_id}', [StudentRegController::class, 'StudentRegistrationDetails'])->name('student.registration.details');
+
+    // Student Role Generate - Generar Rol para Estudiante
+    Route::get('/roll/generate/view', [StudentRollController::class, 'StudentRollView'])->name('roll.generate.view');
+
 
 });
 
