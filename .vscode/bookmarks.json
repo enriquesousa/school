@@ -204,6 +204,26 @@
 					"label": "Creating PDFs in Laravel 9: A Step-by-Step Guide using DomPDF PDF"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/Student/StudentRollController.php",
+			"bookmarks": [
+				{
+					"line": 35,
+					"column": 35,
+					"label": "inspeccionar con dd() y network los parametros pasados por java script JS en un Get Request"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/student/roll_generate/roll_generate_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 107,
+					"column": 42,
+					"label": "JS para desplegar el div rol generado java"
+				}
+			]
 		}
 	]
 }

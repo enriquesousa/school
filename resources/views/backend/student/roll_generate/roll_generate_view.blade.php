@@ -22,7 +22,7 @@
 
                         <div class="box-body">
 
-                            <form method="GET" action="{{ route('student.year.class.wise') }}">
+                            <form method="POST"" action="{{ route('student.year.class.wise') }}">
 
                                 {{-- Row 1 --}}
                                 <div class="row">
@@ -75,7 +75,6 @@
                                                     <th>ID</th>
                                                     <th>Nombre Estudiante</th>
                                                     <th>Nombre del Padre</th>
-                                                    <th>Nombre de la Madre</th>
                                                     <th>Sexo</th>
                                                     <th>Rol</th>
                                                 </tr>

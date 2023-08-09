@@ -851,7 +851,8 @@ Listo!
 ## 315. Student Roll Generate Part 2
 Listo!
 ## 316. Student Roll Generate Part 3
-
+Como pasar los datos con JS a /reg/getstudents
+Listo!
 ## 317. Student Roll Generate Part 4
 
 # S37 - Student Registration Fee
