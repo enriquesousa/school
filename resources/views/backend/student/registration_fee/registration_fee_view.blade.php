@@ -14,8 +14,9 @@
                 <div class="col-12">
                     <div class="box bb-3 border-warning">
 
+                        {{-- Titulo --}}
                         <div class="box-header">
-                            <h4 class="box-title">Cargos por Inscripción<strong>Inscripción</strong></h4>
+                            <h4 class="box-title">Cargos por <strong>Inscripción</strong></h4>
                         </div>
 
                         <div class="box-body">
@@ -55,8 +56,9 @@
 
 
                                 <div class="col-md-4" style="padding-top: 25px;">
-                                    <a id="search" class="btn btn-primary" name="search"> Search</a>
-                                </div> <!-- End Col md 4 -->
+                                    <a id="refrescar" class="btn btn-secondary" name="refrescar" title="Refrescar Pagina"><i class="fa fa-superpowers" aria-hidden="true"></i></a>
+                                    <a id="search" class="btn btn-primary" name="search">Search</a>
+                                </div>
 
                             </div><!--  end row -->
 
@@ -99,24 +101,37 @@
 
 
 <script type="text/javascript">
-    $(document).on('click','#search',function(){
-    var year_id = $('#year_id').val();
-    var class_id = $('#class_id').val();
-     $.ajax({
-      url: "{{ route('student.registration.fee.classwise.get')}}",
-      type: "get",
-      data: {'year_id':year_id,'class_id':class_id},
-      beforeSend: function() {
-      },
-      success: function (data) {
-        var source = $("#document-template").html();
-        var template = Handlebars.compile(source);
-        var html = template(data);
-        $('#DocumentResults').html(html);
-        $('[data-toggle="tooltip"]').tooltip();
-      }
+
+    $(document).on('click', '#search', function () {
+
+        var year_id = $('#year_id').val();
+        var class_id = $('#class_id').val();
+        $.ajax({
+            url: "{{ route('student.registration.fee.classwise.get')}}",
+            type: "get",
+            data: {
+                'year_id': year_id,
+                'class_id': class_id
+            },
+            beforeSend: function () {},
+            success: function (data) {
+                var source = $("#document-template").html();
+                var template = Handlebars.compile(source);
+                var html = template(data);
+                $('#DocumentResults').html(html);
+                $('[data-toggle="tooltip"]').tooltip();
+            }
+        });
+
     });
-  });
+
+
+    $(document).on('click', '#refrescar', function () {
+        // reload page keeping the POST data
+        window.location.reload();
+    });
+
+
 
 </script>
 

@@ -229,6 +229,21 @@
 					"label": "JS para desplegar el div rol generado java"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/student/registration_fee/registration_fee_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 70,
+					"column": 94,
+					"label": "handlebars js manejar la tabla java"
+				},
+				{
+					"line": 128,
+					"column": 15,
+					"label": "js java script refrescar pagina"
+				}
+			]
 		}
 	]
 }
