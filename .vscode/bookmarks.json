@@ -182,6 +182,11 @@
 					"line": 177,
 					"column": 66,
 					"label": "unlink image en student update"
+				},
+				{
+					"line": 281,
+					"column": 83,
+					"label": "pdf ver en pdf los detalles del estudiante"
 				}
 			]
 		},

@@ -70,6 +70,7 @@ class RegistrationFeeController extends Controller
             $finalfee = (float)$originalfee-(float)$discounttablefee;
 
             $html[$key]['tdsource'] .='<td>'.'$ '.$finalfee.'</td>';
+
             $html[$key]['tdsource'] .='<td>';
             $html[$key]['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="Recibo de Pago PDF" target="_blanks" href="'.route("student.registration.fee.payslip").'?class_id='.$v->class_id.'&student_id='.$v->student_id.'">Recibo</a>';
             $html[$key]['tdsource'] .= '</td>';
@@ -78,10 +79,21 @@ class RegistrationFeeController extends Controller
        return response()->json(@$html);
     }
 
-    // RegistrationFeePayslip
-    public function RegistrationFeePayslip(){
+    // RegistrationFeePayslip, Recibo de Pago en PDF
+    public function RegistrationFeePayslip(Request $request){
 
+        $student_id = $request->student_id;
+        $class_id = $request->class_id;
+
+        $allStudent['details'] = AssignStudent::with(['student','discount'])
+                                    ->where('student_id', $student_id)
+                                    ->where('class_id', '$class_id')
+                                    ->first();
+
+        $pdf = PDF::loadView('backend.student.registration_fee.registration_recibo_pdf', $allStudent);
+        return $pdf->stream('detalles.pdf');
     }
+
 
 
 }

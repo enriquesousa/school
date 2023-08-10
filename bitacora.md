@@ -934,8 +934,10 @@ En resources/views/backend/student/registration_fee/registration_fee_view.blade.
 ```
 Listo!
 ## 320. Student Registration Fee Part 3
-
+Listo!
 ## 321. Student Registration Fee Part 4
+
+
 
 # S38 - Student Monthly Fee Option
 ## 322. Student Monthly Fee Part 1
