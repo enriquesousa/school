@@ -923,8 +923,18 @@ En resources/views/backend/student/registration_fee/registration_fee_view.blade.
 ```
 Listo!
 ## 319. Student Registration Fee Part 2
+Usar la version cdn de handlebars
+https://cdnjs.com/libraries/handlebars.js
 
+En resources/views/backend/student/registration_fee/registration_fee_view.blade.php
+```php
+{{-- para soportar handlebars --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+...
+```
+Listo!
 ## 320. Student Registration Fee Part 3
+
 ## 321. Student Registration Fee Part 4
 
 # S38 - Student Monthly Fee Option
