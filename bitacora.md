@@ -936,11 +936,11 @@ Listo!
 ## 320. Student Registration Fee Part 3
 Listo!
 ## 321. Student Registration Fee Part 4
-
-
+Listo!
 
 # S38 - Student Monthly Fee Option
 ## 322. Student Monthly Fee Part 1
+
 ## 323. Student Monthly Fee Part 2
 
 # S39 - Student Exam Fee Option

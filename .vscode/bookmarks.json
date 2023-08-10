@@ -249,6 +249,26 @@
 					"label": "js java script refrescar pagina"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/student/registration_fee/registration_recibo_pdf.blade.php",
+			"bookmarks": [
+				{
+					"line": 128,
+					"column": 41,
+					"label": "money precio convert en vista"
+				}
+			]
+		},
+		{
+			"path": "app/Providers/AppServiceProvider.php",
+			"bookmarks": [
+				{
+					"line": 24,
+					"column": 10,
+					"label": "money convert"
+				}
+			]
 		}
 	]
 }

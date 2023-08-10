@@ -87,11 +87,13 @@ class RegistrationFeeController extends Controller
 
         $allStudent['details'] = AssignStudent::with(['student','discount'])
                                     ->where('student_id', $student_id)
-                                    ->where('class_id', '$class_id')
+                                    ->where('class_id', $class_id)
                                     ->first();
 
-        $pdf = PDF::loadView('backend.student.registration_fee.registration_recibo_pdf', $allStudent);
-        return $pdf->stream('detalles.pdf');
+        // $pdf = PDF::loadView('backend.student.registration_fee.registration_recibo_pdf', $allStudent);
+        // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice_pdf', $allStudent);
+        $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice2_pdf', $allStudent);
+        return $pdf->stream('recibo.pdf');
     }
 
 
