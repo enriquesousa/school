@@ -105,6 +105,7 @@
                     <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>Generar Rol</a></li>
                     <li><a href="{{ route('registration.fee.view') }}"><i class="ti-more"></i>Cargo Inscripción</a></li>
                     <li><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Cargo Mensualidad</a></li>
+                    <li><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Cargo Examen</a></li>
                 </ul>
             </li>
 

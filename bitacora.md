@@ -946,8 +946,9 @@ Listo!
 
 # S39 - Student Exam Fee Option
 ## 324. Student Exam Fee Part 1
-
+Listo!
 ## 325. Student Exam Fee Part 2
+
 ## 326. update Route authentication
 
 # S40 - Manage Employee Registration
