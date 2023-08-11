@@ -254,7 +254,7 @@
 			"path": "resources/views/backend/student/registration_fee/registration_recibo_pdf.blade.php",
 			"bookmarks": [
 				{
-					"line": 128,
+					"line": 129,
 					"column": 41,
 					"label": "money precio convert en vista"
 				}
@@ -267,6 +267,26 @@
 					"line": 24,
 					"column": 10,
 					"label": "money convert"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/Setup/MonthlyFeeController.php",
+			"bookmarks": [
+				{
+					"line": 71,
+					"column": 76,
+					"label": "money precio convercion directa con php"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/student/monthly_fee/monthly_fee_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 4,
+					"column": 54,
+					"label": "handlebars js cdn"
 				}
 			]
 		}

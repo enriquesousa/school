@@ -940,7 +940,7 @@ Listo!
 
 # S38 - Student Monthly Fee Option
 ## 322. Student Monthly Fee Part 1
-
+Listo!
 ## 323. Student Monthly Fee Part 2
 
 # S39 - Student Exam Fee Option

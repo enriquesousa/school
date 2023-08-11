@@ -16,7 +16,7 @@
 
                         {{-- Titulo --}}
                         <div class="box-header">
-                            <h4 class="box-title">Cargo <strong>Inscripción</strong></h4>
+                            <h4 class="box-title">Cargo <strong>Mensual</strong></h4>
                         </div>
 
                         <div class="box-body">
@@ -24,7 +24,7 @@
                             <div class="row">
 
                                 {{-- Seleccionar Año --}}
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <h5>Año <span class="text-danger"> </span></h5>
                                         <div class="controls">
@@ -37,10 +37,11 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div> <!-- End Col md 4 -->
+                                </div> <!-- End Col -->
+
 
                                 {{-- Seleccionar Clase --}}
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <h5>Clase <span class="text-danger"> </span></h5>
                                         <div class="controls">
@@ -52,10 +53,36 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div> <!-- End Col md 4 -->
+                                </div> <!-- End Col  -->
 
 
-                                <div class="col-md-4" style="padding-top: 25px;">
+                                {{-- Seleccionar Mes --}}
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <h5>Mes <span class="text-danger"> </span></h5>
+                                        <div class="controls">
+                                            <select name="month" id="month" required="" class="form-control">
+                                                <option value="" selected="" disabled="">Seleccionar Mes</option>
+
+                                                <option value="January">Enero</option>
+                                                <option value="February">Febrero</option>
+                                                <option value="March">Marzo</option>
+                                                <option value="April">Abril</option>
+                                                <option value="May">Mayo</option>
+                                                <option value="June">Junio</option>
+                                                <option value="July">Julio</option>
+                                                <option value="August">Agosto</option>
+                                                <option value="September">Septiembre</option>
+                                                <option value="October">Octubre</option>
+                                                <option value="November">Noviembre</option>
+                                                <option value="December">Diciembre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div> <!-- End Col  -->
+
+
+                                <div class="col-md-3" style="padding-top: 25px;">
                                     <a id="refrescar" class="btn btn-secondary" name="refrescar" title="Refrescar Pagina"><i class="fa fa-superpowers" aria-hidden="true"></i></a>
                                     <a id="search" class="btn btn-primary" name="search">Search</a>
                                 </div>
@@ -106,12 +133,14 @@
 
         var year_id = $('#year_id').val();
         var class_id = $('#class_id').val();
+        var month = $('#month').val();
         $.ajax({
-            url: "{{ route('student.registration.fee.classwise.get')}}",
+            url: "{{ route('student.monthly.fee.classwise.get')}}",
             type: "get",
             data: {
                 'year_id': year_id,
-                'class_id': class_id
+                'class_id': class_id,
+                'month': month
             },
             beforeSend: function () {},
             success: function (data) {
