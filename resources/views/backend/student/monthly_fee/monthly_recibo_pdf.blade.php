@@ -52,14 +52,14 @@
             <td>
 
                 <h3 align="right">Escuela Fácil EsWeb</h3>
+
                 <p style="font-size: 12px;" align="right">
                     CARR TAMPICO-MANTE KM 10.5 S/N<br>
                     AEROPUERTO INTERNACIONAL, 89339<br>
                     (664) 333-1111<br>
                     soporte@escuelafacil.com<br>
-                    <b>Inscripción</b>
+                    <b>Mensualidad</b>
                 </p>
-
 
             </td>
 
@@ -68,7 +68,7 @@
     </table>
 
     @php
-        $registrationfee = App\Models\FeeCategoryAmount::where('fee_category_id','1')->where('class_id',$details->class_id)->first();
+        $registrationfee = App\Models\FeeCategoryAmount::where('fee_category_id','2')->where('class_id',$details->class_id)->first();
 
         $originalfee = $registrationfee->amount;
         $discount = $details['discount']['discount'];
@@ -118,7 +118,7 @@
         </tr>
         <tr>
             <td>7</td>
-            <td><b>Inscripción</b></td>
+            <td><b>Mensualidad</b></td>
             <td>$@convert($originalfee)</td>
         </tr>
         <tr>
@@ -128,7 +128,7 @@
         </tr>
         <tr>
             <td>9</td>
-            <td><b>Total</b></td>
+            <td><b>Total del mes de {{ $month }}</b></td>
             <td>$@convert($finalfee)</td>
         </tr>
 
@@ -187,7 +187,7 @@
         </tr>
         <tr>
             <td>7</td>
-            <td><b>Cargo Inscripción</b></td>
+            <td><b>Mensualidad</b></td>
             <td>$@convert($originalfee)</td>
         </tr>
         <tr>
@@ -197,7 +197,7 @@
         </tr>
         <tr>
             <td>9</td>
-            <td><b>Total</b></td>
+            <td><b>Total del mes de {{ $month }}</b></td>
             <td>$@convert($finalfee)</td>
         </tr>
 

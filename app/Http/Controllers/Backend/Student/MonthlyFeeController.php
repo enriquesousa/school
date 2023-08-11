@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Setup;
+namespace App\Http\Controllers\Backend\Student;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -55,8 +55,12 @@ class MonthlyFeeController extends Controller
 
 
         foreach ($allStudent as $key => $v) {
+
+            // ahora usamos 2 para identificar al cargo de mensualidad de la tabla 'fee_category_amounts'
             $registrationfee = FeeCategoryAmount::where('fee_category_id','2')->where('class_id',$v->class_id)->first();
+
             $color = 'success';
+
             $html[$key]['tdsource']  = '<td>'.($key+1).'</td>';
             $html[$key]['tdsource'] .= '<td>'.$v['student']['id_no'].'</td>';
             $html[$key]['tdsource'] .= '<td>'.$v['student']['name'].'</td>';
@@ -74,7 +78,7 @@ class MonthlyFeeController extends Controller
             $html[$key]['tdsource'] .='<td>';
             $html[$key]['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="Recibo de Pago PDF"
                                         target="_blanks"
-                                        href="'.route("student.registration.fee.payslip").'?class_id='.$v->class_id.'&student_id='.$v->student_id.'&month='.$request->month.'">
+                                        href="'.route("student.monthly.fee.payslip").'?class_id='.$v->class_id.'&student_id='.$v->student_id.'&month='.$request->month.'">
                                         Recibo</a>';
             $html[$key]['tdsource'] .= '</td>';
 
@@ -82,6 +86,29 @@ class MonthlyFeeController extends Controller
        return response()->json(@$html);
     }
 
+    // MonthlyFeePayslip
+    public function MonthlyFeePayslip(Request $request){
+
+        $student_id = $request->student_id;
+        $class_id = $request->class_id;
+        $data['month'] = $request->month;
+
+        $data['details'] = AssignStudent::with(['student','discount'])
+                                    ->where('student_id', $student_id)
+                                    ->where('class_id', $class_id)
+                                    ->first();
+
+        // Invoice genérico
+        // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice_pdf', $allStudent);
+
+        // Invoice tipo negocio
+        // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice2_pdf', $allStudent);
+
+        // sencillo
+        $pdf = PDF::loadView('backend.student.monthly_fee.monthly_recibo_pdf', $data);
+
+        return $pdf->stream('recibo.pdf');
+    }
 
 
 }

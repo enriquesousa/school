@@ -61,7 +61,7 @@ class RegistrationFeeController extends Controller
             $html[$key]['tdsource'] .= '<td>'.$v['student']['id_no'].'</td>';
             $html[$key]['tdsource'] .= '<td>'.$v['student']['name'].'</td>';
             $html[$key]['tdsource'] .= '<td>'.$v->roll.'</td>';
-            $html[$key]['tdsource'] .= '<td>'.$registrationfee->amount.'</td>';
+            $html[$key]['tdsource'] .= '<td>'.'$ '.number_format($registrationfee->amount, 2).'</td>';
             $html[$key]['tdsource'] .= '<td>'.$v['discount']['discount'].'%'.'</td>';
 
             $originalfee = $registrationfee->amount;
@@ -69,7 +69,7 @@ class RegistrationFeeController extends Controller
             $discounttablefee = $discount/100*$originalfee;
             $finalfee = (float)$originalfee-(float)$discounttablefee;
 
-            $html[$key]['tdsource'] .='<td>'.'$ '.$finalfee.'</td>';
+            $html[$key]['tdsource'] .='<td>'.'$ '.number_format($finalfee, 2).'</td>';
 
             $html[$key]['tdsource'] .='<td>';
             $html[$key]['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="Recibo de Pago PDF" target="_blanks" href="'.route("student.registration.fee.payslip").'?class_id='.$v->class_id.'&student_id='.$v->student_id.'">Recibo</a>';
@@ -94,10 +94,10 @@ class RegistrationFeeController extends Controller
         // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice_pdf', $allStudent);
 
         // Invoice tipo negocio
-        $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice2_pdf', $allStudent);
+        // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice2_pdf', $allStudent);
 
         // sencillo
-        // $pdf = PDF::loadView('backend.student.registration_fee.registration_recibo_pdf', $allStudent);
+        $pdf = PDF::loadView('backend.student.registration_fee.registration_recibo_pdf', $allStudent);
 
         return $pdf->stream('recibo.pdf');
     }

@@ -942,9 +942,11 @@ Listo!
 ## 322. Student Monthly Fee Part 1
 Listo!
 ## 323. Student Monthly Fee Part 2
+Listo!
 
 # S39 - Student Exam Fee Option
 ## 324. Student Exam Fee Part 1
+
 ## 325. Student Exam Fee Part 2
 ## 326. update Route authentication
 
