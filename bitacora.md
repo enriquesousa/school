@@ -950,10 +950,29 @@ Listo!
 ## 325. Student Exam Fee Part 2
 Listo!
 ## 326. update Route authentication
+Agregar Auth Middleware a todas nuestras rutas
+En routes/web.php
+```php
+/*****************
+* Users All Routes
+******************/
 
+// Proteger todas las rutas con auth middleware
+// Nos ayuda a proteger las rutas y si no estamos autorizados nos redirige a la ruta de login
+Route::group(['middleware' => 'auth'], function () {
+
+    // User CRUD
+    Route::prefix('users')->group(function(){ ...
+
+    ...
+
+});
+```
+Listo!
 
 # S40 - Manage Employee Registration
 ## 327. Employee Registration Part 1
+
 ## 328. Employee Registration Part 2
 ## 329. Employee Registration Part 3
 ## 330. Employee Registration Part 4
