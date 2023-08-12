@@ -47,6 +47,10 @@ class StudentRegController extends Controller
     // StudentRegistrationStore
     public function StudentRegistrationStore(Request $request){
 
+        $request->validate([
+            'email' => 'required|unique:users',
+        ]);
+
         DB::transaction(function () use ($request) {
 
             $checkYear = StudentYear::find($request->year_id)->name;
@@ -90,6 +94,7 @@ class StudentRegController extends Controller
             $user->mname = $request->mname;
             $user->mobile = $request->mobile;
             $user->address = $request->address;
+            $user->email = $request->email;
             $user->gender = $request->gender;
             $user->religion = $request->religion;
             $user->dob = date('Y-m-d', strtotime($request->dob));
