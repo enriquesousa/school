@@ -94,7 +94,8 @@ class ExamFeeController extends Controller
 
         $student_id = $request->student_id;
         $class_id = $request->class_id;
-        $data['month'] = $request->month;
+        $data['exam_type'] = ExamType::where('id',$request->exam_type_id)->first()['name'];
+        // dd($data['exam_type']);
 
         $data['details'] = AssignStudent::with(['student','discount'])
                                     ->where('student_id', $student_id)
@@ -108,7 +109,7 @@ class ExamFeeController extends Controller
         // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice2_pdf', $allStudent);
 
         // sencillo
-        $pdf = PDF::loadView('backend.student.monthly_fee.monthly_recibo_pdf', $data);
+        $pdf = PDF::loadView('backend.student.exam_fee.exam_recibo_pdf', $data);
 
         return $pdf->stream('recibo.pdf');
     }
