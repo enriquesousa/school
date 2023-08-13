@@ -197,6 +197,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::get('/registration/view', [EmployeeRegistrationController::class, 'EmployeeRegistrationView'])->name('employee.registration.view');
         Route::get('/registration/add', [EmployeeRegistrationController::class, 'EmployeeRegistrationAdd'])->name('employee.registration.add');
+        Route::post('/registration/store', [EmployeeRegistrationController::class, 'EmployeeRegistrationStore'])->name('store.employee.registration');
 
 
     });
