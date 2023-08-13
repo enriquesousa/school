@@ -3,17 +3,18 @@
 namespace App\Http\Controllers\Backend\Student;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
 use App\Models\StudentClass;
 use App\Models\StudentGroup;
 use App\Models\StudentShift;
 use App\Models\StudentYear;
-use Illuminate\Http\Request;
 use App\Models\AssignStudent;
 use App\Models\User;
 use App\Models\DiscountStudent;
 use DB;
 use Barryvdh\DomPDF\Facade\Pdf;
-
+use Illuminate\Validation\Rule;
 
 class StudentRegController extends Controller
 {
@@ -47,7 +48,7 @@ class StudentRegController extends Controller
     // StudentRegistrationStore
     public function StudentRegistrationStore(Request $request){
 
-        $request->validate([
+        $validateData = $request->validate([
             'email' => 'required|unique:users',
         ]);
 
@@ -165,6 +166,16 @@ class StudentRegController extends Controller
     // StudentRegistrationUpdate
     public function StudentRegistrationUpdate(Request $request, $student_id){
 
+        $request->validate([
+
+            'email' => [
+                'required',
+                Rule::unique('users')->ignore($student_id),
+                // Rule::unique('users')->ignore(Auth::user()->id),
+            ],
+
+        ]);
+
         DB::transaction(function () use ($request, $student_id) {
 
             $user = User::where('id', $student_id)->first();
@@ -174,6 +185,7 @@ class StudentRegController extends Controller
             $user->mname = $request->mname;
             $user->mobile = $request->mobile;
             $user->address = $request->address;
+            $user->email = $request->email;
             $user->gender = $request->gender;
             $user->religion = $request->religion;
             $user->dob = date('Y-m-d', strtotime($request->dob));

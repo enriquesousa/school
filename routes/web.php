@@ -20,6 +20,7 @@ use App\Http\Controllers\Backend\Student\StudentRollController;
 use App\Http\Controllers\Backend\Student\RegistrationFeeController;
 use App\Http\Controllers\Backend\Student\MonthlyFeeController;
 use App\Http\Controllers\Backend\Student\ExamFeeController;
+use App\Http\Controllers\Backend\Employee\EmployeeRegistrationController;
 
 
 
@@ -190,6 +191,15 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/exam/fee/payslip', [ExamFeeController::class, 'ExamFeePayslip'])->name('student.exam.fee.payslip');
 
     });
+
+    // Employees CRUD - Empleados
+    Route::prefix('employees')->group(function () {
+
+        Route::get('/registration/view', [EmployeeRegistrationController::class, 'EmployeeRegistrationView'])->name('employee.registration.view');
+
+
+    });
+
 
 }); // End Middleware Auth
 

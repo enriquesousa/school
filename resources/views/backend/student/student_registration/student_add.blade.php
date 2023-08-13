@@ -33,12 +33,12 @@
                                         {{-- Row 1 - Nombre Estudiante, Padre y Madre --}}
                                         <div class="row">
 
-                                            {{-- Nombre Estudiante --}}
+                                            {{-- Nombre Estudiante , value="{{ old('name') }}" para no perder data al regresar de un Validation error--}}
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <h5>Nombre Estudiante<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="name" class="form-control" required autofocus>
+                                                        <input type="text" name="name" class="form-control" value="{{ old('name') }}" required autofocus>
                                                     </div>
                                                 </div>
                                             </div>
@@ -48,7 +48,7 @@
                                                 <div class="form-group">
                                                     <h5>Nombre del Padre<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="fname" class="form-control" required>
+                                                        <input type="text" name="fname" class="form-control" value="{{ old('fname') }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -58,7 +58,7 @@
                                                 <div class="form-group">
                                                     <h5>Nombre de la Madre<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="mname" class="form-control" required>
+                                                        <input type="text" name="mname" class="form-control" value="{{ old('mname') }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -74,7 +74,7 @@
                                                     <label>Celular</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                                                        <input type="text" name="mobile" class="form-control" data-inputmask="'mask':[ '(999) 999-9999']"
+                                                        <input type="text" name="mobile" class="form-control" value="{{ old('mobile') }}" data-inputmask="'mask':[ '(999) 999-9999']"
                                                             data-mask="">
                                                     </div>
                                                 </div>
@@ -86,7 +86,7 @@
                                                     <label>Dirección</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
-                                                        <input type="text" name="address" class="form-control">
+                                                        <input type="text" name="address" class="form-control" value="{{ old('address') }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -96,7 +96,7 @@
                                                 <div class="form-group">
                                                     <h5>Correo Electrónico <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror">
+                                                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}">
                                                         @error('email')
                                                         <div class="form-control-feedback invalid-feedback">
                                                             <small>{{ $message }}</small>
@@ -111,10 +111,10 @@
                                                 <div class="form-group">
                                                     <h5>Sexo&nbsp;<i class="fa fa-fw fa-venus-mars"></i>&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="gender" id="gender" required="" class="form-control">
-                                                            <option value="" selected="" disabled="">Seleccionar Sexo</option>
-                                                            <option value="Male">Masculino</option>
-                                                            <option value="Female">Femenino</option>
+                                                        <select name="gender" id="gender" required="" class="form-control" value="{{old('gender')}}">
+                                                            <option value="" disabled>Seleccionar Sexo</option>
+                                                            <option value="Male" {{ old('gender')=='Male' ? 'selected' : '' }}>Masculino</option>
+                                                            <option value="Female" {{ old('gender')=='Female' ? 'selected' : '' }}>Femenino</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -130,11 +130,11 @@
                                                 <div class="form-group">
                                                     <h5>Religion&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="religion" id="religion" required="" class="form-control">
+                                                        <select name="religion" id="religion" required="" class="form-control" value="{{ old('religion') }}">
                                                             <option value="" selected="" disabled="">Seleccionar Religion</option>
-                                                            <option value="católico">Cristianismo católico</option>
-                                                            <option value="cristiano">Cristianismo evangélico, pentecostal y protestante</option>
-                                                            <option value="ateo">Ateísmo</option>
+                                                            <option value="católico" {{ old('religion')=='católico' ? 'selected' : '' }}>Cristianismo católico</option>
+                                                            <option value="cristiano" {{ old('religion')=='cristiano' ? 'selected' : '' }}>Cristianismo evangélico, pentecostal y protestante</option>
+                                                            <option value="ateo" {{ old('religion')=='ateo' ? 'selected' : '' }}>Ateísmo</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -146,7 +146,7 @@
                                                     <label>Cumpleaños</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-birthday-cake" aria-hidden="true"></i></div>
-                                                        <input class="form-control" type="date" name="dob">
+                                                        <input class="form-control" type="date" name="dob" value="{{ old('dob') }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,7 +158,7 @@
                                                     <label>Descuento</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></div>
-                                                        <input class="form-control" type="number" name="discount">
+                                                        <input class="form-control" type="number" name="discount" value="{{ old('discount') }}">
                                                         <span class="input-group-addon">%</span>
                                                     </div>
                                                 </div>
@@ -175,10 +175,10 @@
                                                 <div class="form-group">
                                                     <h5>Año&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="year_id" required="" class="form-control">
+                                                        <select name="year_id" required="" class="form-control" value="{{ old('year_id') }}">
                                                             <option value="" selected="" disabled="">Seleccionar Año</option>
                                                             @foreach ($years as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ old('year_id')==$item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -190,10 +190,10 @@
                                                 <div class="form-group">
                                                     <h5>Clase&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="class_id" required="" class="form-control">
+                                                        <select name="class_id" required="" class="form-control" value="{{ old('class_id') }}">
                                                             <option value="" selected="" disabled="">Seleccionar Clase</option>
                                                             @foreach ($classes as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ old('class_id')==$item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -205,10 +205,10 @@
                                                 <div class="form-group">
                                                     <h5>Grupo&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="group_id" required="" class="form-control">
+                                                        <select name="group_id" required="" class="form-control" value="{{ old('group_id') }}">
                                                             <option value="" selected="" disabled="">Seleccionar Grupo</option>
                                                             @foreach ($groups as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ old('group_id')==$item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -225,10 +225,10 @@
                                                 <div class="form-group">
                                                     <h5>Turno&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="shift_id" required="" class="form-control">
+                                                        <select name="shift_id" required="" class="form-control" value="{{ old('shift_id') }}">
                                                             <option value="" selected="" disabled="">Seleccionar Turno</option>
                                                             @foreach ($shifts as $item)
-                                                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                            <option value="{{ $item->id }}" {{ old('shift_id')==$item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -243,7 +243,7 @@
                                                         <div class="input-group-addon">
                                                             <i class="fa fa-file-image-o" aria-hidden="true"></i>
                                                         </div>
-                                                        <input type="file" name="image" id="image" class="form-control">
+                                                        <input type="file" name="image" id="image" class="form-control" value="{{ old('image') }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -254,6 +254,8 @@
                                                     <div class="controls">
                                                         <img id="showImage"
                                                             src="{{ url('upload/no_image.jpg') }}"
+                                                            {{-- No se puede usar old value en un input file upload por seguridad --}}
+                                                            {{-- src="{{ (!empty('image')) ? url('upload/student_images/'.'image') : url('upload/no_image.jpg') }}" --}}
                                                             alt=""
                                                             style="width:100px; height:100px; border: 1px solid #000000;">
                                                     </div>

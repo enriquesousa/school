@@ -174,17 +174,22 @@
 			"path": "app/Http/Controllers/Backend/Student/StudentRegController.php",
 			"bookmarks": [
 				{
-					"line": 158,
+					"line": 154,
 					"column": 44,
 					"label": "Para incluir data de las relacion usar with()"
 				},
 				{
-					"line": 182,
+					"line": 172,
+					"column": 59,
+					"label": "validation rule ignore this student id"
+				},
+				{
+					"line": 190,
 					"column": 66,
 					"label": "unlink image en student update"
 				},
 				{
-					"line": 286,
+					"line": 294,
 					"column": 83,
 					"label": "pdf ver en pdf los detalles del estudiante"
 				}
@@ -194,7 +199,7 @@
 			"path": "resources/views/backend/student/student_registration/student_edit.blade.php",
 			"bookmarks": [
 				{
-					"line": 102,
+					"line": 117,
 					"column": 123,
 					"label": "select por defecto en select student_edit"
 				}
@@ -254,7 +259,7 @@
 			"path": "resources/views/backend/student/registration_fee/registration_recibo_pdf.blade.php",
 			"bookmarks": [
 				{
-					"line": 131,
+					"line": 128,
 					"column": 41,
 					"label": "money precio convert en vista"
 				}
@@ -271,22 +276,12 @@
 			]
 		},
 		{
-			"path": "app/Http/Controllers/Backend/Student/MonthlyFeeController.php",
+			"path": "resources/views/backend/student/student_registration/student_add.blade.php",
 			"bookmarks": [
 				{
-					"line": 75,
-					"column": 76,
-					"label": "money precio convercion directa con php"
-				}
-			]
-		},
-		{
-			"path": "resources/views/backend/student/monthly_fee/monthly_fee_view.blade.php",
-			"bookmarks": [
-				{
-					"line": 4,
-					"column": 54,
-					"label": "handlebars js cdn"
+					"line": 113,
+					"column": 122,
+					"label": "validation en select en add new registro para recuperar el datos anterior si es que hay un error en la validation"
 				}
 			]
 		}

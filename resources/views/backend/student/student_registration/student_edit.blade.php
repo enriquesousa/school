@@ -71,7 +71,7 @@
                                         <div class="row">
 
                                             {{-- Teléfono Celular --}}
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label>Celular</label>
                                                     <div class="input-group">
@@ -83,7 +83,7 @@
                                             </div>
 
                                             {{-- Dirección --}}
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <label>Dirección</label>
                                                     <div class="input-group">
@@ -93,8 +93,23 @@
                                                 </div>
                                             </div>
 
+                                            {{-- Email --}}
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <h5>Correo Electrónico <span class="text-danger">*</span></h5>
+                                                    <div class="controls">
+                                                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" value="{{ $editData->student->email }}">
+                                                        @error('email')
+                                                        <div class="form-control-feedback invalid-feedback">
+                                                            <small>{{ $message }}</small>
+                                                        </div>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             {{-- Sexo --}}
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     <h5>Sexo&nbsp;<i class="fa fa-fw fa-venus-mars"></i>&nbsp;<span class="text-danger">*</span></h5>
                                                     <div class="controls">

@@ -109,6 +109,20 @@
                 </ul>
             </li>
 
+            {{-- Admin Estudiantes --}}
+            <li class="treeview {{ ($prefix == 'employees') ? 'active' : '' }}">
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i><span>Admin Empleados</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('employee.registration.view') }}"><i class="ti-more"></i>Registro de Empleado</a></li>
+
+                </ul>
+            </li>
+
 
 
             <li class="header nav-small-cap">User Interface</li>
