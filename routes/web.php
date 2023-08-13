@@ -196,6 +196,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::prefix('employees')->group(function () {
 
         Route::get('/registration/view', [EmployeeRegistrationController::class, 'EmployeeRegistrationView'])->name('employee.registration.view');
+        Route::get('/registration/add', [EmployeeRegistrationController::class, 'EmployeeRegistrationAdd'])->name('employee.registration.add');
 
 
     });
