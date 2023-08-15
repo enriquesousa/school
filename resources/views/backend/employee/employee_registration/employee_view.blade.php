@@ -50,7 +50,7 @@
                                             <td>{{ $item->mobile }}</td>
                                             <td>{{ $item->gender }}</td>
                                             <td>{{ $item->join_date }}</td>
-                                            <td>{{ $item->salary }}</td>
+                                            <td>$ @convert($item->salary)</td>
                                             @if (Auth::user()->role == 'Admin')
                                                 <td>{{ $item->code }}</td>
                                             @endif

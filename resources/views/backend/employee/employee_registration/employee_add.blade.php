@@ -65,7 +65,7 @@
 
                                         </div>
 
-                                        {{-- Row 2 - Celular, Dirección y Sexo--}}
+                                        {{-- Row 2 - Celular, Dirección, Email, y Sexo--}}
                                         <div class="row">
 
                                             {{-- Teléfono Celular --}}
@@ -188,7 +188,7 @@
                                                     <label>Fecha de Ingreso</label>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></div>
-                                                        <input class="form-control" type="date" name="join_date" value="{{ old('join_date') }}">
+                                                        <input class="form-control" type="date" name="join_date" value="{{ old('join_date') }}" required>
                                                     </div>
                                                 </div>
                                             </div>
