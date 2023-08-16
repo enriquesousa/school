@@ -980,8 +980,27 @@ Listo!
 ## 330. Employee Registration Part 4
 Listo!
 ## 331. Employee Registration Part 5
-
+Edit
+En resources/views/backend/employee/employee_registration/employee_edit.blade.php
+Para esconder Salario no lo puedan editar aquí!
+```php
+{{-- Para esconder Salario no lo puedan editar aquí!  --}}
+@if (!@$editData)
+    {{-- Salario --}}
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Salario</label>
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></div>
+                <input type="number" name="salary" class="form-control" value="{{ $editData->salary }}">
+            </div>
+        </div>
+    </div>
+@endif
+```
+Listo!
 ## 332. Employee Registration Part 6
+
 ## 333. Employee Registration Part 7
 
 # S41 - Manage Employee Salary Increment

@@ -57,7 +57,7 @@
 
                                             <td>
                                                 {{-- Botón Editar --}}
-                                                <a href="{{ route('designation.edit', $item->id) }}" class="btn btn-info">Editar</a>
+                                                <a href="{{ route('employee.registration.edit', $item->id) }}" class="btn btn-info">Editar</a>
 
                                                 {{-- Botón Eliminar --}}
                                                 <a href="{{ route('designation.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a>

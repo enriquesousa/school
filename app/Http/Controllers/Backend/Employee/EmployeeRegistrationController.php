@@ -124,6 +124,14 @@ class EmployeeRegistrationController extends Controller
         return redirect()->route('employee.registration.view')->with($notification);
     }
 
+    // EmployeeRegistrationEdit
+    public function EmployeeRegistrationEdit($id){
+
+        $data['editData'] = User::find($id);
+        $data['designations'] = Designation::all();
+        return view('backend.employee.employee_registration.employee_edit', $data);
+
+    }
 
 
 

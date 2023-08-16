@@ -284,6 +284,16 @@
 					"label": "validation en select en add new registro para recuperar el datos anterior si es que hay un error en la validation"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/employee/employee_registration/employee_edit.blade.php",
+			"bookmarks": [
+				{
+					"line": 172,
+					"column": 96,
+					"label": "Para esconder Salario no lo puedan editar aquí!"
+				}
+			]
 		}
 	]
 }
