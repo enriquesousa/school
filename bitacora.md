@@ -1000,6 +1000,7 @@ Para esconder Salario no lo puedan editar aquí!
 ```
 Listo!
 ## 332. Employee Registration Part 6
+Voy empezando me quede en 1:45
 
 ## 333. Employee Registration Part 7
 

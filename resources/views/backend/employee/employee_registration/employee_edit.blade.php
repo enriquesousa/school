@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('store.employee.registration') }}" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('update.employee.registration', $editData->id) }}" enctype="multipart/form-data">
                             @csrf
 
                                 <div class="row">
