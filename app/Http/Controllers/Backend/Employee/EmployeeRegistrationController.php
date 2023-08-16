@@ -133,6 +133,53 @@ class EmployeeRegistrationController extends Controller
 
     }
 
+    // EmployeeRegistrationUpdate
+    public function EmployeeRegistrationUpdate(Request $request, $id){
+
+        $request->validate([
+
+            'email' => [
+                'required',
+                Rule::unique('users')->ignore($id),
+                // Rule::unique('users')->ignore(Auth::user()->id),
+            ],
+
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->name = $request->name;
+        $user->fname = $request->fname;
+        $user->mname = $request->mname;
+        $user->mobile = $request->mobile;
+        $user->address = $request->address;
+        $user->email = $request->email;
+        $user->gender = $request->gender;
+        $user->religion = $request->religion;
+        $user->designation_id = $request->designation_id;
+        $user->dob = date('Y-m-d', strtotime($request->dob));
+
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            @unlink(public_path('upload/employee_images/'.$user->image));    // Borra la imagen anterior
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('upload/employee_images'), $filename);
+            $user['image'] = $filename;
+        }
+        $user->save();
+
+
+        $notification = array(
+            'message' => 'Empleado Actualizado con éxito',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('employee.registration.view')->with($notification);
+    }
+
+
 
 
 }
+
+
+
