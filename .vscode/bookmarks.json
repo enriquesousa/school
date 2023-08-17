@@ -304,6 +304,21 @@
 					"label": "date format en tabla pdf"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/employee/employee_salary/employee_salary_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 37,
+					"column": 44,
+					"label": "ancho de columna en tabla width en vista"
+				},
+				{
+					"line": 49,
+					"column": 65,
+					"label": "date format con mes en palabra usando F"
+				}
+			]
 		}
 	]
 }

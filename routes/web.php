@@ -21,6 +21,7 @@ use App\Http\Controllers\Backend\Student\RegistrationFeeController;
 use App\Http\Controllers\Backend\Student\MonthlyFeeController;
 use App\Http\Controllers\Backend\Student\ExamFeeController;
 use App\Http\Controllers\Backend\Employee\EmployeeRegistrationController;
+use App\Http\Controllers\Backend\Employee\EmployeeSalaryController;
 
 
 
@@ -195,12 +196,16 @@ Route::group(['middleware' => 'auth'], function () {
     // Employees CRUD - Empleados
     Route::prefix('employees')->group(function () {
 
+        // Employee Registration - Registro de Empleados
         Route::get('/registration/view', [EmployeeRegistrationController::class, 'EmployeeRegistrationView'])->name('employee.registration.view');
         Route::get('/registration/add', [EmployeeRegistrationController::class, 'EmployeeRegistrationAdd'])->name('employee.registration.add');
         Route::post('/registration/store', [EmployeeRegistrationController::class, 'EmployeeRegistrationStore'])->name('store.employee.registration');
         Route::get('/registration/edit/{id}', [EmployeeRegistrationController::class, 'EmployeeRegistrationEdit'])->name('employee.registration.edit');
         Route::post('/registration/update/{id}', [EmployeeRegistrationController::class, 'EmployeeRegistrationUpdate'])->name('update.employee.registration');
         Route::get('/registration/details/{id}', [EmployeeRegistrationController::class, 'EmployeeRegistrationDetails'])->name('employee.registration.details');
+
+        // Employee Salary - Salario de Empleados
+        Route::get('/salary/view', [EmployeeSalaryController::class, 'EmployeeSalaryView'])->name('employee.salary.view');
 
 
     });

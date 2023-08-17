@@ -15,7 +15,6 @@ use App\Models\DiscountStudent;
 use DB;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Validation\Rule;
-
 use App\Models\Designation;
 use App\Models\EmployeeSalaryLog;
 
