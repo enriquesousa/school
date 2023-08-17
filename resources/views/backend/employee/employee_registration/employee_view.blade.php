@@ -60,7 +60,7 @@
                                                 <a href="{{ route('employee.registration.edit', $item->id) }}" class="btn btn-info">Editar</a>
 
                                                 {{-- Botón Eliminar --}}
-                                                <a href="{{ route('designation.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+                                                <a target="_blank" href="{{ route('employee.registration.details', $item->id) }}" class="btn btn-danger">Detalle</a>
                                             </td>
                                         </tr>
                                         @endforeach

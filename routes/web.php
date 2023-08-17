@@ -200,6 +200,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/registration/store', [EmployeeRegistrationController::class, 'EmployeeRegistrationStore'])->name('store.employee.registration');
         Route::get('/registration/edit/{id}', [EmployeeRegistrationController::class, 'EmployeeRegistrationEdit'])->name('employee.registration.edit');
         Route::post('/registration/update/{id}', [EmployeeRegistrationController::class, 'EmployeeRegistrationUpdate'])->name('update.employee.registration');
+        Route::get('/registration/details/{id}', [EmployeeRegistrationController::class, 'EmployeeRegistrationDetails'])->name('employee.registration.details');
 
 
     });

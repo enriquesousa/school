@@ -294,6 +294,16 @@
 					"label": "Para esconder Salario no lo puedan editar aquí!"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/employee/employee_registration/employee_details_pdf.blade.php",
+			"bookmarks": [
+				{
+					"line": 134,
+					"column": 13,
+					"label": "date format en tabla pdf"
+				}
+			]
 		}
 	]
 }
