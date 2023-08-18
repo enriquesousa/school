@@ -279,6 +279,11 @@
 			"path": "resources/views/backend/student/student_registration/student_add.blade.php",
 			"bookmarks": [
 				{
+					"line": 98,
+					"column": 145,
+					"label": "validation email input @error('email') is-invalid @enderror"
+				},
+				{
 					"line": 113,
 					"column": 122,
 					"label": "validation en select en add new registro para recuperar el datos anterior si es que hay un error en la validation"

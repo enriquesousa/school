@@ -27,5 +27,25 @@ class EmployeeSalaryController extends Controller
         return view('backend.employee.employee_salary.employee_salary_view',$data);
     }
 
+    // EmployeeSalaryIncrement
+    public function EmployeeSalaryIncrement($id){
+
+        $data['editData'] = User::find($id);
+        return view('backend.employee.employee_salary.employee_salary_increment',$data);
+
+    }
+
+    // EmployeeSalaryUpdateIncrementStore
+    public function EmployeeSalaryUpdateIncrementStore(Request $request, $id){
+
+
+
+    }
+
+
 
 }
+
+
+
+
