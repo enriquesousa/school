@@ -324,6 +324,21 @@
 					"label": "date format con mes en palabra usando F"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/employee/employee_salary/employee_salary_details.blade.php",
+			"bookmarks": [
+				{
+					"line": 16,
+					"column": 39,
+					"label": "Encabezado header de una vista"
+				},
+				{
+					"line": 28,
+					"column": 39,
+					"label": "data table quitar data-table format de la tabla quitenado id=\"example1\""
+				}
+			]
 		}
 	]
 }

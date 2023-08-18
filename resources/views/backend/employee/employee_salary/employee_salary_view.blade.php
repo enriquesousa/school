@@ -52,11 +52,11 @@
                                             <td>$ @convert($value->salary)</td>
 
                                             <td>
-                                                {{-- Botón Editar --}}
+                                                {{-- Botón Incrementar Salario --}}
                                                 <a title="Incrementar Salario" href="{{ route('employee.salary.increment', $value->id) }}" class="btn btn-info"><i class="fa fa-plus-circle"></i></a>
 
-                                                {{-- Botón Eliminar --}}
-                                                <a title="Ver Detalle" target="_blank" href="{{ route('employee.registration.details', $value->id) }}" class="btn btn-danger"><i class="fa fa-eye"></i></a>
+                                                {{-- Botón Ver Detalle --}}
+                                                <a title="Ver Detalle" target="_blank" href="{{ route('employee.salary.details', $value->id) }}" class="btn btn-danger"><i class="fa fa-eye"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
