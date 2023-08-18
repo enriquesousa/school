@@ -34,7 +34,7 @@
                                                     <h5>Incremento de Salario<span class="text-danger">*</span></h5>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-money" aria-hidden="true"></i></div>
-                                                        <input type="number" name="increment_salary" class="form-control" required>
+                                                        <input type="number" name="increment_salary" class="form-control" required autofocus>
                                                     </div>
                                                 </div>
                                             </div>
