@@ -213,6 +213,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Employee Leave - Ausencias de Empleado
         Route::get('/ausencias/view', [EmployeeLeaveController::class, 'EmployeeLeaveView'])->name('employee.leave.view');
+        Route::get('/ausencias/add', [EmployeeLeaveController::class, 'EmployeeLeaveAdd'])->name('employee.leave.add');
 
 
     });

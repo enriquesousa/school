@@ -1023,8 +1023,13 @@ php artisan make:model EmployeeLeave -m
 ```
 Listo!
 ## 339. Employee Leave Management Part 2
-
+Listo!
 ## 340. Employee Leave Management Part 3 
+Usar JS para agregar en forma dinámica datos a la tabla 'leave_purposes'
+
+
+
+
 ## 341. Employee Leave Management Part 4
 ## 342. Employee Leave Management Part 5
 ## 343. Employee Leave Management Part 6
