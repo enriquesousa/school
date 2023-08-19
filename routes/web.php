@@ -22,6 +22,7 @@ use App\Http\Controllers\Backend\Student\MonthlyFeeController;
 use App\Http\Controllers\Backend\Student\ExamFeeController;
 use App\Http\Controllers\Backend\Employee\EmployeeRegistrationController;
 use App\Http\Controllers\Backend\Employee\EmployeeSalaryController;
+use App\Http\Controllers\Backend\Employee\EmployeeLeaveController;
 
 
 
@@ -209,6 +210,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/salary/increment/{id}', [EmployeeSalaryController::class, 'EmployeeSalaryIncrement'])->name('employee.salary.increment');
         Route::post('/salary/update/increment/store/{id}', [EmployeeSalaryController::class, 'EmployeeSalaryUpdateIncrementStore'])->name('update.increment.store');
         Route::get('/salary/details/{id}', [EmployeeSalaryController::class, 'EmployeeSalaryDetails'])->name('employee.salary.details');
+
+        // Employee Leave - Ausencias de Empleado
+        Route::get('/ausencias/view', [EmployeeLeaveController::class, 'EmployeeLeaveView'])->name('employee.leave.view');
 
 
     });

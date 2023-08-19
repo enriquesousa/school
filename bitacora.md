@@ -1016,8 +1016,14 @@ Listo!
 
 # S42 - Manage Employee Leave Management
 ## 338. Employee Leave Management Part 1
-
+Crear dos tablas nuevas:
+```php
+php artisan make:model LeavePurpose -m
+php artisan make:model EmployeeLeave -m
+```
+Listo!
 ## 339. Employee Leave Management Part 2
+
 ## 340. Employee Leave Management Part 3 
 ## 341. Employee Leave Management Part 4
 ## 342. Employee Leave Management Part 5

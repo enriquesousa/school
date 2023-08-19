@@ -109,7 +109,7 @@
                 </ul>
             </li>
 
-            {{-- Admin Estudiantes --}}
+            {{-- Admin Empleados --}}
             <li class="treeview {{ ($prefix == 'employees') ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-cog" aria-hidden="true"></i><span>Admin Empleados</span>
@@ -120,6 +120,7 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ route('employee.registration.view') }}"><i class="ti-more"></i>Registro de Empleado</a></li>
                     <li><a href="{{ route('employee.salary.view') }}"><i class="ti-more"></i>Salario de Empleado</a></li>
+                    <li><a href="{{ route('employee.leave.view') }}"><i class="ti-more"></i>Ausencias</a></li>
 
                 </ul>
             </li>
