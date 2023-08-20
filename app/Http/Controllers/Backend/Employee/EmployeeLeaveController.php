@@ -35,6 +35,10 @@ class EmployeeLeaveController extends Controller
         return view('backend.employee.employee_leave.employee_leave_add', $data);
     }
 
+    // EmployeeLeaveStore
+    public function EmployeeLeaveStore(Request $request){
+
+    }
 
 
 }

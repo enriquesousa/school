@@ -339,6 +339,16 @@
 					"label": "data table quitar data-table format de la tabla quitenado id=\"example1\""
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/employee/employee_leave/employee_leave_add.blade.php",
+			"bookmarks": [
+				{
+					"line": 114,
+					"column": 69,
+					"label": "Funcionalidad JS para mostrar input de 'Escriba un nuevo motivo'"
+				}
+			]
 		}
 	]
 }
