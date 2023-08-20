@@ -38,7 +38,31 @@ class EmployeeLeaveController extends Controller
     // EmployeeLeaveStore
     public function EmployeeLeaveStore(Request $request){
 
+        if ($request->leave_purpose_id == '0'){
+            $leavePurpose = new LeavePurpose();
+            $leavePurpose->name = $request->motivo_nuevo;
+            $leavePurpose->save();
+            $leave_purpose_id = $leavePurpose->id;
+        }else{
+            $leave_purpose_id = $request->leave_purpose_id;
+        }
+
+        $data = new EmployeeLeave();
+        $data->employee_id = $request->employee_id;
+        $data->leave_purpose_id = $leave_purpose_id;
+        $data->start_date = date('Y-m-d', strtotime($request->start_date));
+        $data->end_date = date('Y-m-d', strtotime($request->end_date));
+        $data->save();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Motivo de Ausencia del Empleado Registrado con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('employee.leave.view')->with($notification);
     }
+
+
 
 
 }

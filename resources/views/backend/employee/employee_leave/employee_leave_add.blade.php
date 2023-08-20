@@ -68,7 +68,7 @@
                                                             @endforeach
                                                             <option value="0">Nuevo Motivo</option>
                                                         </select>
-                                                        <input type="text" name="name" id="add_another" class="form-control" placeholder="Escriba un nuevo motivo" style="display: none;">
+                                                        <input type="text" name="motivo_nuevo" id="add_another" class="form-control" placeholder="Escriba un nuevo motivo" style="display: none;">
                                                     </div>
                                                 </div>
                                             </div>

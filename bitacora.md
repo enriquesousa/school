@@ -1028,8 +1028,43 @@ Listo!
 Usar JS para agregar en forma dinámica datos a la tabla 'leave_purposes'
 Listo!
 ## 341. Employee Leave Management Part 4
+Why do I need to run php artisan optimize after adding a route
+Everytime you push a new version of your project to production it is recommended to run:
+`php artisan route:cache`
+On **dev environment** it is recommended to have no cache and ensure that by running:
+`php artisan route:clear`
 
+En app/Http/Controllers/Backend/Employee/EmployeeLeaveController.php
+```php
+public function EmployeeLeaveStore(Request $request){
+
+    if ($request->leave_purpose_id == '0'){
+        $leavePurpose = new LeavePurpose();
+        $leavePurpose->name = $request->motivo_nuevo;
+        $leavePurpose->save();
+        $leave_purpose_id = $leavePurpose->id;
+    }else{
+        $leave_purpose_id = $request->leave_purpose_id;
+    }
+
+    $data = new EmployeeLeave();
+    $data->employee_id = $request->employee_id;
+    $data->leave_purpose_id = $leave_purpose_id;
+    $data->start_date = date('Y-m-d', strtotime($request->start_date));
+    $data->end_date = date('Y-m-d', strtotime($request->end_date));
+    $data->save();
+
+    // Desplegar notificación
+    $notification = array(
+        'message' => 'Motivo de Ausencia del Empleado Registrado con éxito!',
+        'alert-type' => 'success'
+    );
+    return redirect()->route('employee.leave.view')->with($notification);
+}
+```
+Listo!
 ## 342. Employee Leave Management Part 5
+
 ## 343. Employee Leave Management Part 6
 
 # S43 - Employee Attendance Management
