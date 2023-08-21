@@ -13,8 +13,8 @@
             <div class="box">
 
                 <div class="box-header with-border">
-                    <h4 class="box-title">Agregar Ausencia de Empleado</h4>
-                    <h6 class="box-subtitle">Para agregar una ausencia de empleado en la <a class="text-warning" href="#">base de datos</a></h6>
+                    <h4 class="box-title">Editar Ausencia de Empleado</h4>
+                    <h6 class="box-subtitle">Para editar una ausencia de empleado en la <a class="text-warning" href="#">base de datos</a></h6>
                 </div>
 
                 <!-- /.box-header -->
@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('store.employee.leave') }}">
+                            <form method="post" action="{{ route('update.employee.leave', $editData->id) }}">
                             @csrf
 
                                 <div class="row">
@@ -38,7 +38,7 @@
                                                         <select name="employee_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Nombre de Empleado</option>
                                                             @foreach ($employees as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ $editData->employee_id==$item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>
@@ -51,7 +51,7 @@
                                                     <h5>Fecha de Inicio<span class="text-danger">*</span></h5>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-                                                        <input type="date" name="start_date" class="form-control" required>
+                                                        <input type="date" name="start_date" class="form-control" value="{{ $editData->start_date }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -64,7 +64,7 @@
                                                         <select name="leave_purpose_id" id="leave_purpose_id" required="" class="form-control">
                                                             <option value="" selected="" disabled="">Seleccionar Motivo de Ausencia</option>
                                                             @foreach ($leave_purpose as $item)
-                                                                <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                                <option value="{{ $item->id }}" {{ $editData->leave_purpose_id==$item->id ? 'selected' : '' }}>{{ $item->name }}</option>
                                                             @endforeach
                                                             <option value="0">Nuevo Motivo</option>
                                                         </select>
@@ -79,7 +79,7 @@
                                                     <h5>Fecha de Final<span class="text-danger">*</span></h5>
                                                     <div class="input-group">
                                                         <div class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
-                                                        <input type="date" name="end_date" class="form-control" required>
+                                                        <input type="date" name="end_date" class="form-control" value="{{ $editData->end_date }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,7 +90,7 @@
                                 </div>
 
                                 <div class="text-xs-right">
-                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Guardar">
+                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Actualizar">
                                 </div>
 
                             </form>

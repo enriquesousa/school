@@ -1,3 +1,202 @@
+- [School Management System](#school-management-system)
+  - [Fecha: Miércoles 28 de Junio 2023](#fecha-miércoles-28-de-junio-2023)
+- [S21 - School Management System](#s21---school-management-system)
+  - [242. Customize Admin Dashboard](#242-customize-admin-dashboard)
+  - [243. Dashboard Page Segmentation](#243-dashboard-page-segmentation)
+  - [244. User Logout Option](#244-user-logout-option)
+  - [245. Customize Login Form](#245-customize-login-form)
+  - [246. Refresh Admin Template](#246-refresh-admin-template)
+- [S22 - Manage User](#s22---manage-user)
+  - [247. Routing Controller and Manage Users Part 1](#247-routing-controller-and-manage-users-part-1)
+  - [248. Routing Controller and Manage Users Part 2](#248-routing-controller-and-manage-users-part-2)
+  - [249. View User Data from Database](#249-view-user-data-from-database)
+  - [250. Insert User Data in Database Part 1](#250-insert-user-data-in-database-part-1)
+  - [251. Insert User Data in Database Part 2](#251-insert-user-data-in-database-part-2)
+  - [252. Adding Toaster In Project](#252-adding-toaster-in-project)
+  - [253. Edit and Update User Data into Database Part 1](#253-edit-and-update-user-data-into-database-part-1)
+  - [254. Edit and Update User Data into Database Part 2](#254-edit-and-update-user-data-into-database-part-2)
+  - [255. Delete User Data From Database](#255-delete-user-data-from-database)
+  - [256. Adding Sweet Alert In Project](#256-adding-sweet-alert-in-project)
+- [S23 - Manage User Profile](#s23---manage-user-profile)
+  - [257. User Profile Image Upload Edit Update Database Part 1](#257-user-profile-image-upload-edit-update-database-part-1)
+  - [258. User Profile Image Upload Edit Update Database Part 2](#258-user-profile-image-upload-edit-update-database-part-2)
+  - [259. User Profile Image Upload Edit Update Database Part 3](#259-user-profile-image-upload-edit-update-database-part-3)
+  - [260. User Profile Image Upload Edit Update Database Part 4](#260-user-profile-image-upload-edit-update-database-part-4)
+  - [261. User Profile Change password Part 1](#261-user-profile-change-password-part-1)
+  - [262. User Profile Change password Part 2](#262-user-profile-change-password-part-2)
+  - [263. Sidebar Menu Active non Active Option](#263-sidebar-menu-active-non-active-option)
+  - [264. Add Project in GitHub](#264-add-project-in-github)
+- [S24 - Student Class Management](#s24---student-class-management)
+  - [265. Student Class Management Option Part 1](#265-student-class-management-option-part-1)
+  - [266. Student Class Management Option Part 2](#266-student-class-management-option-part-2)
+  - [267. Student Class Management Option Part 3](#267-student-class-management-option-part-3)
+- [S25 - Student Year Management](#s25---student-year-management)
+  - [268. Student Year Management Option Part 1](#268-student-year-management-option-part-1)
+  - [269. Student Year Management Option Part 2](#269-student-year-management-option-part-2)
+- [S26 - Student Group Management](#s26---student-group-management)
+  - [270. Student Group Management Option Part 1](#270-student-group-management-option-part-1)
+  - [271. Student Group Management Option Part 2](#271-student-group-management-option-part-2)
+- [S27 - Student Shift Management](#s27---student-shift-management)
+  - [272. Student Shift Management Option Part 1](#272-student-shift-management-option-part-1)
+  - [273. Student Shift Management Option Part 2](#273-student-shift-management-option-part-2)
+- [S28 - Student Fee Category Option](#s28---student-fee-category-option)
+  - [274. Working Fee Category Option Part 1](#274-working-fee-category-option-part-1)
+  - [275. Working Fee Category Option Part 2](#275-working-fee-category-option-part-2)
+- [S29 - Manage Student Fee Category Amount](#s29---manage-student-fee-category-amount)
+  - [276. Manage Fee Category Amount Part 1](#276-manage-fee-category-amount-part-1)
+  - [277. Manage Fee Category Amount Part 2](#277-manage-fee-category-amount-part-2)
+  - [278. Manage Fee Category Amount Part 3](#278-manage-fee-category-amount-part-3)
+  - [279. Manage Fee Category Amount Part 4](#279-manage-fee-category-amount-part-4)
+  - [280. Manage Fee Category Amount Part 5](#280-manage-fee-category-amount-part-5)
+  - [281. Manage Fee Category Amount Part 6](#281-manage-fee-category-amount-part-6)
+  - [282. Manage Fee Category Amount Part 7](#282-manage-fee-category-amount-part-7)
+  - [283. Manage Fee Category Amount Part 8](#283-manage-fee-category-amount-part-8)
+- [S30 - Manage Student Exam Type](#s30---manage-student-exam-type)
+  - [284. Working Exam Type Part 1](#284-working-exam-type-part-1)
+  - [285. Working Exam Type Part 2](#285-working-exam-type-part-2)
+- [S31 - Manage Student Subjects](#s31---manage-student-subjects)
+  - [286. Working Subjects Part 1](#286-working-subjects-part-1)
+  - [287. Working Subjects Part 2](#287-working-subjects-part-2)
+- [S32 - Manage Student Assign Subject](#s32---manage-student-assign-subject)
+  - [288. Student Assign Subjects Part 1](#288-student-assign-subjects-part-1)
+  - [289. Student Assign Subjects Part 2](#289-student-assign-subjects-part-2)
+  - [290. Student Assign Subjects Part 3](#290-student-assign-subjects-part-3)
+  - [291. Student Assign Subjects Part 4](#291-student-assign-subjects-part-4)
+  - [292. Student Assign Subjects Part 5](#292-student-assign-subjects-part-5)
+- [S33 - Manage Designation](#s33---manage-designation)
+  - [293. Working Designation Part 1](#293-working-designation-part-1)
+  - [294. Working Designation Part 2](#294-working-designation-part-2)
+- [S34 - Student Registration Management](#s34---student-registration-management)
+  - [295. Student Registration Part 1](#295-student-registration-part-1)
+  - [296. Student Registration Part 2](#296-student-registration-part-2)
+  - [297. Student Registration Part 3](#297-student-registration-part-3)
+  - [298. Student Registration Part 4](#298-student-registration-part-4)
+  - [299. Student Registration Part 5](#299-student-registration-part-5)
+  - [300. Student Registration Part 6](#300-student-registration-part-6)
+  - [301. Student Registration Part 7](#301-student-registration-part-7)
+  - [302. Student Registration Part 8](#302-student-registration-part-8)
+  - [303. Student Registration Part 9](#303-student-registration-part-9)
+  - [304. Student Registration Part 10](#304-student-registration-part-10)
+  - [305. Student Registration Part 11](#305-student-registration-part-11)
+  - [306. Student Registration Part 12](#306-student-registration-part-12)
+  - [307. Student Registration Part 13](#307-student-registration-part-13)
+  - [308. Student Registration Edit Part 1](#308-student-registration-edit-part-1)
+  - [309. Student Registration Edit Part 2](#309-student-registration-edit-part-2)
+  - [310. Student Registration Edit Part 3](#310-student-registration-edit-part-3)
+  - [311. Student Promotion Option](#311-student-promotion-option)
+- [S35 - Student PDF Generate](#s35---student-pdf-generate)
+  - [312. Student PDF Generate Part 1](#312-student-pdf-generate-part-1)
+  - [313. Student PDF Generate Part 2](#313-student-pdf-generate-part-2)
+- [S36 - Student PDF Generate](#s36---student-pdf-generate)
+  - [314. Student Roll Generate Part 1](#314-student-roll-generate-part-1)
+  - [315. Student Roll Generate Part 2](#315-student-roll-generate-part-2)
+  - [316. Student Roll Generate Part 3](#316-student-roll-generate-part-3)
+  - [317. Student Roll Generate Part 4](#317-student-roll-generate-part-4)
+- [S37 - Student Registration Fee](#s37---student-registration-fee)
+  - [318. Student Registration Fee Part 1](#318-student-registration-fee-part-1)
+  - [319. Student Registration Fee Part 2](#319-student-registration-fee-part-2)
+  - [320. Student Registration Fee Part 3](#320-student-registration-fee-part-3)
+  - [321. Student Registration Fee Part 4](#321-student-registration-fee-part-4)
+- [S38 - Student Monthly Fee Option](#s38---student-monthly-fee-option)
+  - [322. Student Monthly Fee Part 1](#322-student-monthly-fee-part-1)
+  - [323. Student Monthly Fee Part 2](#323-student-monthly-fee-part-2)
+- [S39 - Student Exam Fee Option](#s39---student-exam-fee-option)
+  - [324. Student Exam Fee Part 1](#324-student-exam-fee-part-1)
+  - [325. Student Exam Fee Part 2](#325-student-exam-fee-part-2)
+  - [326. update Route authentication](#326-update-route-authentication)
+- [S40 - Manage Employee Registration](#s40---manage-employee-registration)
+  - [327. Employee Registration Part 1](#327-employee-registration-part-1)
+  - [328. Employee Registration Part 2](#328-employee-registration-part-2)
+  - [329. Employee Registration Part 3](#329-employee-registration-part-3)
+  - [330. Employee Registration Part 4](#330-employee-registration-part-4)
+  - [331. Employee Registration Part 5](#331-employee-registration-part-5)
+  - [332. Employee Registration Part 6](#332-employee-registration-part-6)
+  - [333. Employee Registration Part 7](#333-employee-registration-part-7)
+- [S41 - Manage Employee Salary Increment](#s41---manage-employee-salary-increment)
+  - [334. Employee Salary Increment and Details Part 1](#334-employee-salary-increment-and-details-part-1)
+  - [335. Employee Salary Increment and Details Part 2](#335-employee-salary-increment-and-details-part-2)
+  - [336. Employee Salary Increment and Details Part 3](#336-employee-salary-increment-and-details-part-3)
+  - [337. Employee Salary Increment and Details Part 4](#337-employee-salary-increment-and-details-part-4)
+- [S42 - Manage Employee Leave Management](#s42---manage-employee-leave-management)
+  - [339. Employee Leave Management Part 1](#339-employee-leave-management-part-1)
+  - [340. Employee Leave Management Part 2](#340-employee-leave-management-part-2)
+  - [341. Employee Leave Management Part 3](#341-employee-leave-management-part-3)
+  - [342. Employee Leave Management Part 4](#342-employee-leave-management-part-4)
+  - [343. Employee Leave Management Part 5](#343-employee-leave-management-part-5)
+  - [344. Employee Leave Management Part 6](#344-employee-leave-management-part-6)
+- [S43 - Employee Attendance Management](#s43---employee-attendance-management)
+  - [345. Employee Attendance Part 1](#345-employee-attendance-part-1)
+  - [346. Employee Attendance Part 2](#346-employee-attendance-part-2)
+  - [347. Employee Attendance Part 3](#347-employee-attendance-part-3)
+  - [348. Employee Attendance Part 4](#348-employee-attendance-part-4)
+  - [349. Employee Attendance Part 5](#349-employee-attendance-part-5)
+  - [350. Employee Attendance Part 6](#350-employee-attendance-part-6)
+  - [351. Employee Attendance Part 7](#351-employee-attendance-part-7)
+- [S44 - Employee Monthly Salary Management](#s44---employee-monthly-salary-management)
+  - [351. Employee Monthly Salary Part 1](#351-employee-monthly-salary-part-1)
+  - [352. Employee Monthly Salary Part 2](#352-employee-monthly-salary-part-2)
+  - [353. Employee Monthly Salary Part 3](#353-employee-monthly-salary-part-3)
+- [S45 - Manage Student Marks Entry](#s45---manage-student-marks-entry)
+  - [354. Student Marks Entry Part 1](#354-student-marks-entry-part-1)
+  - [355. Student Marks Entry Part 2](#355-student-marks-entry-part-2)
+  - [356. Student Marks Entry Part 3](#356-student-marks-entry-part-3)
+  - [357. Student Marks Entry Part 4](#357-student-marks-entry-part-4)
+  - [358. Student Marks Entry Part 5](#358-student-marks-entry-part-5)
+  - [359. Student Marks Edit Part 1](#359-student-marks-edit-part-1)
+  - [360. Student Marks Edit Part 2](#360-student-marks-edit-part-2)
+  - [361. Update Route Active Menu](#361-update-route-active-menu)
+- [S46 - Manage Student Grade Point](#s46---manage-student-grade-point)
+  - [362. Student Grade Point Part 1](#362-student-grade-point-part-1)
+  - [363. Student Grade Point Part 2](#363-student-grade-point-part-2)
+  - [364. Student Grade Point Part 3](#364-student-grade-point-part-3)
+- [S47 - Manage Student Fee](#s47---manage-student-fee)
+  - [365. Students Fee Part 1](#365-students-fee-part-1)
+  - [366. Students Fee Part 2](#366-students-fee-part-2)
+  - [367. Students Fee Part 3](#367-students-fee-part-3)
+  - [368. Students Fee Part 4](#368-students-fee-part-4)
+  - [369. Students Fee Part 5](#369-students-fee-part-5)
+- [S48 - Manage Employees Salary](#s48---manage-employees-salary)
+  - [370. Employees Salary Part 1](#370-employees-salary-part-1)
+  - [371. Employees Salary Part 2](#371-employees-salary-part-2)
+  - [372. Employees Salary Part 3](#372-employees-salary-part-3)
+  - [373. Employees Salary Part 4](#373-employees-salary-part-4)
+  - [374. Error Solve for Student Fee and Employee Salary](#374-error-solve-for-student-fee-and-employee-salary)
+- [S49 - Manage Others Cost](#s49---manage-others-cost)
+  - [375. Others Cost Part 1](#375-others-cost-part-1)
+  - [376. Others Cost Part 2](#376-others-cost-part-2)
+  - [377. Others Cost Part 3](#377-others-cost-part-3)
+  - [378. Others Cost Part 4](#378-others-cost-part-4)
+- [S50 - Manage Monthly and Yearly Profit](#s50---manage-monthly-and-yearly-profit)
+  - [379. Monthly and Yearly Profit Part 1](#379-monthly-and-yearly-profit-part-1)
+  - [380. Monthly and Yearly Profit Part 2](#380-monthly-and-yearly-profit-part-2)
+  - [381. Monthly and Yearly Profit Part 3](#381-monthly-and-yearly-profit-part-3)
+  - [382. Monthly and Yearly Profit Part 4](#382-monthly-and-yearly-profit-part-4)
+- [S51 - Manage Student Mark Sheet Generate](#s51---manage-student-mark-sheet-generate)
+  - [383. Student Mark Sheet Generate Part 1](#383-student-mark-sheet-generate-part-1)
+  - [384. Student Mark Sheet Generate Part 2](#384-student-mark-sheet-generate-part-2)
+  - [385. Student Mark Sheet Generate Part 3](#385-student-mark-sheet-generate-part-3)
+  - [386. Student Mark Sheet Generate Part 4](#386-student-mark-sheet-generate-part-4)
+  - [387. Student Mark Sheet Generate Part 5](#387-student-mark-sheet-generate-part-5)
+  - [388. Student Mark Sheet Generate Part 6](#388-student-mark-sheet-generate-part-6)
+- [S52 - Employee Attendance Report](#s52---employee-attendance-report)
+  - [389. Employee Attendance Report Part 1](#389-employee-attendance-report-part-1)
+  - [390. Employee Attendance Report Part 2](#390-employee-attendance-report-part-2)
+  - [391. Employee Attendance Report Part 3](#391-employee-attendance-report-part-3)
+- [S53 - Manage Students Result](#s53---manage-students-result)
+  - [392. Students Result Part 1](#392-students-result-part-1)
+  - [393. Students Result Part 2](#393-students-result-part-2)
+  - [394. Students Result Part 3](#394-students-result-part-3)
+- [S54 - Manage Students ID Card Generate](#s54---manage-students-id-card-generate)
+  - [395. Students ID Card Generate Part 1](#395-students-id-card-generate-part-1)
+  - [396. Students ID Card Generate Part 2](#396-students-id-card-generate-part-2)
+  - [397. Students ID Card Generate Part 3](#397-students-id-card-generate-part-3)
+- [S55 - Updated Videos - Student Demand](#s55---updated-videos---student-demand)
+  - [398. Prevent Browser Back Button After Logout](#398-prevent-browser-back-button-after-logout)
+  - [399. How to Run Project Localhost from Source Code](#399-how-to-run-project-localhost-from-source-code)
+  - [400. Happy Learning](#400-happy-learning)
+  - [401. What is coming next?](#401-what-is-coming-next)
+  - [402. Tópico extra](#402-tópico-extra)
+
 # School Management System
 ## Fecha: Miércoles 28 de Junio 2023
 Estoy en Laravel 10
@@ -1015,19 +1214,19 @@ Listo!
 Listo!
 
 # S42 - Manage Employee Leave Management
-## 338. Employee Leave Management Part 1
+## 339. Employee Leave Management Part 1
 Crear dos tablas nuevas:
 ```php
 php artisan make:model LeavePurpose -m
 php artisan make:model EmployeeLeave -m
 ```
 Listo!
-## 339. Employee Leave Management Part 2
+## 340. Employee Leave Management Part 2
 Listo!
-## 340. Employee Leave Management Part 3 
+## 341. Employee Leave Management Part 3 
 Usar JS para agregar en forma dinámica datos a la tabla 'leave_purposes'
 Listo!
-## 341. Employee Leave Management Part 4
+## 342. Employee Leave Management Part 4
 Why do I need to run php artisan optimize after adding a route
 Everytime you push a new version of your project to production it is recommended to run:
 `php artisan route:cache`
@@ -1063,19 +1262,40 @@ public function EmployeeLeaveStore(Request $request){
 }
 ```
 Listo!
-## 342. Employee Leave Management Part 5
+## 343. Employee Leave Management Part 5
+Cambio la numeración, Se recorrio!, Kazi a de ver agregado contenido nuevo antes! de estas lecciones!
+Ya vi agrego la 6. My All Project Base Courses!
+
+🔺▪️ ▫️ ◾️ Top New Courses ▪️ ▫️ ◾️🔺
+
+🟥 Laravel 10 Build Complete Hotel Booking Reservation System   🔥🔥
+
+🟥 Laravel 10 - Build Real Estate Property Listing Project A-Z  🔥🔥
+
+🟥 Laravel 9 Build Advanced Complete Point Of Sale Project A-Z
+
+🟥 Laravel 9 A-Z For Beginner With Complete News Portal Website
+
+🟥 Laravel 9 -Build Complete Multi Vendor Ecommerce Project A-Z
+
+🟥 Laravel 9 - Build Complete Inventory Management System A-Z
+
+Instale la extension de Vscode "Markdown All in One" para generar TOC (Table of Content)
+
 Listo!
-## 343. Employee Leave Management Part 6
+## 344. Employee Leave Management Part 6
 
 
 # S43 - Employee Attendance Management
-## 344. Employee Attendance Part 1
-## 345. Employee Attendance Part 2
-## 346. Employee Attendance Part 3
-## 347. Employee Attendance Part 4
-## 348. Employee Attendance Part 5
-## 349. Employee Attendance Part 6
-## 350. Employee Attendance Part 7
+## 345. Employee Attendance Part 1
+## 346. Employee Attendance Part 2
+## 347. Employee Attendance Part 3
+## 348. Employee Attendance Part 4
+## 349. Employee Attendance Part 5
+## 350. Employee Attendance Part 6
+## 351. Employee Attendance Part 7
+
+
 
 # S44 - Employee Monthly Salary Management
 ## 351. Employee Monthly Salary Part 1
@@ -1151,6 +1371,7 @@ Listo!
 ## 399. How to Run Project Localhost from Source Code
 ## 400. Happy Learning
 ## 401. What is coming next?
+## 402. Tópico extra
 
 
 

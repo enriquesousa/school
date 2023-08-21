@@ -209,12 +209,12 @@
 			"path": "bitacora.md",
 			"bookmarks": [
 				{
-					"line": 810,
+					"line": 1009,
 					"column": 61,
 					"label": "Creating PDFs in Laravel 9: A Step-by-Step Guide using DomPDF PDF"
 				},
 				{
-					"line": 1030,
+					"line": 1229,
 					"column": 62,
 					"label": "Why do I need to run php artisan optimize after adding a route"
 				}
