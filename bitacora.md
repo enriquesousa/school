@@ -1064,8 +1064,10 @@ public function EmployeeLeaveStore(Request $request){
 ```
 Listo!
 ## 342. Employee Leave Management Part 5
+Iniciar
 
 ## 343. Employee Leave Management Part 6
+
 
 # S43 - Employee Attendance Management
 ## 344. Employee Attendance Part 1
