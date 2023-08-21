@@ -1263,6 +1263,8 @@ public function EmployeeLeaveStore(Request $request){
 ```
 Listo!
 ## 343. Employee Leave Management Part 5
+Edit
+
 Cambio la numeración, Se recorrio!, Kazi a de ver agregado contenido nuevo antes! de estas lecciones!
 Ya vi agrego la 6. My All Project Base Courses!
 
@@ -1284,10 +1286,12 @@ Instale la extension de Vscode "Markdown All in One" para generar TOC (Table of 
 
 Listo!
 ## 344. Employee Leave Management Part 6
-
+Delete
+Listo!
 
 # S43 - Employee Attendance Management
 ## 345. Employee Attendance Part 1
+
 ## 346. Employee Attendance Part 2
 ## 347. Employee Attendance Part 3
 ## 348. Employee Attendance Part 4

@@ -217,6 +217,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/ausencias/store', [EmployeeLeaveController::class, 'EmployeeLeaveStore'])->name('store.employee.leave');
         Route::get('/ausencias/edit/{id}', [EmployeeLeaveController::class, 'EmployeeLeaveEdit'])->name('employee.leave.edit');
         Route::post('/ausencias/update/{id}', [EmployeeLeaveController::class, 'EmployeeLeaveUpdate'])->name('update.employee.leave');
+        Route::get('/ausencias/delete/{id}', [EmployeeLeaveController::class, 'EmployeeLeaveDelete'])->name('employee.leave.delete');
 
     });
 

@@ -52,7 +52,7 @@
                                                 <a href="{{ route('employee.leave.edit', $item->id) }}" class="btn btn-info">Editar</a>
 
                                                 {{-- Botón Eliminar --}}
-                                                <a href="{{ route('designation.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+                                                <a href="{{ route('employee.leave.delete', $item->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
                                             </td>
 
                                         </tr>

@@ -97,5 +97,17 @@ class EmployeeLeaveController extends Controller
         return redirect()->route('employee.leave.view')->with($notification);
     }
 
+    // EmployeeLeaveDelete
+    public function EmployeeLeaveDelete($id){
+        $data = EmployeeLeave::find($id);
+        $data->delete();
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Ausencia Eliminada con éxito!',
+            'alert-type' => 'info'
+        );
+        return redirect()->back()->with($notification);
+    }
 
 }
