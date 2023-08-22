@@ -222,6 +222,7 @@ Route::group(['middleware' => 'auth'], function () {
         // Employee Attendance - Model: EmployeeAttendance - Asistencia de Empleado
         Route::get('/attendance/view', [EmployeeAttendanceController::class, 'EmployeeAttendanceView'])->name('employee.attendance.view');
         Route::get('/attendance/add', [EmployeeAttendanceController::class, 'EmployeeAttendanceAdd'])->name('employee.attendance.add');
+        Route::post('/attendance/store', [EmployeeAttendanceController::class, 'EmployeeAttendanceStore'])->name('store.employee.attendance');
 
 
     });

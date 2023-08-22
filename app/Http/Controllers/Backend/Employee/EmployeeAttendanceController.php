@@ -36,6 +36,10 @@ class EmployeeAttendanceController extends Controller
        return view('backend.employee.employee_attendance.employee_attendance_add', $data);
     }
 
+    // EmployeeAttendanceStore
+    public function EmployeeAttendanceStore(Request $request){
+
+    }
 
 
 }
