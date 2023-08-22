@@ -30,6 +30,12 @@ class EmployeeAttendanceController extends Controller
        return view('backend.employee.employee_attendance.employee_attendance_view', $data);
     }
 
+    // EmployeeAttendanceAdd
+    public function EmployeeAttendanceAdd(){
+       $data['employees'] = User::where('usertype', 'Employee')->get();
+       return view('backend.employee.employee_attendance.employee_attendance_add', $data);
+    }
+
 
 
 }

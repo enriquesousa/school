@@ -18,7 +18,7 @@
                             <h3 class="box-title">Asistencias de Empleados</h3>
 
                             {{-- botón agregar asistencia --}}
-                            <a href="{{ route('employee.leave.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Asistencia</a>
+                            <a href="{{ route('employee.attendance.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Asistencia</a>
 
                         </div>
                         <!-- /.box-header -->
