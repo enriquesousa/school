@@ -23,7 +23,7 @@ use App\Http\Controllers\Backend\Student\ExamFeeController;
 use App\Http\Controllers\Backend\Employee\EmployeeRegistrationController;
 use App\Http\Controllers\Backend\Employee\EmployeeSalaryController;
 use App\Http\Controllers\Backend\Employee\EmployeeLeaveController;
-
+use App\Http\Controllers\Backend\Employee\EmployeeAttendanceController;
 
 
 Route::get('/', function () {
@@ -218,6 +218,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/ausencias/edit/{id}', [EmployeeLeaveController::class, 'EmployeeLeaveEdit'])->name('employee.leave.edit');
         Route::post('/ausencias/update/{id}', [EmployeeLeaveController::class, 'EmployeeLeaveUpdate'])->name('update.employee.leave');
         Route::get('/ausencias/delete/{id}', [EmployeeLeaveController::class, 'EmployeeLeaveDelete'])->name('employee.leave.delete');
+
+        // Employee Attendance - Model: EmployeeAttendance - Asistencia de Empleado
+        Route::get('/attendance/view', [EmployeeAttendanceController::class, 'EmployeeAttendanceView'])->name('employee.attendance.view');
+
 
     });
 
