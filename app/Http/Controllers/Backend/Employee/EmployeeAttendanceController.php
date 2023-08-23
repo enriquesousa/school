@@ -26,8 +26,9 @@ class EmployeeAttendanceController extends Controller
 {
     // EmployeeAttendanceView
     public function EmployeeAttendanceView(){
-       $data['allData'] = EmployeeAttendance::orderBy('id', 'DESC')->get();
-       return view('backend.employee.employee_attendance.employee_attendance_view', $data);
+        // $data['allData'] = EmployeeAttendance::orderBy('id', 'DESC')->get();
+        $data['allData'] = EmployeeAttendance::select('date')->groupBy('date')->orderBy('date', 'DESC')->get();
+        return view('backend.employee.employee_attendance.employee_attendance_view', $data);
     }
 
     // EmployeeAttendanceAdd
@@ -57,6 +58,13 @@ class EmployeeAttendanceController extends Controller
             'alert-type' => 'success'
         );
         return redirect()->route('employee.attendance.view')->with($notification);
+    }
+
+    // EmployeeAttendanceEdit
+    public function EmployeeAttendanceEdit($date){
+       $data['editData'] = EmployeeAttendance::where('date', $date)->get();
+       $data['employees'] = User::where('usertype', 'Employee')->get();
+       return view('backend.employee.employee_attendance.employee_attendance_edit', $data);
     }
 
 

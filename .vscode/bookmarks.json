@@ -359,7 +359,7 @@
 			"path": "resources/views/backend/employee/employee_attendance/employee_attendance_view.blade.php",
 			"bookmarks": [
 				{
-					"line": 45,
+					"line": 41,
 					"column": 83,
 					"label": "Formato de fecha (date) en español en  vista"
 				}
