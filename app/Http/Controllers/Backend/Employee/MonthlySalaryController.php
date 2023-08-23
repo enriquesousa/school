@@ -18,6 +18,8 @@ use Illuminate\Validation\Rule;
 use App\Models\Designation;
 use App\Models\EmployeeSalaryLog;
 
+use App\Models\EmployeeAttendance;
+
 
 class MonthlySalaryController extends Controller
 {
@@ -29,8 +31,57 @@ class MonthlySalaryController extends Controller
     // MonthlySalaryGet
     public function MonthlySalaryGet(Request $request){
 
+        $date = date('Y-m',strtotime($request->date));
+
+        if ($date !='') {
+            $where[] = ['date','like',$date.'%'];
+        }
+
+        $data = EmployeeAttendance::select('employee_id')->groupBy('employee_id')->with(['user'])->where($where)->get();
+        // dd($data->toArray());
+
+        $html['thsource']  = '<th>Serie</th>';
+        $html['thsource'] .= '<th>Nombre de Empleado</th>';
+        $html['thsource'] .= '<th>Salario Base</th>';
+        $html['thsource'] .= '<th>Sueldo este Mes</th>';
+        $html['thsource'] .= '<th>Acción</th>';
+
+
+        foreach ($data as $key => $v) {
+
+            $totalAsistencias = EmployeeAttendance::with(['user'])->where($where)->where('employee_id',$v->employee_id)->get();
+            $absentCount = count($totalAsistencias->where('attend_status','Ausente'));
+
+            $color = 'success';
+            $html[$key]['tdsource']  = '<td>'.($key+1).'</td>';
+            $html[$key]['tdsource'] .= '<td>'.$v['user']['name'].'</td>';
+            $html[$key]['tdsource'] .= '<td>'.'$ '.number_format($v['user']['salary'], 2).'</td>';
+
+
+            // Calcular el salario mensual
+            $salary = (float)$v['user']['salary'];
+            $salaryPerDay = (float)$salary/30;
+            $totalSalaryMinus = (float)$absentCount*(float)$salaryPerDay;
+            $totalSalary = (float)$salary - (float)$totalSalaryMinus;
+
+            if ($totalSalary == $salary) {
+                $html[$key]['tdsource'] .='<td class="text-success">'.'$ '.number_format($totalSalary, 2).'</td>';
+            } else {
+                $html[$key]['tdsource'] .='<td class="text-danger">'.'$ '.number_format($totalSalary, 2).'</td>';
+            }
+
+
+            $html[$key]['tdsource'] .='<td>';
+            $html[$key]['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="Recibo de Pago PDF" target="_blanks" href="'.route("employee.monthly.salary.payslip", $v->employee_id).'">Recibo</a>';
+            $html[$key]['tdsource'] .= '</td>';
+
+        }
+       return response()->json(@$html);
     }
 
+    // MonthlySalaryPayslip
+    public function MonthlySalaryPayslip(Request $request){
 
+    }
 
 }

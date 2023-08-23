@@ -230,6 +230,7 @@ Route::group(['middleware' => 'auth'], function () {
         // Employee Monthly Salary - Model: EmployeeAttendance - Sueldo Mensual
         Route::get('/monthly/salary/view', [MonthlySalaryController::class, 'MonthlySalaryView'])->name('employee.monthly.view');
         Route::get('/monthly/salary/get', [MonthlySalaryController::class, 'MonthlySalaryGet'])->name('employee.monthly.salary.get');
+        Route::get('/monthly/salary/payslip', [MonthlySalaryController::class, 'MonthlySalaryPayslip'])->name('employee.monthly.salary.payslip');
 
     });
 
