@@ -40,10 +40,14 @@
                                         @foreach ($allData as $key => $item)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-                                            <td>{{ $item->employee_id }}</td>
-                                            <td>{{ $item->employee_id }}</td>
-                                            <td>{{ $item->employee_id }}</td>
-                                            <td>{{ $item->employee_id }}</td>
+                                            <td>{{ $item->user->name }}</td>
+                                            <td>{{ $item->user->id_no }}</td>
+
+                                            {{-- Formato de fecha (date) en español (dia de la semana, dia mes y año) --}}
+                                            {{-- <td>{{ \Carbon\Carbon::parse($item->date)->locale('es')->isoFormat('dddd, D [de] MMMM [de] YYYY') }}</td> --}}
+                                            <td>{{ \Carbon\Carbon::parse($item->date)->locale('es')->isoFormat('D[/]MMMM[/]YYYY') }}</td>
+
+                                            <td>{{ $item->attend_status }}</td>
 
                                             <td>
                                                 {{-- Botón Editar --}}

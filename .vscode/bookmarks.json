@@ -274,7 +274,7 @@
 			"path": "app/Providers/AppServiceProvider.php",
 			"bookmarks": [
 				{
-					"line": 24,
+					"line": 26,
 					"column": 10,
 					"label": "money convert"
 				}
@@ -352,6 +352,16 @@
 					"line": 114,
 					"column": 69,
 					"label": "Funcionalidad JS para mostrar input de 'Escriba un nuevo motivo'"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/employee/employee_attendance/employee_attendance_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 45,
+					"column": 83,
+					"label": "Formato de fecha (date) en español en  vista"
 				}
 			]
 		}

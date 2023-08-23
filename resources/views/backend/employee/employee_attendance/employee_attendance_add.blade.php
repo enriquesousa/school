@@ -26,6 +26,7 @@
                                 <div class="row mb-3">
                                     <div class="col-12">
 
+                                        {{-- Fecha de Ausencia --}}
                                         <div class="row">
 
                                             {{-- col-md-6 --}}
@@ -35,7 +36,7 @@
                                                 <div class="form-group">
                                                     <h5>Fecha Asistencia<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="date" name="date" class="form-control">
+                                                        <input type="date" name="date" class="form-control" required>
                                                     </div>
                                                 </div>
 
@@ -48,6 +49,7 @@
 
                                         </div>
 
+                                        {{-- Tabla/Lista de Empleados --}}
                                         <div class="row">
 
                                             {{-- col-md-12 --}}

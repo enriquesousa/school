@@ -39,6 +39,24 @@ class EmployeeAttendanceController extends Controller
     // EmployeeAttendanceStore
     public function EmployeeAttendanceStore(Request $request){
 
+        $countEmployee = count($request->employee_id);
+
+        for($i=0; $i<$countEmployee; $i++){
+            $attend_status = 'attend_status'.$i;
+
+            $attend = new EmployeeAttendance();
+            $attend->employee_id = $request->employee_id[$i];
+            $attend->date = date('Y-m-d', strtotime($request->date));
+            $attend->attend_status = $request->$attend_status;
+            $attend->save();
+        }
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Asistencias de empleado actualizadas con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->route('employee.attendance.view')->with($notification);
     }
 
 
