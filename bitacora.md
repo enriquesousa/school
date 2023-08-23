@@ -1304,11 +1304,11 @@ Listo!
 ## 350. Employee Attendance Part 6
 Listo!
 ## 351. Employee Attendance Part 7
-
-
+Listo!
 
 # S44 - Employee Monthly Salary Management
 ## 351. Employee Monthly Salary Part 1
+
 ## 352. Employee Monthly Salary Part 2
 ## 353. Employee Monthly Salary Part 3
 

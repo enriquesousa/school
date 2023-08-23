@@ -15,42 +15,49 @@
                     <div class="box">
                         <div class="box-header with-border">
 
-                            <h3 class="box-title">Asistencias de Empleados</h3>
-
-                            {{-- botón agregar asistencia --}}
-                            <a href="{{ route('employee.attendance.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Asistencia</a>
+                            <h3 class="box-title">Detalles de Asistencias</h3>
 
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
+
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th width="5%">Serie</th>
+                                            <th>Nombre</th>
+                                            <th>ID</th>
                                             <th>Fecha</th>
-                                            <th width="20%">Acción</th>
+                                            <th>Estatus</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         @foreach ($allData as $key => $item)
                                         <tr>
-                                            {{-- Serie --}}
                                             <td>{{ $key + 1 }}</td>
+
+                                            {{-- Nombre --}}
+                                            <td>{{ $item->user->name }}</td>
+
+                                            {{-- ID --}}
+                                            <td>{{ $item->user->id_no }}</td>
 
                                             {{-- Formato de fecha (date) en español (dia de la semana, dia mes y año) --}}
                                             {{-- <td>{{ \Carbon\Carbon::parse($item->date)->locale('es')->isoFormat('dddd, D [de] MMMM [de] YYYY') }}</td> --}}
                                             <td>{{ \Carbon\Carbon::parse($item->date)->locale('es')->isoFormat('D[/]MMMM[/]YYYY') }}</td>
 
-                                            {{-- Acción --}}
-                                            <td>
-                                                {{-- Botón Editar --}}
-                                                <a href="{{ route('employee.attendance.edit', $item->date) }}" class="btn btn-info">Editar</a>
-
-                                                {{-- Botón Detalle --}}
-                                                <a href="{{ route('employee.attendance.details', $item->date) }}" class="btn btn-danger">Detalles</a>
-                                            </td>
+                                            {{-- Estatus --}}
+                                            @if ($item->attend_status == 'Presente')
+                                                <td class="text-success">{{ $item->attend_status }}</td>
+                                            @else
+                                                @if ($item->attend_status == 'Ausente')
+                                                    <td class="text-danger">{{ $item->attend_status }}</td>
+                                                @else
+                                                    <td class="text-warning">{{ $item->attend_status }}</td>
+                                                @endif
+                                            @endif
 
                                         </tr>
                                         @endforeach
@@ -62,6 +69,7 @@
                                     </tfoot>
 
                                 </table>
+
                             </div>
                         </div>
                         <!-- /.box-body -->
