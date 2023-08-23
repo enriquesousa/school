@@ -133,39 +133,39 @@
   - [350. Employee Attendance Part 6](#350-employee-attendance-part-6)
   - [351. Employee Attendance Part 7](#351-employee-attendance-part-7)
 - [S44 - Employee Monthly Salary Management](#s44---employee-monthly-salary-management)
-  - [351. Employee Monthly Salary Part 1](#351-employee-monthly-salary-part-1)
-  - [352. Employee Monthly Salary Part 2](#352-employee-monthly-salary-part-2)
-  - [353. Employee Monthly Salary Part 3](#353-employee-monthly-salary-part-3)
+  - [352. Employee Monthly Salary Part 1](#352-employee-monthly-salary-part-1)
+  - [353. Employee Monthly Salary Part 2](#353-employee-monthly-salary-part-2)
+  - [354. Employee Monthly Salary Part 3](#354-employee-monthly-salary-part-3)
 - [S45 - Manage Student Marks Entry](#s45---manage-student-marks-entry)
-  - [354. Student Marks Entry Part 1](#354-student-marks-entry-part-1)
-  - [355. Student Marks Entry Part 2](#355-student-marks-entry-part-2)
-  - [356. Student Marks Entry Part 3](#356-student-marks-entry-part-3)
-  - [357. Student Marks Entry Part 4](#357-student-marks-entry-part-4)
-  - [358. Student Marks Entry Part 5](#358-student-marks-entry-part-5)
-  - [359. Student Marks Edit Part 1](#359-student-marks-edit-part-1)
-  - [360. Student Marks Edit Part 2](#360-student-marks-edit-part-2)
-  - [361. Update Route Active Menu](#361-update-route-active-menu)
+  - [355. Student Marks Entry Part 1](#355-student-marks-entry-part-1)
+  - [356. Student Marks Entry Part 2](#356-student-marks-entry-part-2)
+  - [357. Student Marks Entry Part 3](#357-student-marks-entry-part-3)
+  - [358. Student Marks Entry Part 4](#358-student-marks-entry-part-4)
+  - [359. Student Marks Entry Part 5](#359-student-marks-entry-part-5)
+  - [360. Student Marks Edit Part 1](#360-student-marks-edit-part-1)
+  - [361. Student Marks Edit Part 2](#361-student-marks-edit-part-2)
+  - [362. Update Route Active Menu](#362-update-route-active-menu)
 - [S46 - Manage Student Grade Point](#s46---manage-student-grade-point)
-  - [362. Student Grade Point Part 1](#362-student-grade-point-part-1)
-  - [363. Student Grade Point Part 2](#363-student-grade-point-part-2)
-  - [364. Student Grade Point Part 3](#364-student-grade-point-part-3)
+  - [363. Student Grade Point Part 1](#363-student-grade-point-part-1)
+  - [364. Student Grade Point Part 2](#364-student-grade-point-part-2)
+  - [365. Student Grade Point Part 3](#365-student-grade-point-part-3)
 - [S47 - Manage Student Fee](#s47---manage-student-fee)
-  - [365. Students Fee Part 1](#365-students-fee-part-1)
-  - [366. Students Fee Part 2](#366-students-fee-part-2)
-  - [367. Students Fee Part 3](#367-students-fee-part-3)
-  - [368. Students Fee Part 4](#368-students-fee-part-4)
-  - [369. Students Fee Part 5](#369-students-fee-part-5)
+  - [366. Students Fee Part 1](#366-students-fee-part-1)
+  - [367. Students Fee Part 2](#367-students-fee-part-2)
+  - [368. Students Fee Part 3](#368-students-fee-part-3)
+  - [369. Students Fee Part 4](#369-students-fee-part-4)
+  - [370. Students Fee Part 5](#370-students-fee-part-5)
 - [S48 - Manage Employees Salary](#s48---manage-employees-salary)
-  - [370. Employees Salary Part 1](#370-employees-salary-part-1)
-  - [371. Employees Salary Part 2](#371-employees-salary-part-2)
-  - [372. Employees Salary Part 3](#372-employees-salary-part-3)
-  - [373. Employees Salary Part 4](#373-employees-salary-part-4)
-  - [374. Error Solve for Student Fee and Employee Salary](#374-error-solve-for-student-fee-and-employee-salary)
+  - [371. Employees Salary Part 1](#371-employees-salary-part-1)
+  - [372. Employees Salary Part 2](#372-employees-salary-part-2)
+  - [373. Employees Salary Part 3](#373-employees-salary-part-3)
+  - [374. Employees Salary Part 4](#374-employees-salary-part-4)
+  - [375. Error Solve for Student Fee and Employee Salary](#375-error-solve-for-student-fee-and-employee-salary)
 - [S49 - Manage Others Cost](#s49---manage-others-cost)
-  - [375. Others Cost Part 1](#375-others-cost-part-1)
-  - [376. Others Cost Part 2](#376-others-cost-part-2)
-  - [377. Others Cost Part 3](#377-others-cost-part-3)
-  - [378. Others Cost Part 4](#378-others-cost-part-4)
+  - [376. Others Cost Part 1](#376-others-cost-part-1)
+  - [377. Others Cost Part 2](#377-others-cost-part-2)
+  - [378. Others Cost Part 3](#378-others-cost-part-3)
+  - [379. Others Cost Part 4](#379-others-cost-part-4)
 - [S50 - Manage Monthly and Yearly Profit](#s50---manage-monthly-and-yearly-profit)
   - [379. Monthly and Yearly Profit Part 1](#379-monthly-and-yearly-profit-part-1)
   - [380. Monthly and Yearly Profit Part 2](#380-monthly-and-yearly-profit-part-2)
@@ -1307,47 +1307,48 @@ Listo!
 Listo!
 
 # S44 - Employee Monthly Salary Management
-## 351. Employee Monthly Salary Part 1
+## 352. Employee Monthly Salary Part 1
 Listo!
-## 352. Employee Monthly Salary Part 2
+## 353. Employee Monthly Salary Part 2
 Listo!
-## 353. Employee Monthly Salary Part 3
-
+## 354. Employee Monthly Salary Part 3
+Listo! 
 
 # S45 - Manage Student Marks Entry
-## 354. Student Marks Entry Part 1
-## 355. Student Marks Entry Part 2
-## 356. Student Marks Entry Part 3
-## 357. Student Marks Entry Part 4
-## 358. Student Marks Entry Part 5
-## 359. Student Marks Edit Part 1
-## 360. Student Marks Edit Part 2
-## 361. Update Route Active Menu
+## 355. Student Marks Entry Part 1
+
+## 356. Student Marks Entry Part 2
+## 357. Student Marks Entry Part 3
+## 358. Student Marks Entry Part 4
+## 359. Student Marks Entry Part 5
+## 360. Student Marks Edit Part 1
+## 361. Student Marks Edit Part 2
+## 362. Update Route Active Menu
 
 # S46 - Manage Student Grade Point
-## 362. Student Grade Point Part 1
-## 363. Student Grade Point Part 2
-## 364. Student Grade Point Part 3
+## 363. Student Grade Point Part 1
+## 364. Student Grade Point Part 2
+## 365. Student Grade Point Part 3
 
 # S47 - Manage Student Fee
-## 365. Students Fee Part 1
-## 366. Students Fee Part 2
-## 367. Students Fee Part 3
-## 368. Students Fee Part 4
-## 369. Students Fee Part 5
+## 366. Students Fee Part 1
+## 367. Students Fee Part 2
+## 368. Students Fee Part 3
+## 369. Students Fee Part 4
+## 370. Students Fee Part 5
 
 # S48 - Manage Employees Salary
-## 370. Employees Salary Part 1
-## 371. Employees Salary Part 2
-## 372. Employees Salary Part 3
-## 373. Employees Salary Part 4
-## 374. Error Solve for Student Fee and Employee Salary
+## 371. Employees Salary Part 1
+## 372. Employees Salary Part 2
+## 373. Employees Salary Part 3
+## 374. Employees Salary Part 4
+## 375. Error Solve for Student Fee and Employee Salary
 
 # S49 - Manage Others Cost
-## 375. Others Cost Part 1
-## 376. Others Cost Part 2
-## 377. Others Cost Part 3
-## 378. Others Cost Part 4
+## 376. Others Cost Part 1
+## 377. Others Cost Part 2
+## 378. Others Cost Part 3
+## 379. Others Cost Part 4
 
 # S50 - Manage Monthly and Yearly Profit
 ## 379. Monthly and Yearly Profit Part 1

@@ -80,8 +80,28 @@ class MonthlySalaryController extends Controller
     }
 
     // MonthlySalaryPayslip
-    public function MonthlySalaryPayslip(Request $request){
+    public function MonthlySalaryPayslip(Request $request, $employee_id){
 
+        $id = EmployeeAttendance::where('employee_id',$employee_id)->first();
+
+        $date = date('Y-m',strtotime($id->date));
+
+        if ($date !='') {
+            $where[] = ['date','like',$date.'%'];
+        }
+
+        $data['details'] = EmployeeAttendance::with(['user'])->where($where)->where('employee_id',$id->employee_id)->get();
+
+        // Invoice genérico
+        // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice_pdf', $allStudent);
+
+        // Invoice tipo negocio
+        // $pdf = PDF::loadView('backend.student.registration_fee.registration_invoice2_pdf', $allStudent);
+
+        // sencillo
+        $pdf = PDF::loadView('backend.employee.monthly_salary.monthly_salary_pdf', $data);
+
+        return $pdf->stream('recibo.pdf');
     }
 
 }
