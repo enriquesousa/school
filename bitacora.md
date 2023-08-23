@@ -1308,8 +1308,9 @@ Listo!
 
 # S44 - Employee Monthly Salary Management
 ## 351. Employee Monthly Salary Part 1
-
+Listo!
 ## 352. Employee Monthly Salary Part 2
+
 ## 353. Employee Monthly Salary Part 3
 
 # S45 - Manage Student Marks Entry
