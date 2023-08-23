@@ -1302,7 +1302,7 @@ Listo!
 Agrupar por fecha y mostrar en una tabla
 Listo!
 ## 350. Employee Attendance Part 6
-
+Listo!
 ## 351. Employee Attendance Part 7
 
 

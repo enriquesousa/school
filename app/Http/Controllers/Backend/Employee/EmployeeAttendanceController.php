@@ -40,6 +40,10 @@ class EmployeeAttendanceController extends Controller
     // EmployeeAttendanceStore
     public function EmployeeAttendanceStore(Request $request){
 
+        // primero vamos a borrar todos los registros de la fecha seleccionada
+        EmployeeAttendance::where('date', date('Y-m-d', strtotime($request->date)))->delete();
+
+
         $countEmployee = count($request->employee_id);
 
         for($i=0; $i<$countEmployee; $i++){
