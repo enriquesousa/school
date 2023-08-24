@@ -167,35 +167,35 @@
   - [378. Others Cost Part 3](#378-others-cost-part-3)
   - [379. Others Cost Part 4](#379-others-cost-part-4)
 - [S50 - Manage Monthly and Yearly Profit](#s50---manage-monthly-and-yearly-profit)
-  - [379. Monthly and Yearly Profit Part 1](#379-monthly-and-yearly-profit-part-1)
-  - [380. Monthly and Yearly Profit Part 2](#380-monthly-and-yearly-profit-part-2)
-  - [381. Monthly and Yearly Profit Part 3](#381-monthly-and-yearly-profit-part-3)
-  - [382. Monthly and Yearly Profit Part 4](#382-monthly-and-yearly-profit-part-4)
+  - [380. Monthly and Yearly Profit Part 1](#380-monthly-and-yearly-profit-part-1)
+  - [381. Monthly and Yearly Profit Part 2](#381-monthly-and-yearly-profit-part-2)
+  - [382. Monthly and Yearly Profit Part 3](#382-monthly-and-yearly-profit-part-3)
+  - [383. Monthly and Yearly Profit Part 4](#383-monthly-and-yearly-profit-part-4)
 - [S51 - Manage Student Mark Sheet Generate](#s51---manage-student-mark-sheet-generate)
-  - [383. Student Mark Sheet Generate Part 1](#383-student-mark-sheet-generate-part-1)
-  - [384. Student Mark Sheet Generate Part 2](#384-student-mark-sheet-generate-part-2)
-  - [385. Student Mark Sheet Generate Part 3](#385-student-mark-sheet-generate-part-3)
-  - [386. Student Mark Sheet Generate Part 4](#386-student-mark-sheet-generate-part-4)
-  - [387. Student Mark Sheet Generate Part 5](#387-student-mark-sheet-generate-part-5)
-  - [388. Student Mark Sheet Generate Part 6](#388-student-mark-sheet-generate-part-6)
+  - [384. Student Mark Sheet Generate Part 1](#384-student-mark-sheet-generate-part-1)
+  - [385. Student Mark Sheet Generate Part 2](#385-student-mark-sheet-generate-part-2)
+  - [386. Student Mark Sheet Generate Part 3](#386-student-mark-sheet-generate-part-3)
+  - [387. Student Mark Sheet Generate Part 4](#387-student-mark-sheet-generate-part-4)
+  - [388. Student Mark Sheet Generate Part 5](#388-student-mark-sheet-generate-part-5)
+  - [389. Student Mark Sheet Generate Part 6](#389-student-mark-sheet-generate-part-6)
 - [S52 - Employee Attendance Report](#s52---employee-attendance-report)
-  - [389. Employee Attendance Report Part 1](#389-employee-attendance-report-part-1)
-  - [390. Employee Attendance Report Part 2](#390-employee-attendance-report-part-2)
-  - [391. Employee Attendance Report Part 3](#391-employee-attendance-report-part-3)
+  - [390. Employee Attendance Report Part 1](#390-employee-attendance-report-part-1)
+  - [391. Employee Attendance Report Part 2](#391-employee-attendance-report-part-2)
+  - [392. Employee Attendance Report Part 3](#392-employee-attendance-report-part-3)
 - [S53 - Manage Students Result](#s53---manage-students-result)
-  - [392. Students Result Part 1](#392-students-result-part-1)
-  - [393. Students Result Part 2](#393-students-result-part-2)
-  - [394. Students Result Part 3](#394-students-result-part-3)
+  - [393. Students Result Part 1](#393-students-result-part-1)
+  - [394. Students Result Part 2](#394-students-result-part-2)
+  - [395. Students Result Part 3](#395-students-result-part-3)
 - [S54 - Manage Students ID Card Generate](#s54---manage-students-id-card-generate)
-  - [395. Students ID Card Generate Part 1](#395-students-id-card-generate-part-1)
-  - [396. Students ID Card Generate Part 2](#396-students-id-card-generate-part-2)
-  - [397. Students ID Card Generate Part 3](#397-students-id-card-generate-part-3)
+  - [396. Students ID Card Generate Part 1](#396-students-id-card-generate-part-1)
+  - [397. Students ID Card Generate Part 2](#397-students-id-card-generate-part-2)
+  - [398. Students ID Card Generate Part 3](#398-students-id-card-generate-part-3)
 - [S55 - Updated Videos - Student Demand](#s55---updated-videos---student-demand)
-  - [398. Prevent Browser Back Button After Logout](#398-prevent-browser-back-button-after-logout)
-  - [399. How to Run Project Localhost from Source Code](#399-how-to-run-project-localhost-from-source-code)
-  - [400. Happy Learning](#400-happy-learning)
-  - [401. What is coming next?](#401-what-is-coming-next)
-  - [402. Tópico extra](#402-tópico-extra)
+  - [399. Prevent Browser Back Button After Logout](#399-prevent-browser-back-button-after-logout)
+  - [400. How to Run Project Localhost from Source Code](#400-how-to-run-project-localhost-from-source-code)
+  - [401. Happy Learning](#401-happy-learning)
+  - [402. What is coming next?](#402-what-is-coming-next)
+  - [403. Tópico extra](#403-tópico-extra)
 
 # School Management System
 ## Fecha: Miércoles 28 de Junio 2023
@@ -1316,8 +1316,9 @@ Listo!
 
 # S45 - Manage Student Marks Entry
 ## 355. Student Marks Entry Part 1
-
+Listo!
 ## 356. Student Marks Entry Part 2
+
 ## 357. Student Marks Entry Part 3
 ## 358. Student Marks Entry Part 4
 ## 359. Student Marks Entry Part 5
@@ -1351,40 +1352,40 @@ Listo!
 ## 379. Others Cost Part 4
 
 # S50 - Manage Monthly and Yearly Profit
-## 379. Monthly and Yearly Profit Part 1
-## 380. Monthly and Yearly Profit Part 2
-## 381. Monthly and Yearly Profit Part 3
-## 382. Monthly and Yearly Profit Part 4
+## 380. Monthly and Yearly Profit Part 1
+## 381. Monthly and Yearly Profit Part 2
+## 382. Monthly and Yearly Profit Part 3
+## 383. Monthly and Yearly Profit Part 4
 
 # S51 - Manage Student Mark Sheet Generate
-## 383. Student Mark Sheet Generate Part 1
-## 384. Student Mark Sheet Generate Part 2
-## 385. Student Mark Sheet Generate Part 3
-## 386. Student Mark Sheet Generate Part 4
-## 387. Student Mark Sheet Generate Part 5
-## 388. Student Mark Sheet Generate Part 6
+## 384. Student Mark Sheet Generate Part 1
+## 385. Student Mark Sheet Generate Part 2
+## 386. Student Mark Sheet Generate Part 3
+## 387. Student Mark Sheet Generate Part 4
+## 388. Student Mark Sheet Generate Part 5
+## 389. Student Mark Sheet Generate Part 6
 
 # S52 - Employee Attendance Report
-## 389. Employee Attendance Report Part 1
-## 390. Employee Attendance Report Part 2
-## 391. Employee Attendance Report Part 3
+## 390. Employee Attendance Report Part 1
+## 391. Employee Attendance Report Part 2
+## 392. Employee Attendance Report Part 3
 
 # S53 - Manage Students Result
-## 392. Students Result Part 1
-## 393. Students Result Part 2
-## 394. Students Result Part 3
+## 393. Students Result Part 1
+## 394. Students Result Part 2
+## 395. Students Result Part 3
 
 # S54 - Manage Students ID Card Generate
-## 395. Students ID Card Generate Part 1
-## 396. Students ID Card Generate Part 2
-## 397. Students ID Card Generate Part 3
+## 396. Students ID Card Generate Part 1
+## 397. Students ID Card Generate Part 2
+## 398. Students ID Card Generate Part 3
 
 # S55 - Updated Videos - Student Demand
-## 398. Prevent Browser Back Button After Logout
-## 399. How to Run Project Localhost from Source Code
-## 400. Happy Learning
-## 401. What is coming next?
-## 402. Tópico extra
+## 399. Prevent Browser Back Button After Logout
+## 400. How to Run Project Localhost from Source Code
+## 401. Happy Learning
+## 402. What is coming next?
+## 403. Tópico extra
 
 
 

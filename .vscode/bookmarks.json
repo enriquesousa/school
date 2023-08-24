@@ -9,11 +9,6 @@
 					"label": "Para colorear el menu donde estamos en sidebar de admin"
 				},
 				{
-					"line": 38,
-					"column": 47,
-					"label": "para controlar el acceso a los menus segun el rol de user"
-				},
-				{
 					"line": 40,
 					"column": 48,
 					"label": "font awesome icon"

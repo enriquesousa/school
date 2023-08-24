@@ -46,8 +46,8 @@
                         </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{ route('user.view') }}"><i class="ti-more"></i>Lista de Usuarios</a></li>
-                        <li><a href="{{ route('user.add') }}"><i class="ti-more"></i>Agregar Usuario</a></li>
+                        <li class="{{ ($route == 'user.view') ? 'active' : '' }}"><a href="{{ route('user.view') }}"><i class="ti-more"></i>Lista de Usuarios</a></li>
+                        <li class="{{ ($route == 'user.add') ? 'active' : '' }}"><a href="{{ route('user.add') }}"><i class="ti-more"></i>Agregar Usuario</a></li>
                     </ul>
                 </li>
             @endif
@@ -62,10 +62,10 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('profile.view') }}"><i class="ti-more"></i>Tu Perfil</a></li>
+                    <li class="{{ ($route == 'profile.view') ? 'active' : '' }}"><a href="{{ route('profile.view') }}"><i class="ti-more"></i>Tu Perfil</a></li>
                     {{-- <li><a href="{{ route('profile.advance.form') }}"><i class="ti-more"></i>Advanced Form</a></li>
                     --}}
-                    <li><a href="{{ route('password.view') }}"><i class="ti-more"></i>Cambiar contraseña</a></li>
+                    <li class="{{ ($route == 'password.view') ? 'active' : '' }}"><a href="{{ route('password.view') }}"><i class="ti-more"></i>Cambiar contraseña</a></li>
                 </ul>
             </li>
 
@@ -79,16 +79,16 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Clases</a></li>
-                    <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Años</a></li>
-                    <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Grupos</a></li>
-                    <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Horario</a></li>
-                    <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Categoría de Cobro</a></li>
-                    <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Monto de Cobro</a></li>
-                    <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Tipo de Examen</a></li>
-                    <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Materias</a></li>
-                    <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Asignar Materias</a></li>
-                    <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designación</a></li>
+                    <li class="{{ ($route == 'student.class.view') ? 'active' : '' }}"><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Clases</a></li>
+                    <li class="{{ ($route == 'student.year.view') ? 'active' : '' }}"><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Años</a></li>
+                    <li class="{{ ($route == 'student.group.view') ? 'active' : '' }}"><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Grupos</a></li>
+                    <li class="{{ ($route == 'student.shift.view') ? 'active' : '' }}"><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Horario</a></li>
+                    <li class="{{ ($route == 'fee.category.view') ? 'active' : '' }}"><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Categoría de Cobro</a></li>
+                    <li class="{{ ($route == 'fee.amount.view') ? 'active' : '' }}"><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Monto de Cobro</a></li>
+                    <li class="{{ ($route == 'exam.type.view') ? 'active' : '' }}"><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Tipo de Examen</a></li>
+                    <li class="{{ ($route == 'school.subject.view') ? 'active' : '' }}"><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Materias</a></li>
+                    <li class="{{ ($route == 'assign.subject.view') ? 'active' : '' }}"><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Asignar Materias</a></li>
+                    <li class="{{ ($route == 'designation.view') ? 'active' : '' }}"><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Designación</a></li>
                 </ul>
             </li>
 
@@ -101,11 +101,11 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Registro de Estudiantes</a></li>
-                    <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>Generar Rol</a></li>
-                    <li><a href="{{ route('registration.fee.view') }}"><i class="ti-more"></i>Cargo Inscripción</a></li>
-                    <li><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Cargo Mensualidad</a></li>
-                    <li><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Cargo Examen</a></li>
+                    <li class="{{ ($route == 'student.registration.view') ? 'active' : '' }}"><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Registro de Estudiantes</a></li>
+                    <li class="{{ ($route == 'roll.generate.view') ? 'active' : '' }}"><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>Generar Rol</a></li>
+                    <li class="{{ ($route == 'registration.fee.view') ? 'active' : '' }}"><a href="{{ route('registration.fee.view') }}"><i class="ti-more"></i>Cargo Inscripción</a></li>
+                    <li class="{{ ($route == 'monthly.fee.view') ? 'active' : '' }}"><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Cargo Mensualidad</a></li>
+                    <li class="{{ ($route == 'exam.fee.view') ? 'active' : '' }}"><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Cargo Examen</a></li>
                 </ul>
             </li>
 
@@ -118,11 +118,24 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('employee.registration.view') }}"><i class="ti-more"></i>Registro de Empleado</a></li>
-                    <li><a href="{{ route('employee.salary.view') }}"><i class="ti-more"></i>Salario de Empleado</a></li>
-                    <li><a href="{{ route('employee.leave.view') }}"><i class="ti-more"></i>Ausencias</a></li>
-                    <li><a href="{{ route('employee.attendance.view') }}"><i class="ti-more"></i>Asistencia</a></li>
-                    <li><a href="{{ route('employee.monthly.view') }}"><i class="ti-more"></i>Sueldo Mensual</a></li>
+                    <li class="{{ ($route == 'employee.registration.view') ? 'active' : '' }}"><a href="{{ route('employee.registration.view') }}"><i class="ti-more"></i>Registro de Empleado</a></li>
+                    <li class="{{ ($route == 'employee.salary.view') ? 'active' : '' }}"><a href="{{ route('employee.salary.view') }}"><i class="ti-more"></i>Salario de Empleado</a></li>
+                    <li class="{{ ($route == 'employee.leave.view') ? 'active' : '' }}"><a href="{{ route('employee.leave.view') }}"><i class="ti-more"></i>Ausencias</a></li>
+                    <li class="{{ ($route == 'employee.attendance.view') ? 'active' : '' }}"><a href="{{ route('employee.attendance.view') }}"><i class="ti-more"></i>Asistencia</a></li>
+                    <li class="{{ ($route == 'employee.monthly.view') ? 'active' : '' }}"><a href="{{ route('employee.monthly.view') }}"><i class="ti-more"></i>Sueldo Mensual</a></li>
+                </ul>
+            </li>
+
+            {{-- Admin de Calificaciones - Marks Management --}}
+            <li class="treeview {{ ($prefix == 'marks') ? 'active' : '' }}">
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i><span>Admin Calificaciones</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                     <li class="{{ ($route == 'marks.entry.view.add') ? 'active' : '' }}"><a href="{{ route('marks.entry.view.add') }}"><i class="ti-more"></i>Entrada de Calificaciones</a></li>
 
                 </ul>
             </li>
