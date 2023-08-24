@@ -359,6 +359,26 @@
 					"label": "Formato de fecha (date) en español en  vista"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/marks/marks_add.blade.php",
+			"bookmarks": [
+				{
+					"line": 165,
+					"column": 33,
+					"label": "JS para obtener las materias en marks_add vista"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/DefaultController.php",
+			"bookmarks": [
+				{
+					"line": 12,
+					"column": 39,
+					"label": "JS para obtener las materias en GetSubject Controller"
+				}
+			]
 		}
 	]
 }

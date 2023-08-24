@@ -61,11 +61,26 @@
                                     {{-- Select Materia --}}
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <h5>Clase&nbsp;<span class="text-danger"></span></h5>
+                                            <h5>Materia&nbsp;<span class="text-danger"></span></h5>
                                             <div class="controls">
                                                 <select name="assign_subject_id" id="assign_subject_id" required="" class="form-control">
                                                     <option selected="">Seleccionar Materia</option>
 
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- Select Tipo de Examen --}}
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <h5>Tipo de Examen&nbsp;<span class="text-danger"></span></h5>
+                                            <div class="controls">
+                                                <select name="exam_type_id" id="exam_type_id" required="" class="form-control">
+                                                    <option value="" selected="" disabled="">Seleccionar Clase</option>
+                                                    @foreach ($exam_types as $item)
+                                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                         </div>
@@ -158,7 +173,7 @@
           type:"GET",
           data:{class_id:class_id},
           success:function(data){
-            var html = '<option value="">Select Subject</option>';
+            var html = '<option value="">Seleccionar Materia</option>';
             $.each( data, function(key, v) {
               html += '<option value="'+v.id+'">'+v.school_subject.name+'</option>';
             });
