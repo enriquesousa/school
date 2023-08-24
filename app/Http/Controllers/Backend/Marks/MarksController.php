@@ -16,6 +16,7 @@ use DB;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 use App\Models\StudentMarks;
+use App\Models\ExamType;
 
 
 
@@ -24,9 +25,13 @@ class MarksController extends Controller
     // MarksAdd
     public function MarksAdd(){
 
-        return view('backend.marks.marks_add');
+        $data['years'] = StudentYear::all();
+        $data['classes'] = StudentClass::all();
+        $data['exam_types'] = ExamType::all();
 
+        return view('backend.marks.marks_add', $data);
     }
+
 
 
 

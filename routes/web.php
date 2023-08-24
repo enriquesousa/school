@@ -31,6 +31,8 @@ use App\Http\Controllers\Backend\Employee\MonthlySalaryController;
 
 use App\Http\Controllers\Backend\Marks\MarksController;
 
+use App\Http\Controllers\Backend\DefaultController;
+
 
 
 Route::get('/', function () {
@@ -249,6 +251,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     });
 
+    Route::get('/marks/getsubject', [DefaultController::class, 'GetSubject'])->name('marks.getsubject');
 
 }); // End Middleware Auth
 
