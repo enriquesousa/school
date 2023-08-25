@@ -364,7 +364,7 @@
 			"path": "resources/views/backend/marks/marks_add.blade.php",
 			"bookmarks": [
 				{
-					"line": 167,
+					"line": 168,
 					"column": 33,
 					"label": "JS para obtener las materias en marks_add vista"
 				}
