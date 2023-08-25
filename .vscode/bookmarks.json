@@ -364,7 +364,7 @@
 			"path": "resources/views/backend/marks/marks_add.blade.php",
 			"bookmarks": [
 				{
-					"line": 165,
+					"line": 167,
 					"column": 33,
 					"label": "JS para obtener las materias en marks_add vista"
 				}
@@ -374,7 +374,7 @@
 			"path": "app/Http/Controllers/Backend/DefaultController.php",
 			"bookmarks": [
 				{
-					"line": 12,
+					"line": 13,
 					"column": 39,
 					"label": "JS para obtener las materias en GetSubject Controller"
 				}

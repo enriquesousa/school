@@ -252,6 +252,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::get('/marks/getsubject', [DefaultController::class, 'GetSubject'])->name('marks.getsubject');
+    Route::get('student/marks/getstudents', [DefaultController::class, 'StudentMarksGet'])->name('student.marks.getstudents');
 
 }); // End Middleware Auth
 
