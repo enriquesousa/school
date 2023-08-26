@@ -250,6 +250,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/entry/marks/store', [MarksController::class, 'MarksStore'])->name('marks.entry.store');
         Route::get('/entry/marks/edit', [MarksController::class, 'MarksEdit'])->name('marks.entry.edit');
         Route::get('/entry/marks/edit/getstudents', [MarksController::class, 'MarksEditGetStudents'])->name('student.edit.getstudents');
+        Route::post('/marks/entry/update', [MarksController::class, 'MarksUpdate'])->name('marks.entry.update');
 
 
     });

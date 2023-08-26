@@ -79,6 +79,34 @@ class MarksController extends Controller
        return response()->json($getStudent);
     }
 
+    // MarksUpdate
+    public function MarksUpdate(Request $request){
+
+        // primero borramos los datos y luego los insertamos
+        StudentMarks::where('year_id', $request->year_id)->where('class_id', $request->class_id)->where('assign_subject_id', $request->assign_subject_id)->where('exam_type_id', $request->exam_type_id)->delete();
+
+        $studentList = $request->student_id;
+        if ($studentList) {
+            for ($i=0; $i < count($studentList); $i++) {
+                $marks = new StudentMarks();
+                $marks->year_id = $request->year_id;
+                $marks->class_id = $request->class_id;
+                $marks->assign_subject_id = $request->assign_subject_id;
+                $marks->exam_type_id = $request->exam_type_id;
+                $marks->student_id = $request->student_id[$i];
+                $marks->id_no = $request->id_no[$i];
+                $marks->marks = $request->marks[$i];
+                $marks->save();
+            }
+        }
+
+        // Desplegar notificación
+        $notification = array(
+            'message' => 'Calificaciones Actualizadas con éxito!',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
+    }
 
 
 

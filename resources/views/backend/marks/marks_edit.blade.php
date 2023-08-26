@@ -22,7 +22,7 @@
 
                         <div class="box-body">
 
-                            <form method="POST"" action="{{ route('marks.entry.store') }}">
+                            <form method="POST"" action="{{ route('marks.entry.update') }}">
                             @csrf
 
                                 {{-- Row 1 --}}
