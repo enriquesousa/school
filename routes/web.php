@@ -29,9 +29,10 @@ use App\Http\Controllers\Backend\Employee\EmployeeLeaveController;
 use App\Http\Controllers\Backend\Employee\EmployeeAttendanceController;
 use App\Http\Controllers\Backend\Employee\MonthlySalaryController;
 
-use App\Http\Controllers\Backend\Marks\MarksController;
-
 use App\Http\Controllers\Backend\DefaultController;
+
+use App\Http\Controllers\Backend\Marks\MarksController;
+use App\Http\Controllers\Backend\Marks\GradeController;
 
 
 
@@ -246,11 +247,15 @@ Route::group(['middleware' => 'auth'], function () {
     // Marks Management - Administración de Calificaciones
     Route::prefix('marks')->group(function () {
 
+        // Calificaciones
         Route::get('/entry/view/add', [MarksController::class, 'MarksAdd'])->name('marks.entry.view.add');
         Route::post('/entry/marks/store', [MarksController::class, 'MarksStore'])->name('marks.entry.store');
         Route::get('/entry/marks/edit', [MarksController::class, 'MarksEdit'])->name('marks.entry.edit');
         Route::get('/entry/marks/edit/getstudents', [MarksController::class, 'MarksEditGetStudents'])->name('student.edit.getstudents');
         Route::post('/marks/entry/update', [MarksController::class, 'MarksUpdate'])->name('marks.entry.update');
+
+        // Grados
+        Route::get('/marks/grade/view', [GradeController::class, 'MarksGradeView'])->name('marks.entry.grade');
 
 
     });
