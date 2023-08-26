@@ -1330,10 +1330,13 @@ Listo!
 ## 361. Student Marks Edit Part 2
 Listo!
 ## 362. Update Route Active Menu
-
+Que se vean activas las rutas en el side menu de la izquierda.
+Ya lo había hecho esto yo solo.
+Listo!
 
 # S46 - Manage Student Grade Point
 ## 363. Student Grade Point Part 1
+
 ## 364. Student Grade Point Part 2
 ## 365. Student Grade Point Part 3
 
