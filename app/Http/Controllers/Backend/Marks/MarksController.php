@@ -58,6 +58,28 @@ class MarksController extends Controller
         return redirect()->back()->with($notification);
     }
 
+    // MarksEdit
+    public function MarksEdit(){
+        $data['years'] = StudentYear::all();
+        $data['classes'] = StudentClass::all();
+        $data['exam_types'] = ExamType::all();
+
+        return view('backend.marks.marks_edit', $data);
+    }
+
+    // MarksEditGetStudents
+    public function MarksEditGetStudents(Request $request){
+       $year_id = $request->year_id;
+       $class_id = $request->class_id;
+       $assign_subject_id = $request->assign_subject_id;
+       $exam_type_id = $request->exam_type_id;
+
+       $getStudent = StudentMarks::with(['student'])->where('year_id', $year_id)->where('class_id', $class_id)->where('assign_subject_id', $assign_subject_id)->where('exam_type_id', $exam_type_id)->get();
+
+       return response()->json($getStudent);
+    }
+
+
 
 
 
