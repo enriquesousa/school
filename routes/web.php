@@ -258,6 +258,9 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/marks/grade/view', [GradeController::class, 'MarksGradeView'])->name('marks.entry.grade');
         Route::get('/marks/grade/add', [GradeController::class, 'MarksGradeAdd'])->name('marks.grade.add');
         Route::post('/marks/grade/store', [GradeController::class, 'MarksGradeStore'])->name('store.marks.grade');
+        Route::get('/marks/grade/edit/{id}', [GradeController::class, 'MarksGradeEdit'])->name('marks.grade.edit');
+        Route::post('/marks/grade/update/{id}', [GradeController::class, 'MarksGradeUpdate'])->name('update.marks.grade');
+        Route::get('/marks/grade/delete/{id}', [GradeController::class, 'MarksGradeDelete'])->name('marks.grade.delete');
 
 
     });

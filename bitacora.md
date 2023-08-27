@@ -1338,11 +1338,16 @@ Listo!
 ## 363. Student Grade Point Part 1
 Listo!
 ## 364. Student Grade Point Part 2
+Add
 Listo!
 ## 365. Student Grade Point Part 3
+Edit
+Delete
+Listo!
 
 # S47 - Manage Student Fee
 ## 366. Students Fee Part 1
+
 ## 367. Students Fee Part 2
 ## 368. Students Fee Part 3
 ## 369. Students Fee Part 4

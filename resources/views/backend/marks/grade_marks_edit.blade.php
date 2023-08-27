@@ -13,8 +13,8 @@
             <div class="box">
 
                 <div class="box-header with-border">
-                    <h4 class="box-title">Agregar Grado</h4>
-                    <h6 class="box-subtitle">Para agregar una configuración mas de Grado y Calificaciones en la <a class="text-warning" href="#">base de datos </a>
+                    <h4 class="box-title">Editar Grado</h4>
+                    <h6 class="box-subtitle">Para Editar Configuración de Grado y Calificaciones en la <a class="text-warning" href="#">base de datos </a>
                     </h6>
                 </div>
 
@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{ route('store.marks.grade') }}">
+                            <form method="post" action="{{ route('update.marks.grade', $editData->id) }}">
                             @csrf
 
                                 <div class="row">
@@ -37,7 +37,7 @@
                                                 <div class="form-group">
                                                     <h5>Nombre Grado<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="grade_name" class="form-control" value="{{ old('grade_name') }}" required autofocus>
+                                                        <input type="text" name="grade_name" class="form-control" value="{{ $editData->grade_name }}" required autofocus>
                                                     </div>
                                                 </div>
                                             </div>
@@ -47,7 +47,7 @@
                                                 <div class="form-group">
                                                     <h5>Puntos Grado<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="grade_point" class="form-control" value="{{ old('grade_point') }}" required>
+                                                        <input type="text" name="grade_point" class="form-control" value="{{ $editData->grade_point }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -62,7 +62,7 @@
                                                 <div class="form-group">
                                                     <h5>Calificación Inicial<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="start_marks" class="form-control" value="{{ old('start_marks') }}" required>
+                                                        <input type="text" name="start_marks" class="form-control" value="{{ $editData->start_marks }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -72,7 +72,7 @@
                                                 <div class="form-group">
                                                     <h5>Calificación Final<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="end_marks" class="form-control" value="{{ old('end_marks') }}" required>
+                                                        <input type="text" name="end_marks" class="form-control" value="{{ $editData->end_marks }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -82,7 +82,7 @@
                                                 <div class="form-group">
                                                     <h5>Puntos Iniciales<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="start_point" class="form-control" value="{{ old('start_point') }}" required>
+                                                        <input type="text" name="start_point" class="form-control" value="{{ $editData->start_point }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -92,7 +92,7 @@
                                                 <div class="form-group">
                                                     <h5>Puntos Finales<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="end_point" class="form-control" value="{{ old('end_point') }}" required>
+                                                        <input type="text" name="end_point" class="form-control" value="{{ $editData->end_point }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -108,7 +108,7 @@
                                                 <div class="form-group">
                                                     <h5>Comentarios<span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <input type="text" name="remarks" class="form-control" value="{{ old('remarks') }}" required>
+                                                        <input type="text" name="remarks" class="form-control" value="{{ $editData->remarks }}" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -120,7 +120,7 @@
                                 </div>
 
                                 <div class="text-xs-right">
-                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Guardar">
+                                    <input type="submit" class="btn btn-rounded btn-info mb-5" value="Actualizar">
                                 </div>
 
                             </form>

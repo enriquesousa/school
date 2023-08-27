@@ -15,10 +15,10 @@
                     <div class="box">
                         <div class="box-header with-border">
 
-                            <h3 class="box-title">Lista - Grados Estudiantes</h3>
+                            <h3 class="box-title">Lista - Configuración de Grados y Calificaciones</h3>
 
                             {{-- botón agregar designación --}}
-                            <a href="{{ route('marks.grade.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Grado</a>
+                            <a href="{{ route('marks.grade.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Nuevo Grado</a>
 
                         </div>
                         <!-- /.box-header -->
@@ -52,7 +52,10 @@
 
                                             <td>
                                                 {{-- Botón Editar --}}
-                                                <a href="{{ route('employee.registration.edit', $item->id) }}" class="btn btn-info">Editar</a>
+                                                <a title="Editar" href="{{ route('marks.grade.edit', $item->id) }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
+
+                                                {{-- Botón Eliminar --}}
+                                                <a title="Eliminar" href="{{ route('marks.grade.delete', $item->id) }}" class="btn btn-danger" id="delete"><i class="fa fa-trash-o"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
