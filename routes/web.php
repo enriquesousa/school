@@ -256,6 +256,8 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Grados
         Route::get('/marks/grade/view', [GradeController::class, 'MarksGradeView'])->name('marks.entry.grade');
+        Route::get('/marks/grade/add', [GradeController::class, 'MarksGradeAdd'])->name('marks.grade.add');
+        Route::post('/marks/grade/store', [GradeController::class, 'MarksGradeStore'])->name('store.marks.grade');
 
 
     });

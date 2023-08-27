@@ -18,7 +18,7 @@
                             <h3 class="box-title">Lista - Grados Estudiantes</h3>
 
                             {{-- botón agregar designación --}}
-                            <a href="{{ route('employee.registration.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Empleado</a>
+                            <a href="{{ route('marks.grade.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Grado</a>
 
                         </div>
                         <!-- /.box-header -->

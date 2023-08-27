@@ -1338,7 +1338,7 @@ Listo!
 ## 363. Student Grade Point Part 1
 Listo!
 ## 364. Student Grade Point Part 2
-
+Listo!
 ## 365. Student Grade Point Part 3
 
 # S47 - Manage Student Fee
