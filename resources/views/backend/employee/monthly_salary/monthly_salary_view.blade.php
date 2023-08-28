@@ -46,8 +46,8 @@
                             <!--  ////////////////// Registration Fee table /////////////  -->
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div id="DocumentResults">
 
+                                    <div id="DocumentResults">
                                         <script id="document-template" type="text/x-handlebars-template">
                                             <table class="table table-bordered table-striped" style="width: 100%">
                                                 <thead>
@@ -66,6 +66,7 @@
                                         </script>
 
                                     </div>
+
                                 </div>
                             </div>
 
