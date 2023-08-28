@@ -34,6 +34,8 @@ use App\Http\Controllers\Backend\DefaultController;
 use App\Http\Controllers\Backend\Marks\MarksController;
 use App\Http\Controllers\Backend\Marks\GradeController;
 
+use App\Http\Controllers\Backend\Account\StudentFeeController;
+
 
 
 Route::get('/', function () {
@@ -262,11 +264,19 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/marks/grade/update/{id}', [GradeController::class, 'MarksGradeUpdate'])->name('update.marks.grade');
         Route::get('/marks/grade/delete/{id}', [GradeController::class, 'MarksGradeDelete'])->name('marks.grade.delete');
 
-
     });
 
     Route::get('/marks/getsubject', [DefaultController::class, 'GetSubject'])->name('marks.getsubject');
     Route::get('student/marks/getstudents', [DefaultController::class, 'StudentMarksGet'])->name('student.marks.getstudents');
+
+    // Account Management - Administración de Cuentas
+    Route::prefix('accounts')->group(function () {
+
+        // Student Fee - Cargos para Estudiantes
+        Route::get('/student/fee/view', [StudentFeeController::class, 'StudentFeeView'])->name('student.fee.view');
+
+
+    });
 
 }); // End Middleware Auth
 

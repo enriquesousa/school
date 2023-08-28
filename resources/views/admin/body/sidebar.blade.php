@@ -142,6 +142,20 @@
                 </ul>
             </li>
 
+            {{-- Admin Cuentas - Account Management --}}
+            <li class="treeview {{ ($prefix == 'accounts') ? 'active' : '' }}">
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i><span>Admin Cuentas</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                     <li class="{{ ($route == 'student.fee.view') ? 'active' : '' }}"><a href="{{ route('student.fee.view') }}"><i class="ti-more"></i>Cargos Estudiantes</a></li>
+
+                </ul>
+            </li>
+
 
 
             <li class="header nav-small-cap">User Interface</li>
