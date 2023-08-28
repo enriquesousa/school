@@ -274,6 +274,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Student Fee - Cargos para Estudiantes
         Route::get('/student/fee/view', [StudentFeeController::class, 'StudentFeeView'])->name('student.fee.view');
+        Route::get('/student/fee/add', [StudentFeeController::class, 'StudentFeeAdd'])->name('student.fee.add');
 
 
     });
