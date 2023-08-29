@@ -1353,6 +1353,7 @@ Listo!
 ## 368. Students Fee Part 3
 Listo!
 ## 369. Students Fee Part 4
+Todo el dia me la pase Instalando Rhino Linux a la Maquina Optiplex
 
 ## 370. Students Fee Part 5
 
