@@ -389,9 +389,29 @@
 					"label": "Tabla con Handlebars"
 				},
 				{
-					"line": 143,
+					"line": 145,
 					"column": 47,
 					"label": "Script para desplegar tabla con handlebars"
+				}
+			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/Account/StudentFeeController.php",
+			"bookmarks": [
+				{
+					"line": 108,
+					"column": 84,
+					"label": "Para convertir a numero un string de tipo $100,000 (money/dinero)"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/account/student_fee/student_fee_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 55,
+					"column": 112,
+					"label": "date carbon desplegar mes y ano solamente en vista"
 				}
 			]
 		},

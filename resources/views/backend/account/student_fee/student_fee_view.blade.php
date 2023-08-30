@@ -28,12 +28,16 @@
                                     <thead>
                                         <tr>
                                             <th width="5%">Serie</th>
+
                                             <th>ID</th>
                                             <th>Nombre</th>
                                             <th>Año</th>
                                             <th>Clase</th>
                                             <th>Tipo de Cargo</th>
+                                            <th>Total</th>
+
                                             <th>Fecha</th>
+                                            <th>Acción</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -41,13 +45,15 @@
                                         @foreach ($allData as $key => $item)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
+
                                             <td>{{ $item->student->id_no }}</td>
                                             <td>{{ $item->student->name }}</td>
                                             <td>{{ $item->student_year->name }}</td>
                                             <td>{{ $item->student_class->name }}</td>
                                             <td>{{ $item->fee_category->name }}</td>
                                             <td>$ @convert($item->amount)</td>
-                                            <td>{{ \Carbon\Carbon::parse($item->date)->locale('es')->isoFormat('D[/]MMMM[/]YYYY') }}</td>
+
+                                            <td>{{ \Carbon\Carbon::parse($item->date)->locale('es')->isoFormat('MMMM[/]YYYY') }}</td>
 
                                             <td>
                                                 {{-- Botón Editar --}}

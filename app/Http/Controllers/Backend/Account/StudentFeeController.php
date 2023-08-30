@@ -87,6 +87,59 @@ class StudentFeeController extends Controller
     // StudentFeeStore
     public function StudentFeeStore(Request $request){
 
+        $date = date('Y-m', strtotime($request->date));
+
+        // Primero borramos datos anteriores (si es que existe)
+        AccountStudentFee::where('year_id', $request->year_id)->where('class_id', $request->class_id)->where('fee_category_id', $request->fee_category_id)->where('date', $date)->delete();
+
+        $checkData = $request->checkmanage;
+
+        if ($checkData != null) {
+            for ($i=0; $i < count($checkData) ; $i++) {
+                $data = new AccountStudentFee();
+                $data->year_id = $request->year_id;
+                $data->class_id = $request->class_id;
+                $data->date = $date;
+                $data->fee_category_id = $request->fee_category_id;
+                $data->student_id = $request->student_id[$checkData[$i]];
+
+                // $cantidad = $request->amount[$checkData[$i]];
+                // dd($cantidad);
+
+                // Para convertir a numero un string de tipo $100,000 (money/dinero)
+                // $string = "$100,000";
+                // $int = preg_replace("/([^0-9\\.])/i", "", $string);
+                // echo $int;
+
+                // si $cantidad es ($ 1,520.00)
+                // $int = preg_replace("/([^0-9\\.])/i", "", $cantidad);
+                // dd($int);
+                // Resultado: 1520.00
+
+                $cantidad = $request->amount[$checkData[$i]];
+                $int = preg_replace("/([^0-9\\.])/i", "", $cantidad);
+                $data->amount = $int;
+
+                $data->save();
+            }
+        }
+
+        if (!empty(@$data) || empty($checkData)) {
+            // Desplegar notificación
+            $notification = array(
+                'message' => 'Datos Actualizados con éxito!',
+                'alert-type' => 'success'
+            );
+            return redirect()->route('student.fee.view')->with($notification);
+        }else{
+            // Desplegar notificación
+            $notification = array(
+                'message' => 'Datos NO guardados!',
+                'alert-type' => 'error'
+            );
+            return redirect()->back()->with($notification);
+        }
+
     }
 
 

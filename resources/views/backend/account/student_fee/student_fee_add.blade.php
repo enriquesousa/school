@@ -119,6 +119,8 @@
                                                     </tbody>
                                                 </table>
 
+                                                <button type="submit" class="btn btn-primary" style="margin-top: 10px">Guardar</button>
+
                                             </form>
 
                                         </script>
