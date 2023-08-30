@@ -40,13 +40,13 @@ class StudentFeeController extends Controller
 
         $data = AssignStudent::with(['discount'])->where('year_id', $year_id)->where('class_id', $class_id)->get();
 
-        $html['thsource'] = '<th>ID No</th>';
-        $html['thsource'] .= '<th>Student Name</th>';
-        $html['thsource'] .= '<th>Father Name</th>';
-        $html['thsource'] .= '<th>Original Fee </th>';
-        $html['thsource'] .= '<th>Discount Amount</th>';
-        $html['thsource'] .= '<th>Fee (This Student)</th>';
-        $html['thsource'] .= '<th>Select</th>';
+        $html['thsource'] = '<th>ID</th>';
+        $html['thsource'] .= '<th>Nombre Estudiante</th>';
+        $html['thsource'] .= '<th>Nombre del Padre</th>';
+        $html['thsource'] .= '<th>Cargo</th>';
+        $html['thsource'] .= '<th>Descuento</th>';
+        $html['thsource'] .= '<th>Total (Este Estudiante)</th>';
+        $html['thsource'] .= '<th>Seleccionar</th>';
 
         foreach ($data as $key => $std) {
             $registrationfee = FeeCategoryAmount::where('fee_category_id', $fee_category_id)->where('class_id', $std->class_id)->first();
@@ -58,14 +58,16 @@ class StudentFeeController extends Controller
             } else {
                 $checked = '';
             }
+
             $color = 'success';
+
             $html[$key]['tdsource'] = '<td>' . $std['student']['id_no'] . '<input type="hidden" name="fee_category_id" value= " ' . $fee_category_id . ' " >' . '</td>';
 
             $html[$key]['tdsource'] .= '<td>' . $std['student']['name'] . '<input type="hidden" name="year_id" value= " ' . $std->year_id . ' " >' . '</td>';
 
             $html[$key]['tdsource'] .= '<td>' . $std['student']['fname'] . '<input type="hidden" name="class_id" value= " ' . $std->class_id . ' " >' . '</td>';
 
-            $html[$key]['tdsource'] .= '<td>' . $registrationfee->amount . '$' . '<input type="hidden" name="date" value= " ' . $date . ' " >' . '</td>';
+            $html[$key]['tdsource'] .= '<td>' . '$ ' . number_format($registrationfee->amount, 2) . '<input type="hidden" name="date" value= " ' . $date . ' " >' . '</td>';
 
             $html[$key]['tdsource'] .= '<td>' . $std['discount']['discount'] . '%' . '</td>';
 
@@ -74,7 +76,7 @@ class StudentFeeController extends Controller
             $discountablefee = $discount / 100 * $orginalfee;
             $finalfee = (int) $orginalfee - (int) $discountablefee;
 
-            $html[$key]['tdsource'] .= '<td>' . '<input type="text" name="amount[]" value="' . $finalfee . ' " class="form-control" readonly' . '</td>';
+            $html[$key]['tdsource'] .= '<td>' . '<input type="text" name="amount[]" value="' . '$ ' . number_format($finalfee, 2)  . ' " class="form-control" readonly' . '</td>';
 
             $html[$key]['tdsource'] .= '<td>' . '<input type="hidden" name="student_id[]" value="' . $std->student_id . '">' . '<input type="checkbox" name="checkmanage[]" id="' . $key . '" value="' . $key . '" ' . $checked . ' style="transform: scale(1.5);margin-left: 10px;"> <label for="' . $key . '"> </label> ' . '</td>';
 

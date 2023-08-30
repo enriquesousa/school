@@ -394,6 +394,16 @@
 					"label": "Script para desplegar tabla con handlebars"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/Employee/MonthlySalaryController.php",
+			"bookmarks": [
+				{
+					"line": 67,
+					"column": 71,
+					"label": "money dinero formato en controller"
+				}
+			]
 		}
 	]
 }

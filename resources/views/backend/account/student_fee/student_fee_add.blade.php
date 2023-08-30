@@ -32,7 +32,7 @@
                                 {{-- Select Año --}}
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <h5>Año&nbsp;<span class="text-danger"></span></h5>
+                                        <h5>Año&nbsp;<span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <select name="year_id" id="year_id" required="" class="form-control">
                                                 <option value="" selected="" disabled="">Seleccionar Año</option>
@@ -47,7 +47,7 @@
                                 {{-- Select Clase --}}
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <h5>Clase&nbsp;<span class="text-danger"></span></h5>
+                                        <h5>Clase&nbsp;<span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <select name="class_id" id="class_id" required="" class="form-control">
                                                 <option value="" selected="" disabled="">Seleccionar Clase</option>
@@ -62,7 +62,7 @@
                                 {{-- Select Categoría de Cargo --}}
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <h5>Categoría de Cargo&nbsp;<span class="text-danger"></span></h5>
+                                        <h5>Categoría de Cargo&nbsp;<span class="text-danger">*</span></h5>
                                         <div class="controls">
                                             <select name="fee_category_id" id="fee_category_id" required="" class="form-control">
                                                 <option value="" selected="" disabled="">Categoría de Cargo</option>
@@ -77,7 +77,7 @@
                                 {{-- Fecha --}}
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <h5>Fecha<span class="text-danger">*</span></h5>
+                                        <h5>Fecha (Mes)&nbsp;&nbsp;<span class="text-danger">*</span></h5>
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></div>
                                             <input type="date" name="date" id="date" class="form-control" required>
