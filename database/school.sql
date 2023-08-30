@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 28, 2023 at 10:18 PM
+-- Generation Time: Aug 30, 2023 at 01:57 PM
 -- Server version: 8.0.34-0ubuntu0.20.04.1
 -- PHP Version: 8.2.9
 
@@ -39,6 +39,15 @@ CREATE TABLE `account_student_fees` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `account_student_fees`
+--
+
+INSERT INTO `account_student_fees` (`id`, `year_id`, `class_id`, `student_id`, `fee_category_id`, `date`, `amount`, `created_at`, `updated_at`) VALUES
+(4, 1, 2, 6, 2, '2023-08', 428, '2023-08-30 20:51:41', '2023-08-30 20:51:41'),
+(5, 1, 3, 11, 1, '2023-08', 1710, '2023-08-30 20:52:14', '2023-08-30 20:52:14'),
+(6, 1, 1, 12, 1, '2023-08', 1520, '2023-08-30 20:53:24', '2023-08-30 20:53:24');
+
 -- --------------------------------------------------------
 
 --
@@ -69,8 +78,8 @@ INSERT INTO `assign_students` (`id`, `student_id`, `roll`, `class_id`, `year_id`
 (5, 8, NULL, 4, 1, 2, 2, '2023-08-06 08:40:35', '2023-08-06 08:40:35'),
 (6, 9, 3, 3, 4, 1, 2, '2023-08-06 08:41:42', '2023-08-09 23:12:24'),
 (7, 10, 4, 3, 4, 4, 1, '2023-08-06 08:43:39', '2023-08-09 23:12:24'),
-(8, 11, 1, 1, 1, 1, 3, '2023-08-06 08:44:46', '2023-08-09 23:09:37'),
-(9, 12, 2, 1, 1, 3, 2, '2023-08-06 08:45:11', '2023-08-09 23:09:37'),
+(8, 11, 1, 1, 1, 1, 3, '2023-08-06 08:44:46', '2023-08-30 18:27:36'),
+(9, 12, 2, 1, 1, 3, 2, '2023-08-06 08:45:11', '2023-08-30 18:27:36'),
 (10, 13, 5, 3, 4, 1, 3, '2023-08-06 08:45:47', '2023-08-09 23:12:24'),
 (11, 14, 8, 4, 4, 1, 2, '2023-08-06 08:58:04', '2023-08-13 05:15:20'),
 (12, 12, NULL, 2, 2, 3, 2, '2023-08-08 10:37:42', '2023-08-08 10:37:42'),
@@ -79,7 +88,11 @@ INSERT INTO `assign_students` (`id`, `student_id`, `roll`, `class_id`, `year_id`
 (15, 17, 8, 4, 4, 4, 3, '2023-08-13 04:59:39', '2023-08-13 05:15:20'),
 (16, 18, NULL, 4, 4, 2, 2, '2023-08-13 05:16:55', '2023-08-13 05:16:55'),
 (17, 19, NULL, 3, 2, 2, 3, '2023-08-13 21:50:42', '2023-08-13 21:50:42'),
-(18, 26, NULL, 1, 1, 2, 1, '2023-08-25 01:19:20', '2023-08-25 01:19:20');
+(18, 26, 2, 1, 1, 2, 1, '2023-08-25 01:19:20', '2023-08-30 18:27:36'),
+(19, 26, NULL, 2, 1, 1, 2, '2023-08-30 18:43:18', '2023-08-30 18:43:18'),
+(20, 11, NULL, 3, 1, 1, 3, '2023-08-30 18:45:03', '2023-08-30 18:45:03'),
+(21, 12, NULL, 3, 1, 3, 3, '2023-08-30 18:45:54', '2023-08-30 18:45:54'),
+(22, 27, NULL, 1, 1, 2, 2, '2023-08-30 18:59:00', '2023-08-30 18:59:00');
 
 -- --------------------------------------------------------
 
@@ -172,11 +185,15 @@ INSERT INTO `discount_students` (`id`, `assign_student_id`, `fee_category_id`, `
 (11, 11, 1, 15, '2023-08-06 08:58:04', '2023-08-06 08:58:04'),
 (12, 12, 1, 5, '2023-08-08 10:37:42', '2023-08-08 10:37:42'),
 (13, 13, 1, 43, '2023-08-12 23:12:45', '2023-08-12 23:12:45'),
-(14, 14, 1, 94, '2023-08-12 23:21:25', '2023-08-12 23:21:25'),
+(14, 14, 1, 15, '2023-08-12 23:21:25', '2023-08-30 18:40:04'),
 (15, 15, 1, 10, '2023-08-13 04:59:39', '2023-08-13 04:59:39'),
 (16, 16, 1, 56, '2023-08-13 05:16:55', '2023-08-13 05:16:55'),
 (17, 17, 1, 5, '2023-08-13 21:50:42', '2023-08-13 21:50:42'),
-(18, 18, 1, 5, '2023-08-25 01:19:20', '2023-08-25 01:19:20');
+(18, 18, 1, 5, '2023-08-25 01:19:20', '2023-08-25 01:19:20'),
+(19, 19, 1, 5, '2023-08-30 18:43:18', '2023-08-30 18:43:18'),
+(20, 20, 1, 5, '2023-08-30 18:45:03', '2023-08-30 18:45:03'),
+(21, 21, 1, 5, '2023-08-30 18:45:54', '2023-08-30 18:45:54'),
+(22, 22, 1, 15, '2023-08-30 18:59:00', '2023-08-30 18:59:00');
 
 -- --------------------------------------------------------
 
@@ -359,14 +376,18 @@ CREATE TABLE `fee_category_amounts` (
 --
 
 INSERT INTO `fee_category_amounts` (`id`, `fee_category_id`, `class_id`, `amount`, `created_at`, `updated_at`) VALUES
-(5, 3, 1, 900, '2023-08-01 22:31:19', '2023-08-01 22:31:19'),
-(6, 3, 2, 850, '2023-08-01 22:31:19', '2023-08-01 22:31:19'),
-(7, 2, 1, 450, '2023-08-01 22:32:23', '2023-08-01 22:32:23'),
-(8, 2, 3, 450, '2023-08-01 22:32:23', '2023-08-01 22:32:23'),
-(22, 1, 1, 1600, '2023-08-10 07:45:41', '2023-08-10 07:45:41'),
-(23, 1, 2, 1800, '2023-08-10 07:45:41', '2023-08-10 07:45:41'),
-(24, 1, 3, 0, '2023-08-10 07:45:41', '2023-08-10 07:45:41'),
-(25, 1, 4, 0, '2023-08-10 07:45:41', '2023-08-10 07:45:41');
+(32, 2, 1, 400, '2023-08-30 18:33:14', '2023-08-30 18:33:14'),
+(33, 2, 2, 450, '2023-08-30 18:33:14', '2023-08-30 18:33:14'),
+(34, 2, 3, 500, '2023-08-30 18:33:14', '2023-08-30 18:33:14'),
+(35, 2, 4, 600, '2023-08-30 18:33:14', '2023-08-30 18:33:14'),
+(36, 1, 1, 1600, '2023-08-30 18:34:39', '2023-08-30 18:34:39'),
+(37, 1, 2, 1700, '2023-08-30 18:34:39', '2023-08-30 18:34:39'),
+(38, 1, 3, 1800, '2023-08-30 18:34:39', '2023-08-30 18:34:39'),
+(39, 1, 4, 1900, '2023-08-30 18:34:39', '2023-08-30 18:34:39'),
+(40, 3, 1, 200, '2023-08-30 18:36:11', '2023-08-30 18:36:11'),
+(41, 3, 2, 300, '2023-08-30 18:36:11', '2023-08-30 18:36:11'),
+(42, 3, 3, 350, '2023-08-30 18:36:11', '2023-08-30 18:36:11'),
+(43, 3, 4, 370, '2023-08-30 18:36:11', '2023-08-30 18:36:11');
 
 -- --------------------------------------------------------
 
@@ -541,7 +562,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('80rt7FcUoH2Ryaei5W195syCTyzDHKjQTNk2boAT', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiMzVKcXFGanZJRXVmbW9wdTVCd2thRWo2RTlReFJQSUR1QnFRYTJ6WSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693286291);
+('TplAmg96GdSTiQ6ZLJ59Vz8hsR4b8omP0aYNfwF9', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiM1NhT0pac3IxSmp3c0JXNzlHNEJHN2dGbVc3NFhiQWRTT2MyV25FOSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9zdHVkZW50L2ZlZS92aWV3Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRoWDF5MWouM2xrTzNaUGJuWTl0RGl1T0F0Qi5XNVZMTklGZHpnaXNEaEJ5djU1d1VIVEhDdSI7fQ==', 1693428909);
 
 -- --------------------------------------------------------
 
@@ -564,7 +585,7 @@ INSERT INTO `student_classes` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Class Uno', '2023-07-31 10:01:08', '2023-07-31 10:01:08'),
 (2, 'Clase Dos', '2023-07-31 10:02:11', '2023-07-31 10:02:11'),
 (3, 'Clase Tres', '2023-07-31 10:02:22', '2023-07-31 10:02:22'),
-(4, 'Clase 4', '2023-08-03 00:07:58', '2023-08-03 00:07:58');
+(4, 'Clase Cuatro', '2023-08-03 00:07:58', '2023-08-30 18:36:26');
 
 -- --------------------------------------------------------
 
@@ -709,7 +730,7 @@ INSERT INTO `users` (`id`, `usertype`, `name`, `email`, `email_verified_at`, `pa
 (4, 'Student', 'Gregory Merritt', NULL, NULL, '$2y$10$JY2YbziOPGbIOnHKpzlEEe4eiBDRtaeAO3kNGAXxVzCFQQS.EJrqS', '(678) 090-0999', 'Esse, qui duis facil.', 'Male', '20230805180062.jpg', 'Jameson Harris', 'Justin Humphrey', 'católico', '20200001', '1975-12-15', '7983', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 01:00:03', '2023-08-06 01:00:03'),
 (5, 'Student', 'Hamish Mcdowell', NULL, NULL, '$2y$10$tbW/IN3txvr8Nr5rPseVyu48aewaXekQJMeN9Zw4riouUH8adz9FK', '(555) 555-5522', 'Suscipit quia eu inc.', 'Female', '20230808023329.jpg', 'Nerea Sweeney', 'Karly Flowers', 'ateo', '20200005', '1970-01-21', '8006', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 01:11:05', '2023-08-08 09:33:07'),
 (6, 'Student', 'Carl Rosales', NULL, NULL, '$2y$10$31knKO.q7yOZkUKyhWdhwOjRi6PWeVcwbSk9L3ebMagPWIBXtC6OO', '(345) 456-6666', 'Provident, voluptate.', 'Male', '20230806013850.jpg', 'Aristotle Head', 'Colette Stephenson', 'ateo', '20190006', '2000-05-08', '3640', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 08:38:31', '2023-08-06 08:38:31'),
-(7, 'Student', 'Todd Savage', NULL, NULL, '$2y$10$Um4ELLme.Mv4bkAZ9hkzeuO2aC/K0v2oNGDFyaRl7tRDW6ZBXU34W', '(664) 789-5666', 'Consequuntur dolorem.', 'Female', '2023080601395.jpg', 'Rama Lopez', 'Jason Schneider', 'ateo', '20210007', '1998-02-26', '7517', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 08:39:30', '2023-08-06 08:39:30'),
+(7, 'Student', 'Todd Savage', 'erwe@gh.com', NULL, '$2y$10$Um4ELLme.Mv4bkAZ9hkzeuO2aC/K0v2oNGDFyaRl7tRDW6ZBXU34W', '(664) 789-5666', 'Consequuntur dolorem.', 'Female', '2023080601395.jpg', 'Rama Lopez', 'Jason Schneider', 'ateo', '20210007', '1998-02-26', '7517', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 08:39:30', '2023-08-30 18:23:46'),
 (8, 'Student', 'Montana Carroll', NULL, NULL, '$2y$10$OVH859hTlSvRTwGAsNfzs.nbnFNKRDkMCVvqHDFZpJNVYSTJxvQCK', '(664) 555-4565', 'Voluptatem, ut nemo .', 'Female', '20230806014066.jpg', 'Adrienne Finley', 'Sara Silva', 'católico', '20190008', '2013-04-02', '4872', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 08:40:35', '2023-08-06 08:40:35'),
 (9, 'Student', 'Curran Crane', NULL, NULL, '$2y$10$/UwWu3TovCt1T6ZldHca2e4vdzfJ1Q.9tUoFTE4YlceN2ztKJi25W', '(616) 666-5555', 'Enim dolorem ea aliq.', 'Male', '20230806014128.jpg', 'Dean House', 'Timon Sampson', 'ateo', '20220009', '1991-04-02', '2070', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 08:41:42', '2023-08-06 08:41:42'),
 (10, 'Student', 'Kennedy Nixon', NULL, NULL, '$2y$10$sOTMm3xeQzorvZrPCAqJMOoPmf7p22gimyflugpCB67MSrI2Y8EPK', '(789) 987-8999', 'Esse, laboris ipsam .', 'Female', '20230806014375.jpg', 'Susan Sherman', 'Reed Frye', 'ateo', '20220010', '2002-03-16', '710', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-06 08:43:39', '2023-08-06 08:43:39'),
@@ -728,7 +749,8 @@ INSERT INTO `users` (`id`, `usertype`, `name`, `email`, `email_verified_at`, `pa
 (23, 'Employee', 'Yuli Stout', 'mekezigyt@mailinator.com', NULL, '$2y$10$slRSfp9TPtmXzB/MOWTvZ.yX4aZq5NCtDoFC2Jf3tS5a7Z1pKNwZ6', '(664) 888-9889', 'Sed explicabo Illo', 'Male', '202308220936patrick2.jpg', 'Pascale Castro', 'Raphael Newton', 'cristiano', '2011060023', '1994-10-27', '543', NULL, '2011-06-24', 3, 3600, 1, NULL, NULL, NULL, '2023-08-22 16:36:21', '2023-08-22 16:36:21'),
 (24, 'Employee', 'Susan Raymond', 'hijybyxuh@mailinator.com', NULL, '$2y$10$18KHvJQny.Of81zAXjjTAOwbZG1e8Nn4ymxmIKOXt5E/a4sAErbZ2', '(664) 565-4568', 'Non sunt et sed ad', 'Female', '202308220936Zoe-Colman-original-1.jpg', 'Melyssa Poole', 'Jocelyn Ramsey', 'ateo', '1993010024', '1979-04-02', '7501', NULL, '1993-01-16', 5, 2300, 1, NULL, NULL, NULL, '2023-08-22 16:36:58', '2023-08-22 16:36:58'),
 (25, 'Employee', 'Troy Wells', 'cesehydizu@mailinator.com', NULL, '$2y$10$FKbO6ui2FgJt8sNzqdNUle0QJW74QUburVMpGwNgyb67iCgYWDDgS', '(664) 456-7899', 'Sunt dignissimos cup', 'Male', '202308220937Koos-Tamminga.jpg', 'Karleigh Eaton', 'Maggy Camacho', 'cristiano', '2007030025', '1991-06-20', '5757', NULL, '2007-03-23', 2, 6000, 1, NULL, NULL, NULL, '2023-08-22 16:37:42', '2023-08-22 16:37:42'),
-(26, 'Student', 'Allistair Barnett', 'xovety@mailinator.com', NULL, '$2y$10$e2tq0qNMz3YwF5l/ouljBO3tbYpr2KznOYGpu7yNxCCMAAEz5CFhK', '(664) 789-4566', 'Facilis duis do cons', 'Male', '2023082418197837_Profile-2.rev.1572210489.jpg', 'Steel Foreman', 'Jescie Frederick', 'cristiano', '20190020', '2003-04-22', '2472', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-25 01:19:20', '2023-08-25 01:19:20');
+(26, 'Student', 'Allistair Barnett', 'xovety@mailinator.com', NULL, '$2y$10$e2tq0qNMz3YwF5l/ouljBO3tbYpr2KznOYGpu7yNxCCMAAEz5CFhK', '(664) 789-4566', 'Facilis duis do cons', 'Male', '2023082418197837_Profile-2.rev.1572210489.jpg', 'Steel Foreman', 'Jescie Frederick', 'cristiano', '20190020', '2003-04-22', '2472', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-25 01:19:20', '2023-08-25 01:19:20'),
+(27, 'Student', 'Carlos Galloway', 'gyquliwuvy@mailinator.com', NULL, '$2y$10$V2OCcjXT8dE6W8tuKtE1leSlHgkQ35WGDDSrX6vOT2.PW.OuNnDjm', '(664) 797-1125', 'Eum quisquam ipsum u', 'Male', '202308301159tobinsouth_vrs_2017-18.jpeg', 'Nevada Watkins', 'Phelan Chandler', 'católico', '20190027', '2006-10-09', '2437', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-30 18:59:00', '2023-08-30 18:59:00');
 
 --
 -- Indexes for dumped tables
@@ -907,13 +929,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `account_student_fees`
 --
 ALTER TABLE `account_student_fees`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `assign_students`
 --
 ALTER TABLE `assign_students`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `assign_subjects`
@@ -931,7 +953,7 @@ ALTER TABLE `designations`
 -- AUTO_INCREMENT for table `discount_students`
 --
 ALTER TABLE `discount_students`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `employee_attendances`
@@ -973,7 +995,7 @@ ALTER TABLE `fee_categories`
 -- AUTO_INCREMENT for table `fee_category_amounts`
 --
 ALTER TABLE `fee_category_amounts`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `leave_purposes`
@@ -1039,7 +1061,7 @@ ALTER TABLE `student_years`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
