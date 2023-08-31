@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 30, 2023 at 01:57 PM
+-- Generation Time: Aug 31, 2023 at 08:53 AM
 -- Server version: 8.0.34-0ubuntu0.20.04.1
 -- PHP Version: 8.2.9
 
@@ -20,6 +20,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `school`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_employee_salaries`
+--
+
+CREATE TABLE `account_employee_salaries` (
+  `id` bigint UNSIGNED NOT NULL,
+  `employee_id` int NOT NULL COMMENT 'employee_id=user_id',
+  `date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -45,8 +60,7 @@ CREATE TABLE `account_student_fees` (
 
 INSERT INTO `account_student_fees` (`id`, `year_id`, `class_id`, `student_id`, `fee_category_id`, `date`, `amount`, `created_at`, `updated_at`) VALUES
 (4, 1, 2, 6, 2, '2023-08', 428, '2023-08-30 20:51:41', '2023-08-30 20:51:41'),
-(5, 1, 3, 11, 1, '2023-08', 1710, '2023-08-30 20:52:14', '2023-08-30 20:52:14'),
-(6, 1, 1, 12, 1, '2023-08', 1520, '2023-08-30 20:53:24', '2023-08-30 20:53:24');
+(5, 1, 3, 11, 1, '2023-08', 1710, '2023-08-30 20:52:14', '2023-08-30 20:52:14');
 
 -- --------------------------------------------------------
 
@@ -485,7 +499,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (24, '2023_08_21_212118_create_employee_attendances_table', 13),
 (25, '2023_08_23_170520_create_student_marks_table', 14),
 (26, '2023_08_26_120341_create_marks_grades_table', 15),
-(27, '2023_08_27_172028_create_account_student_fees_table', 16);
+(27, '2023_08_27_172028_create_account_student_fees_table', 16),
+(28, '2023_08_30_203643_create_account_employee_salaries_table', 17);
 
 -- --------------------------------------------------------
 
@@ -562,7 +577,10 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('TplAmg96GdSTiQ6ZLJ59Vz8hsR4b8omP0aYNfwF9', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiM1NhT0pac3IxSmp3c0JXNzlHNEJHN2dGbVc3NFhiQWRTT2MyV25FOSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9zdHVkZW50L2ZlZS92aWV3Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRoWDF5MWouM2xrTzNaUGJuWTl0RGl1T0F0Qi5XNVZMTklGZHpnaXNEaEJ5djU1d1VIVEhDdSI7fQ==', 1693428909);
+('F7FY0wFjZaxAROWNfqq6NeUESdYwbU3YPQLznnyT', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOXBkZm80cmFoTFFkZXM0cnFnRXFyNG9XRzk2bTdqMXNMcjFoZUpTYSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDc6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9lbXBsb3llZS9zYWxhcnkvYWRkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRoWDF5MWouM2xrTzNaUGJuWTl0RGl1T0F0Qi5XNVZMTklGZHpnaXNEaEJ5djU1d1VIVEhDdSI7fQ==', 1693493567),
+('g0FCiOluPWebfRRMwzI96pe1d64zgR0kKLWrOyze', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOVZxd1ZVaVpiaXNhV0c2M3dQVWliYTh3VDhKSTg0YzZVQ0xHTGF3MCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1693457076),
+('IVuDyV8ffCFJPozlITrUZoB7tJzna731UkJRvoID', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoid01NeWJhNWE3d1lFMFZhODFNRThHYjFVV3RpektxSkdKMFlVT1A0cSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693461229),
+('qMBUlFl8SlzKTkAkPYNSSiOmtXWq1c3PXO7O5cf1', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoic1NtRHgzZlhIdEJrUFpxaU1NZWk3QndSdXBuQ256SVJVcGh5anc4bCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo0ODoiaHR0cDovL3NjaG9vbC50ZXN0L2VtcGxveWVlcy9tb250aGx5L3NhbGFyeS92aWV3Ijt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9lbXBsb3llZXMvbW9udGhseS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1693457076);
 
 -- --------------------------------------------------------
 
@@ -757,6 +775,12 @@ INSERT INTO `users` (`id`, `usertype`, `name`, `email`, `email_verified_at`, `pa
 --
 
 --
+-- Indexes for table `account_employee_salaries`
+--
+ALTER TABLE `account_employee_salaries`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `account_student_fees`
 --
 ALTER TABLE `account_student_fees`
@@ -926,6 +950,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `account_employee_salaries`
+--
+ALTER TABLE `account_employee_salaries`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `account_student_fees`
 --
 ALTER TABLE `account_student_fees`
@@ -1013,7 +1043,7 @@ ALTER TABLE `marks_grades`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`

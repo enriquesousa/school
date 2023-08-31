@@ -43,11 +43,14 @@ class AccountSalaryController extends Controller
         $data = EmployeeAttendance::select('employee_id')->groupBy('employee_id')->with(['user'])->where($where)->get();
         // dd($data->toArray()); //el resultado lo podemos ver en inspección de consola network response!
 
+        // Convertir la fecha a español Mes/Año
+        $fecha = \Carbon\Carbon::parse($date)->locale('es')->isoFormat('MMMM[/]YYYY');
+
         $html['thsource'] = '<th>Serie</th>';
         $html['thsource'] .= '<th>ID</th>';
         $html['thsource'] .= '<th>Nombre de Empleado</th>';
         $html['thsource'] .= '<th>Salario Base</th>';
-        $html['thsource'] .= '<th>' . "Sueldo este Mes: " . $date . '</th>';
+        $html['thsource'] .= '<th>' . "Sueldo este Mes: " . $fecha . '</th>';
         $html['thsource'] .= '<th>Seleccionar</th>';
 
         foreach ($data as $key => $v) {
