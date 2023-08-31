@@ -32,18 +32,27 @@ class MonthlySalaryController extends Controller
     public function MonthlySalaryGet(Request $request){
 
         $date = date('Y-m',strtotime($request->date));
+        // dd($date); //debug dd con js el resultado lo podemos ver en inspección de consola network response!
 
-        if ($date !='') {
+        if ($date != '') {
             $where[] = ['date','like',$date.'%'];
         }
+        // dd($where);
+        // array:1 [ // app/Http/Controllers/Backend/Employee/MonthlySalaryController.php:40
+        //     0 => array:3 [
+        //       0 => "date"
+        //       1 => "like"
+        //       2 => "2023-07%"
+        //     ]
+        //   ]
 
         $data = EmployeeAttendance::select('employee_id')->groupBy('employee_id')->with(['user'])->where($where)->get();
-        // dd($data->toArray());
+        // dd($data->toArray()); //el resultado lo podemos ver en inspección de consola network response!
 
         $html['thsource']  = '<th>Serie</th>';
         $html['thsource'] .= '<th>Nombre de Empleado</th>';
         $html['thsource'] .= '<th>Salario Base</th>';
-        $html['thsource'] .= '<th>Sueldo este Mes</th>';
+        $html['thsource'] .= '<th>'."Sueldo este Mes: ".$date.'</th>';
         $html['thsource'] .= '<th>Acción</th>';
 
 

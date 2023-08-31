@@ -35,7 +35,7 @@ use App\Http\Controllers\Backend\Marks\MarksController;
 use App\Http\Controllers\Backend\Marks\GradeController;
 
 use App\Http\Controllers\Backend\Account\StudentFeeController;
-
+use App\Http\Controllers\Backend\Account\AccountSalaryController;
 
 
 Route::get('/', function () {
@@ -278,6 +278,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/student/fee/get/student', [StudentFeeController::class, 'StudentFeeGetStudent'])->name('account.fee.get.student');
         Route::post('/student/fee/store', [StudentFeeController::class, 'StudentFeeStore'])->name('account.fee.store');
 
+        // Employee Salary - Sueldos Empleados
+        Route::get('/employee/salary/view', [AccountSalaryController::class, 'EmployeeSalaryView'])->name('account.salary.view');
 
     });
 

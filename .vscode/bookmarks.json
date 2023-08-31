@@ -409,7 +409,7 @@
 			"path": "resources/views/backend/account/student_fee/student_fee_view.blade.php",
 			"bookmarks": [
 				{
-					"line": 55,
+					"line": 52,
 					"column": 112,
 					"label": "date carbon desplegar mes y ano solamente en vista"
 				}
@@ -419,9 +419,24 @@
 			"path": "app/Http/Controllers/Backend/Employee/MonthlySalaryController.php",
 			"bookmarks": [
 				{
-					"line": 67,
+					"line": 34,
+					"column": 110,
+					"label": "debug dd con js el resultado lo podemos ver en inspección de consola network response!"
+				},
+				{
+					"line": 76,
 					"column": 71,
 					"label": "money dinero formato en controller"
+				}
+			]
+		},
+		{
+			"path": "resources/views/backend/employee/monthly_salary/monthly_salary_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 110,
+					"column": 81,
+					"label": "js script to reload page: false-keeping the POST data true-clear cache"
 				}
 			]
 		}

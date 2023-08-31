@@ -15,10 +15,10 @@
                     <div class="box">
                         <div class="box-header with-border">
 
-                            <h3 class="box-title">Lista - Cargos a Estudiantes</h3>
+                            <h3 class="box-title">Lista - Sueldos Empleados </h3>
 
                             {{-- botón agregar designación --}}
-                            <a href="{{ route('student.fee.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar / Editar Cargos a Estudiantes</a>
+                            <a href="{{ route('student.fee.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar / Editar Sueldos Empleados</a>
 
                         </div>
                         <!-- /.box-header -->
@@ -28,13 +28,9 @@
                                     <thead>
                                         <tr>
                                             <th width="5%">Serie</th>
-
                                             <th>ID</th>
                                             <th>Nombre</th>
-                                            <th>Año</th>
-                                            <th>Clase</th>
-                                            <th>Tipo de Cargo</th>
-                                            <th>Total</th>
+                                            <th>Salario</th>
                                             <th>Fecha</th>
                                         </tr>
                                     </thead>
@@ -43,12 +39,8 @@
                                         @foreach ($allData as $key => $item)
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
-
-                                            <td>{{ $item->student->id_no }}</td>
-                                            <td>{{ $item->student->name }}</td>
-                                            <td>{{ $item->student_year->name }}</td>
-                                            <td>{{ $item->student_class->name }}</td>
-                                            <td>{{ $item->fee_category->name }}</td>
+                                            <td>{{ $item->user->id_no }}</td>
+                                            <td>{{ $item->user->name }}</td>
                                             <td>$ @convert($item->amount)</td>
                                             <td>{{ \Carbon\Carbon::parse($item->date)->locale('es')->isoFormat('MMMM[/]YYYY') }}</td>
                                         </tr>

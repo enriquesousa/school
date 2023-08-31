@@ -86,6 +86,7 @@
     $(document).on('click', '#search', function () {
 
         var date = $('#date').val();
+        console.log(date);
 
         $.ajax({
             url: "{{ route('employee.monthly.salary.get') }}",
@@ -107,8 +108,9 @@
 
 
     $(document).on('click', '#refrescar', function () {
-        // reload page keeping the POST data
-        window.location.reload();
+        // js script to reload page: false-keeping the POST data true-clear cache
+        window.location.reload(true);
+        // window.location.href = window.location.href.replace(/#.*$/, '');
     });
 
 
