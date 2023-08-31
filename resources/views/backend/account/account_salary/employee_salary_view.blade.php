@@ -18,7 +18,7 @@
                             <h3 class="box-title">Lista - Sueldos Empleados </h3>
 
                             {{-- botón agregar designación --}}
-                            <a href="{{ route('student.fee.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar / Editar Sueldos Empleados</a>
+                            <a href="{{ route('account.salary.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar / Editar Sueldos Empleados</a>
 
                         </div>
                         <!-- /.box-header -->

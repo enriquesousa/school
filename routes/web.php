@@ -280,6 +280,9 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Employee Salary - Sueldos Empleados
         Route::get('/employee/salary/view', [AccountSalaryController::class, 'EmployeeSalaryView'])->name('account.salary.view');
+        Route::get('/employee/salary/add', [AccountSalaryController::class, 'EmployeeSalaryAdd'])->name('account.salary.add');
+        Route::get('/employee/salary/get/employee', [AccountSalaryController::class, 'EmployeeSalaryGetEmployee'])->name('account.salary.get.employee');
+        Route::post('/employee/salary/store', [AccountSalaryController::class, 'EmployeeSalaryStore'])->name('account.salary.store');
 
     });
 
