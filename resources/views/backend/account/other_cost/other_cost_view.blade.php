@@ -18,7 +18,7 @@
                             <h3 class="box-title">Lista - Otros Costos </h3>
 
                             {{-- botón agregar designación --}}
-                            <a href="{{ route('account.salary.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Otros Costos</a>
+                            <a href="{{ route('other.cost.add') }}" class="btn btn-rounded btn-success mb-5" style="float: right;">Agregar Otros Costos</a>
 
                         </div>
                         <!-- /.box-header -->

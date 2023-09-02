@@ -288,6 +288,8 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Other Cost - Otros Gastos
         Route::get('/other/cost/view', [OtherCostController::class, 'OtherCostView'])->name('other.cost.view');
+        Route::get('/other/cost/add', [OtherCostController::class, 'OtherCostAdd'])->name('other.cost.add');
+        Route::post('/other/cost/store', [OtherCostController::class, 'OtherCostStore'])->name('store.other.cost');
 
 
     });

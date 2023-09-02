@@ -16,6 +16,15 @@ class OtherCostController extends Controller
         return view('backend.account.other_cost.other_cost_view', $data);
     }
 
+    // OtherCostAdd
+    public function OtherCostAdd(){
+        return view('backend.account.other_cost.other_cost_add');
+    }
+
+    // OtherCostStore
+    public function OtherCostStore(Request $request){
+
+    }
 
 
 }
