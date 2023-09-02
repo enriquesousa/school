@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 31, 2023 at 08:53 AM
+-- Generation Time: Sep 02, 2023 at 09:47 AM
 -- Server version: 8.0.34-0ubuntu0.20.04.1
 -- PHP Version: 8.2.9
 
@@ -32,6 +32,29 @@ CREATE TABLE `account_employee_salaries` (
   `employee_id` int NOT NULL COMMENT 'employee_id=user_id',
   `date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `amount` double DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `account_employee_salaries`
+--
+
+INSERT INTO `account_employee_salaries` (`id`, `employee_id`, `date`, `amount`, `created_at`, `updated_at`) VALUES
+(1, 21, '2023-08', 4750, '2023-09-01 01:24:58', '2023-09-01 01:24:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account_other_costs`
+--
+
+CREATE TABLE `account_other_costs` (
+  `id` bigint UNSIGNED NOT NULL,
+  `date` date DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -500,7 +523,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (25, '2023_08_23_170520_create_student_marks_table', 14),
 (26, '2023_08_26_120341_create_marks_grades_table', 15),
 (27, '2023_08_27_172028_create_account_student_fees_table', 16),
-(28, '2023_08_30_203643_create_account_employee_salaries_table', 17);
+(28, '2023_08_30_203643_create_account_employee_salaries_table', 17),
+(29, '2023_09_02_091308_create_account_other_costs_table', 18);
 
 -- --------------------------------------------------------
 
@@ -577,10 +601,14 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('04RT1CS2TOBIeqEJ9ClqIjcDene5VQMA3gB4pjqe', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSXBnOGlUYWY0NllvUkVUdEo1c0ZlZVRPcXdVOEUxaDFNZ1Q2ckxCSiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9lbXBsb3llZS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693592820),
+('BbOgnWfKsXXZOY5RJQvPRu1UkIQ3CVsqiTbMXZf5', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTjUxbndNVjBhcEZIVUdEODhEWnk0UVNXbFhVSzdtMTF6UW5namJqMCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9lbXBsb3llZS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693519079),
 ('F7FY0wFjZaxAROWNfqq6NeUESdYwbU3YPQLznnyT', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOXBkZm80cmFoTFFkZXM0cnFnRXFyNG9XRzk2bTdqMXNMcjFoZUpTYSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDc6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9lbXBsb3llZS9zYWxhcnkvYWRkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRoWDF5MWouM2xrTzNaUGJuWTl0RGl1T0F0Qi5XNVZMTklGZHpnaXNEaEJ5djU1d1VIVEhDdSI7fQ==', 1693493567),
 ('g0FCiOluPWebfRRMwzI96pe1d64zgR0kKLWrOyze', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOVZxd1ZVaVpiaXNhV0c2M3dQVWliYTh3VDhKSTg0YzZVQ0xHTGF3MCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1693457076),
+('IpRHar6cTWj2igv2FjpbM2GGLdAJJyeivJqJaoHJ', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicDEwVzdjcWh1WjJhN1loc3F3MFdJSXBmbnoydFRzUEFqYnlsUUFxQSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI0OiJodHRwOi8vc2Nob29sLnRlc3QvbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1693535281),
 ('IVuDyV8ffCFJPozlITrUZoB7tJzna731UkJRvoID', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoid01NeWJhNWE3d1lFMFZhODFNRThHYjFVV3RpektxSkdKMFlVT1A0cSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693461229),
-('qMBUlFl8SlzKTkAkPYNSSiOmtXWq1c3PXO7O5cf1', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoic1NtRHgzZlhIdEJrUFpxaU1NZWk3QndSdXBuQ256SVJVcGh5anc4bCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo0ODoiaHR0cDovL3NjaG9vbC50ZXN0L2VtcGxveWVlcy9tb250aGx5L3NhbGFyeS92aWV3Ijt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9lbXBsb3llZXMvbW9udGhseS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1693457076);
+('qMBUlFl8SlzKTkAkPYNSSiOmtXWq1c3PXO7O5cf1', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoic1NtRHgzZlhIdEJrUFpxaU1NZWk3QndSdXBuQ256SVJVcGh5anc4bCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo0ODoiaHR0cDovL3NjaG9vbC50ZXN0L2VtcGxveWVlcy9tb250aGx5L3NhbGFyeS92aWV3Ijt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9lbXBsb3llZXMvbW9udGhseS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1693457076),
+('rqZLeL3vlR0F6xccFilXYcweqFzdnrx0kFgfhj5o', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaURWN1BRZVBzZ3A5Y2RhMjkzSUhEVWpJMU5qUFRtOUpTUWhIeUdSdyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDM6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9vdGhlci9jb3N0L3ZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693672921);
 
 -- --------------------------------------------------------
 
@@ -781,6 +809,12 @@ ALTER TABLE `account_employee_salaries`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `account_other_costs`
+--
+ALTER TABLE `account_other_costs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `account_student_fees`
 --
 ALTER TABLE `account_student_fees`
@@ -953,6 +987,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `account_employee_salaries`
 --
 ALTER TABLE `account_employee_salaries`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `account_other_costs`
+--
+ALTER TABLE `account_other_costs`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -1043,7 +1083,7 @@ ALTER TABLE `marks_grades`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
