@@ -1371,8 +1371,9 @@ Listo!
 
 # S49 - Manage Others Cost
 ## 376. Others Cost Part 1
-
+Listo!
 ## 377. Others Cost Part 2
+
 ## 378. Others Cost Part 3
 ## 379. Others Cost Part 4
 

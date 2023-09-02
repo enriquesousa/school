@@ -36,6 +36,8 @@ use App\Http\Controllers\Backend\Marks\GradeController;
 
 use App\Http\Controllers\Backend\Account\StudentFeeController;
 use App\Http\Controllers\Backend\Account\AccountSalaryController;
+use App\Http\Controllers\Backend\Account\OtherCostController;
+
 
 
 Route::get('/', function () {
@@ -283,6 +285,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/employee/salary/add', [AccountSalaryController::class, 'EmployeeSalaryAdd'])->name('account.salary.add');
         Route::get('/employee/salary/get/employee', [AccountSalaryController::class, 'EmployeeSalaryGetEmployee'])->name('account.salary.get.employee');
         Route::post('/employee/salary/store', [AccountSalaryController::class, 'EmployeeSalaryStore'])->name('account.salary.store');
+
+        // Other Cost - Otros Gastos
+        Route::get('/other/cost/view', [OtherCostController::class, 'OtherCostView'])->name('other.cost.view');
+
 
     });
 
