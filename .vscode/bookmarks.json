@@ -419,12 +419,12 @@
 			"path": "app/Http/Controllers/Backend/Employee/MonthlySalaryController.php",
 			"bookmarks": [
 				{
-					"line": 34,
+					"line": 35,
 					"column": 110,
 					"label": "debug dd con js el resultado lo podemos ver en inspección de consola network response!"
 				},
 				{
-					"line": 76,
+					"line": 77,
 					"column": 71,
 					"label": "money dinero formato en controller"
 				}

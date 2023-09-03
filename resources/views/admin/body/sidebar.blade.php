@@ -159,20 +159,20 @@
 
 
 
-            <li class="header nav-small-cap">User Interface</li>
+            <li class="header nav-small-cap">Reportes</li>
 
-            {{-- Components --}}
-            <li class="treeview">
+
+             {{-- Admin Reportes --}}
+             <li class="treeview {{ ($prefix == 'reports') ? 'active' : '' }}">
                 <a href="#">
-                    <i data-feather="grid"></i>
-                    <span>Components</span>
+                    <i data-feather="grid"></i><span>Admin Reportes</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="components_alerts.html"><i class="ti-more"></i>Alerts</a></li>
-                    <li><a href="components_badges.html"><i class="ti-more"></i>Badge</a></li>
+                     <li class="{{ ($route == 'monthly.profit.view') ? 'active' : '' }}"><a href="{{ route('monthly.profit.view') }}"><i class="ti-more"></i>Ganancias por Mes/Año</a></li>
+
                 </ul>
             </li>
 

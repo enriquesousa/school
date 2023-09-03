@@ -37,6 +37,7 @@ use App\Http\Controllers\Backend\Marks\GradeController;
 use App\Http\Controllers\Backend\Account\StudentFeeController;
 use App\Http\Controllers\Backend\Account\AccountSalaryController;
 use App\Http\Controllers\Backend\Account\OtherCostController;
+use App\Http\Controllers\Backend\Report\ProfitController;
 
 
 
@@ -294,8 +295,18 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/other/cost/update/{id}', [OtherCostController::class, 'OtherCostUpdate'])->name('update.other.cost');
         Route::get('/other/cost/delete/{id}', [OtherCostController::class, 'OtherCostDelete'])->name('delete.other.cost');
 
+    });
+
+    // Report Management - Administración de Reportes
+    Route::prefix('reports')->group(function () {
+
+        // Admin Reportes
+        Route::get('/monthly/profit/view', [ProfitController::class, 'MonthlyProfitView'])->name('monthly.profit.view');
+
 
     });
+
+
 
 }); // End Middleware Auth
 

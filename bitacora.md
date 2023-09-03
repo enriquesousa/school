@@ -1381,8 +1381,9 @@ Listo!
 
 # S50 - Manage Monthly and Yearly Profit
 ## 380. Monthly and Yearly Profit Part 1
-
+Listo!
 ## 381. Monthly and Yearly Profit Part 2
+
 ## 382. Monthly and Yearly Profit Part 3
 ## 383. Monthly and Yearly Profit Part 4
 

@@ -12,13 +12,14 @@ use App\Models\StudentYear;
 use App\Models\AssignStudent;
 use App\Models\User;
 use App\Models\DiscountStudent;
+use App\Models\Designation;
+use App\Models\EmployeeAttendance;
+
 use DB;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Validation\Rule;
-use App\Models\Designation;
 use App\Models\EmployeeSalaryLog;
 
-use App\Models\EmployeeAttendance;
 
 
 class MonthlySalaryController extends Controller
