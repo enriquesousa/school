@@ -53,13 +53,13 @@
 
                                             {{-- Imagen --}}
                                             <td>
-                                                <img src="{{ (!empty($item->image)) ? url('upload/cost_images/'.$item->image) : url('upload/no_image.jpg') }}" style="width: 100px; height: 100px;">
+                                                <img src="{{ (!empty($item->image)) ? url('upload/cost_images/'.$item->image) : url('upload/no_image.jpg') }}" style="width: 70px; height: 50px;">
                                             </td>
 
                                             {{-- Acción --}}
                                             <td>
-                                                <a href="{{ route('', $item->id) }}" class="btn btn-rounded btn-info mb-5">Editar</a>
-                                                <a href="{{ route('', $item->id) }}" class="btn btn-rounded btn-danger mb-5">Eliminar</a>
+                                                <a href="" class="btn btn-rounded btn-info mb-5">Editar</a>
+                                                <a href="" class="btn btn-rounded btn-danger mb-5">Eliminar</a>
                                             </td>
 
                                         </tr>
