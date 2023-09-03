@@ -33,43 +33,35 @@ class ProfitController extends Controller
         $other_cost = AccountOtherCost::whereBetween('date',[$sdate,$edate])->sum('amount');
         $employee_salary = AccountEmployeeSalary::whereBetween('date',[$start_date,$end_date])->sum('amount');
 
-        $html['thsource']  = '<th>Serie</th>';
-        $html['thsource'] .= '<th>Nombre de Empleado</th>';
-        $html['thsource'] .= '<th>Salario Base</th>';
-        $html['thsource'] .= '<th>'."Sueldo este Mes: ".$date.'</th>';
+        $total_cost = $other_cost + $employee_salary;
+        $profit = $student_fee - $total_cost;
+
+
+        $html['thsource']  = '<th>Cargo a Estudiantes</th>';
+        $html['thsource'] .= '<th>Otros Gastos</th>';
+        $html['thsource'] .= '<th>Sueldo Empleados</th>';
+        $html['thsource'] .= '<th>Costo Total</th>';
+        $html['thsource'] .= '<th>Ganancia</th>';
         $html['thsource'] .= '<th>Acción</th>';
 
+        $color = 'success';
 
-        foreach ($data as $key => $v) {
+        $html['tdsource']  = '<td>'.$student_fee.'</td>';
+        $html['tdsource'] .= '<td>'.$other_cost.'</td>';
+        $html['tdsource'] .= '<td>'.$employee_salary.'</td>';
+        $html['tdsource'] .= '<td>'.$total_cost.'</td>';
+        $html['tdsource'] .= '<td>'.$profit.'</td>';
 
-            $totalAsistencias = EmployeeAttendance::with(['user'])->where($where)->where('employee_id',$v->employee_id)->get();
-            $absentCount = count($totalAsistencias->where('attend_status','Ausente'));
+        $html['tdsource'] .='<td>';
+        $html['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="PDF" target="_blanks" href="'.route("report.profit.pdf").'?start_date='.$sdate.'&end_date='.$edate.'">Recibo</a>';
+        $html['tdsource'] .= '</td>';
 
-            $color = 'success';
-            $html[$key]['tdsource']  = '<td>'.($key+1).'</td>';
-            $html[$key]['tdsource'] .= '<td>'.$v['user']['name'].'</td>';
-            $html[$key]['tdsource'] .= '<td>'.'$ '.number_format($v['user']['salary'], 2).'</td>';
-
-
-            // Calcular el salario mensual
-            $salary = (float)$v['user']['salary'];
-            $salaryPerDay = (float)$salary/30;
-            $totalSalaryMinus = (float)$absentCount*(float)$salaryPerDay;
-            $totalSalary = (float)$salary - (float)$totalSalaryMinus;
-
-            if ($totalSalary == $salary) {
-                $html[$key]['tdsource'] .='<td class="text-success">'.'$ '.number_format($totalSalary, 2).'</td>';
-            } else {
-                $html[$key]['tdsource'] .='<td class="text-danger">'.'$ '.number_format($totalSalary, 2).'</td>';
-            }
-
-
-            $html[$key]['tdsource'] .='<td>';
-            $html[$key]['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="Recibo de Pago PDF" target="_blanks" href="'.route("employee.monthly.salary.payslip", $v->employee_id).'">Recibo</a>';
-            $html[$key]['tdsource'] .= '</td>';
-
-        }
        return response()->json(@$html);
+
+    }
+
+    // MonthlyProfitPdf
+    public function MonthlyProfitPdf(){
 
     }
 

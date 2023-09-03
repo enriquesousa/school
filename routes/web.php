@@ -303,6 +303,7 @@ Route::group(['middleware' => 'auth'], function () {
         // Admin Reportes
         Route::get('/monthly/profit/view', [ProfitController::class, 'MonthlyProfitView'])->name('monthly.profit.view');
         Route::get('/monthly/profit/date/wise/get', [ProfitController::class, 'MonthlyProfitDateWiseGet'])->name('report.profit.date.wise.get');
+        Route::get('/monthly/profit/pdf', [ProfitController::class, 'MonthlyProfitPdf'])->name('report.profit.pdf');
 
 
     });
