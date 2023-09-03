@@ -58,8 +58,11 @@
 
                                             {{-- Acción --}}
                                             <td>
-                                                <a href="" class="btn btn-rounded btn-info mb-5">Editar</a>
-                                                <a href="" class="btn btn-rounded btn-danger mb-5">Eliminar</a>
+                                                {{-- Botón Editar --}}
+                                                <a title="Editar" href="{{ route('edit.other.cost', $item->id) }}" class="btn btn-info"><i class="fa fa-edit"></i></a>
+
+                                                {{-- Botón Eliminar --}}
+                                                <a title="Eliminar" href="{{ route('delete.other.cost', $item->id) }}" class="btn btn-danger" id="delete"><i class="fa fa-trash-o"></i></a>
                                             </td>
 
                                         </tr>

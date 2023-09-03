@@ -1377,10 +1377,11 @@ Listo!
 ## 378. Others Cost Part 3
 Listo!
 ## 379. Others Cost Part 4
-
+Listo!
 
 # S50 - Manage Monthly and Yearly Profit
 ## 380. Monthly and Yearly Profit Part 1
+
 ## 381. Monthly and Yearly Profit Part 2
 ## 382. Monthly and Yearly Profit Part 3
 ## 383. Monthly and Yearly Profit Part 4
