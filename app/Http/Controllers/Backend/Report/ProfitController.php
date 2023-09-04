@@ -46,11 +46,17 @@ class ProfitController extends Controller
 
         $color = 'success';
 
-        $html['tdsource']  = '<td>'.$student_fee.'</td>';
-        $html['tdsource'] .= '<td>'.$other_cost.'</td>';
-        $html['tdsource'] .= '<td>'.$employee_salary.'</td>';
-        $html['tdsource'] .= '<td>'.$total_cost.'</td>';
-        $html['tdsource'] .= '<td>'.$profit.'</td>';
+        $html['tdsource']  = '<td>'.'$ '.number_format($student_fee, 2).'</td>';
+        $html['tdsource'] .= '<td>'.'$ '.number_format($other_cost, 2).'</td>';
+        $html['tdsource'] .= '<td>'.'$ '.number_format($employee_salary, 2).'</td>';
+        $html['tdsource'] .= '<td>'.'$ '.number_format($total_cost, 2).'</td>';
+
+        // $html['tdsource'] .= '<td>'.'$ '.number_format($profit, 2).'</td>';
+        if ($profit > 0) {
+            $html['tdsource'] .='<td class="text-success">'.'$ '.number_format($profit, 2).'</td>';
+        } else {
+            $html['tdsource'] .='<td class="text-danger">'.'$ '.number_format($profit, 2).'</td>';
+        }
 
         $html['tdsource'] .='<td>';
         $html['tdsource'] .='<a class="btn btn-sm btn-'.$color.'" title="PDF" target="_blanks" href="'.route("report.profit.pdf").'?start_date='.$sdate.'&end_date='.$edate.'">Recibo</a>';
@@ -61,8 +67,16 @@ class ProfitController extends Controller
     }
 
     // MonthlyProfitPdf
-    public function MonthlyProfitPdf(){
+    public function MonthlyProfitPdf(Request $request){
 
+        $data['start_date'] = date('Y-m',strtotime($request->start_date));
+        $data['end_date'] = date('Y-m',strtotime($request->end_date));
+        $data['sdate'] = date('Y-m-d',strtotime($request->start_date));
+        $data['edate'] = date('Y-m-d',strtotime($request->end_date));
+
+        // sencillo
+        $pdf = PDF::loadView('backend.report.profit.profit_pdf', $data);
+        return $pdf->stream('documento.pdf');
     }
 
 
