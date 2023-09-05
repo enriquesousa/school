@@ -38,6 +38,7 @@ use App\Http\Controllers\Backend\Account\StudentFeeController;
 use App\Http\Controllers\Backend\Account\AccountSalaryController;
 use App\Http\Controllers\Backend\Account\OtherCostController;
 use App\Http\Controllers\Backend\Report\ProfitController;
+use App\Http\Controllers\Backend\Report\MarkSheetController;
 
 
 
@@ -304,6 +305,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/monthly/profit/view', [ProfitController::class, 'MonthlyProfitView'])->name('monthly.profit.view');
         Route::get('/monthly/profit/date/wise/get', [ProfitController::class, 'MonthlyProfitDateWiseGet'])->name('report.profit.date.wise.get');
         Route::get('/monthly/profit/pdf', [ProfitController::class, 'MonthlyProfitPdf'])->name('report.profit.pdf');
+
+        // Mark Sheet Generate - Reporte de Calificaciones
+        Route::get('/mark/sheet/generate/view', [MarkSheetController::class, 'MarkSheetGenerateView'])->name('mark.sheet.generate.view');
+        Route::get('/mark/sheet/generate/get', [MarkSheetController::class, 'MarkSheetGenerateGet'])->name('report.mark-sheet.get');
 
 
     });

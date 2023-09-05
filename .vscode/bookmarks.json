@@ -439,6 +439,16 @@
 					"label": "js script to reload page: false-keeping the POST data true-clear cache"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/report/mark_sheet/mark_sheet_view.blade.php",
+			"bookmarks": [
+				{
+					"line": 26,
+					"column": 108,
+					"label": "form con el metodo GET"
+				}
+			]
 		}
 	]
 }

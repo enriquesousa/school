@@ -30,7 +30,7 @@
             {{-- Dashboard - Panel de Control --}}
             <li class="{{ ($route == 'dashboard') ? 'active' : '' }}">
                 <a href="{{ route('dashboard') }}">
-                    <i class="fa fa-fw fa-area-chart"></i>
+                    <i data-feather="grid"></i>
                     <span>Panel</span>
                 </a>
             </li>
@@ -165,14 +165,14 @@
              {{-- Admin Reportes --}}
              <li class="treeview {{ ($prefix == 'reports') ? 'active' : '' }}">
                 <a href="#">
-                    <i data-feather="grid"></i><span>Admin Reportes</span>
+                    <i class="fa fa-fw fa-area-chart"></i><span>Admin Reportes</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
                      <li class="{{ ($route == 'monthly.profit.view') ? 'active' : '' }}"><a href="{{ route('monthly.profit.view') }}"><i class="ti-more"></i>Ganancias por Mes/Año</a></li>
-
+                     <li class="{{ ($route == 'mark.sheet.generate.view') ? 'active' : '' }}"><a href="{{ route('mark.sheet.generate.view') }}"><i class="ti-more"></i>Reporte de Calificaciones</a></li>
                 </ul>
             </li>
 
