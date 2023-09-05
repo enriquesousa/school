@@ -43,7 +43,7 @@
                                         <tr>
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $item->grade_name }}</td>
-                                            <td>{{ $item->grade_point }}</td>
+                                            <td>@convert($item->grade_point)</td>
                                             <td>{{ $item->start_marks }}</td>
                                             <td>{{ $item->end_marks }}</td>
                                             <td>{{ $item->start_point }} - {{ $item->end_point }}</td>
