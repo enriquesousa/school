@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 03, 2023 at 08:18 AM
+-- Generation Time: Sep 06, 2023 at 09:53 AM
 -- Server version: 8.0.34-0ubuntu0.20.04.1
 -- PHP Version: 8.2.10
 
@@ -41,7 +41,10 @@ CREATE TABLE `account_employee_salaries` (
 --
 
 INSERT INTO `account_employee_salaries` (`id`, `employee_id`, `date`, `amount`, `created_at`, `updated_at`) VALUES
-(1, 21, '2023-08', 4750, '2023-09-01 01:24:58', '2023-09-01 01:24:58');
+(1, 21, '2023-08', 4750, '2023-09-01 01:24:58', '2023-09-01 01:24:58'),
+(2, 21, '2023-07', 4750, '2023-09-03 22:44:53', '2023-09-03 22:44:53'),
+(3, 22, '2023-07', 2500, '2023-09-03 22:44:53', '2023-09-03 22:44:53'),
+(4, 23, '2023-07', 3600, '2023-09-03 22:44:53', '2023-09-03 22:44:53');
 
 -- --------------------------------------------------------
 
@@ -64,8 +67,9 @@ CREATE TABLE `account_other_costs` (
 --
 
 INSERT INTO `account_other_costs` (`id`, `date`, `amount`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(1, '2023-09-02', 1500, 'Cortadora para Departamento de Mantenimiento', '202309021851air_tools-saws.jpg', '2023-09-03 01:51:17', '2023-09-03 01:51:17'),
-(2, '2023-09-01', 1000, 'Cacahuates para cafeteria', '202309021932Southern Style Nuts Honey Roasted Hunter Mix.png', '2023-09-03 01:56:59', '2023-09-03 02:32:55');
+(1, '2023-08-23', 1500, 'Cortadora para Departamento de Mantenimiento', '202309021851air_tools-saws.jpg', '2023-09-03 01:51:17', '2023-09-03 17:38:33'),
+(2, '2023-08-16', 1000, 'Cacahuates para cafeteria', '202309021932Southern Style Nuts Honey Roasted Hunter Mix.png', '2023-09-03 01:56:59', '2023-09-03 17:38:21'),
+(4, '2023-07-18', 800, 'Pistachos para Cafeteria', '202309031545Pistachios.png', '2023-09-03 22:45:33', '2023-09-03 22:45:33');
 
 -- --------------------------------------------------------
 
@@ -91,7 +95,20 @@ CREATE TABLE `account_student_fees` (
 
 INSERT INTO `account_student_fees` (`id`, `year_id`, `class_id`, `student_id`, `fee_category_id`, `date`, `amount`, `created_at`, `updated_at`) VALUES
 (4, 1, 2, 6, 2, '2023-08', 428, '2023-08-30 20:51:41', '2023-08-30 20:51:41'),
-(5, 1, 3, 11, 1, '2023-08', 1710, '2023-08-30 20:52:14', '2023-08-30 20:52:14');
+(7, 1, 1, 11, 1, '2023-08', 1520, '2023-09-03 22:38:38', '2023-09-03 22:38:38'),
+(8, 1, 1, 12, 1, '2023-08', 1520, '2023-09-03 22:38:38', '2023-09-03 22:38:38'),
+(9, 1, 1, 26, 1, '2023-08', 1520, '2023-09-03 22:38:38', '2023-09-03 22:38:38'),
+(10, 1, 1, 27, 1, '2023-08', 1360, '2023-09-03 22:38:38', '2023-09-03 22:38:38'),
+(11, 1, 2, 6, 1, '2023-08', 1615, '2023-09-03 22:39:02', '2023-09-03 22:39:02'),
+(12, 1, 2, 26, 1, '2023-08', 1615, '2023-09-03 22:39:02', '2023-09-03 22:39:02'),
+(13, 1, 3, 11, 1, '2023-08', 1710, '2023-09-03 22:39:19', '2023-09-03 22:39:19'),
+(14, 1, 3, 12, 1, '2023-08', 1710, '2023-09-03 22:39:19', '2023-09-03 22:39:19'),
+(15, 1, 4, 8, 1, '2023-08', 1805, '2023-09-03 22:39:42', '2023-09-03 22:39:42'),
+(16, 2, 1, 4, 1, '2023-07', 1520, '2023-09-03 22:42:24', '2023-09-03 22:42:24'),
+(17, 2, 1, 5, 1, '2023-07', 1440, '2023-09-03 22:42:24', '2023-09-03 22:42:24'),
+(18, 2, 2, 12, 1, '2023-07', 1615, '2023-09-03 22:42:45', '2023-09-03 22:42:45'),
+(19, 2, 3, 19, 1, '2023-07', 1710, '2023-09-03 22:43:28', '2023-09-03 22:43:28'),
+(20, 2, 4, 15, 1, '2023-07', 1083, '2023-09-03 22:43:43', '2023-09-03 22:43:43');
 
 -- --------------------------------------------------------
 
@@ -481,13 +498,13 @@ CREATE TABLE `marks_grades` (
 --
 
 INSERT INTO `marks_grades` (`id`, `grade_name`, `grade_point`, `start_marks`, `end_marks`, `start_point`, `end_point`, `remarks`, `created_at`, `updated_at`) VALUES
-(1, 'A+', '5.00', '80', '100', '5.00', '5.00', 'Excelente!', '2023-08-27 15:34:30', '2023-08-27 17:32:40'),
-(2, 'A', '4.00', '70', '79', '4.00', '4.99', 'Muy Bien', '2023-08-27 17:40:42', '2023-08-27 17:40:42'),
-(3, 'A-', '3.50', '60', '69', '3.50', '3.99', 'Bueno', '2023-08-27 17:41:59', '2023-08-27 17:41:59'),
-(4, 'B', '3.00', '50', '59', '3.00', '3.49', 'Regular', '2023-08-27 17:43:35', '2023-08-27 17:47:39'),
-(5, 'C', '2.00', '40', '49', '2.00', '2.99', 'Suficiente', '2023-08-27 17:46:27', '2023-08-27 17:46:27'),
-(6, 'D', '1.00', '33', '39', '1.00', '1.99', 'Malo', '2023-08-27 17:49:05', '2023-08-27 17:50:07'),
-(7, 'F', '0.00', '00', '32', '0.00', '0.99', 'Reprobado', '2023-08-27 17:50:55', '2023-08-27 17:50:55');
+(1, 'A+', '5', '80', '100', '5', '5', 'Excelente!', '2023-08-27 15:34:30', '2023-09-05 16:49:29'),
+(2, 'A', '4', '70', '79', '4', '4.99', 'Muy Bien', '2023-08-27 17:40:42', '2023-09-05 16:49:55'),
+(3, 'A-', '3.5', '60', '69', '3.5', '3.99', 'Bueno', '2023-08-27 17:41:59', '2023-09-05 16:50:06'),
+(4, 'B', '3', '50', '59', '3', '3.49', 'Regular', '2023-08-27 17:43:35', '2023-09-05 16:50:17'),
+(5, 'C', '2', '40', '49', '2', '2.99', 'Suficiente', '2023-08-27 17:46:27', '2023-09-05 16:50:28'),
+(6, 'D', '1', '33', '39', '1', '1.99', 'Malo', '2023-08-27 17:49:05', '2023-09-05 16:50:42'),
+(7, 'F', '0', '00', '32', '0', '0.99', 'Reprobado', '2023-08-27 17:50:55', '2023-09-05 16:50:54');
 
 -- --------------------------------------------------------
 
@@ -609,15 +626,11 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('04RT1CS2TOBIeqEJ9ClqIjcDene5VQMA3gB4pjqe', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSXBnOGlUYWY0NllvUkVUdEo1c0ZlZVRPcXdVOEUxaDFNZ1Q2ckxCSiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9lbXBsb3llZS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693592820),
-('BbOgnWfKsXXZOY5RJQvPRu1UkIQ3CVsqiTbMXZf5', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTjUxbndNVjBhcEZIVUdEODhEWnk0UVNXbFhVSzdtMTF6UW5namJqMCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9lbXBsb3llZS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693519079),
-('F7FY0wFjZaxAROWNfqq6NeUESdYwbU3YPQLznnyT', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOXBkZm80cmFoTFFkZXM0cnFnRXFyNG9XRzk2bTdqMXNMcjFoZUpTYSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDc6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9lbXBsb3llZS9zYWxhcnkvYWRkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRoWDF5MWouM2xrTzNaUGJuWTl0RGl1T0F0Qi5XNVZMTklGZHpnaXNEaEJ5djU1d1VIVEhDdSI7fQ==', 1693493567),
-('g0FCiOluPWebfRRMwzI96pe1d64zgR0kKLWrOyze', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOVZxd1ZVaVpiaXNhV0c2M3dQVWliYTh3VDhKSTg0YzZVQ0xHTGF3MCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1693457076),
-('IpRHar6cTWj2igv2FjpbM2GGLdAJJyeivJqJaoHJ', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicDEwVzdjcWh1WjJhN1loc3F3MFdJSXBmbnoydFRzUEFqYnlsUUFxQSI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI0OiJodHRwOi8vc2Nob29sLnRlc3QvbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1693535281),
-('IVuDyV8ffCFJPozlITrUZoB7tJzna731UkJRvoID', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoid01NeWJhNWE3d1lFMFZhODFNRThHYjFVV3RpektxSkdKMFlVT1A0cSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693461229),
-('qMBUlFl8SlzKTkAkPYNSSiOmtXWq1c3PXO7O5cf1', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoic1NtRHgzZlhIdEJrUFpxaU1NZWk3QndSdXBuQ256SVJVcGh5anc4bCI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo0ODoiaHR0cDovL3NjaG9vbC50ZXN0L2VtcGxveWVlcy9tb250aGx5L3NhbGFyeS92aWV3Ijt9czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDg6Imh0dHA6Ly9zY2hvb2wudGVzdC9lbXBsb3llZXMvbW9udGhseS9zYWxhcnkvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1693457076),
-('r2WNTFJHbxY9ETduq0fndFoSnn09EX6HRWtH1GJU', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoidzdqMU1MTGlxMGQ2V0pPVmNycGxsY1dpNG1zT1hvSFIxVng5U0g2VyI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI0OiJodHRwOi8vc2Nob29sLnRlc3QvbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRoWDF5MWouM2xrTzNaUGJuWTl0RGl1T0F0Qi5XNVZMTklGZHpnaXNEaEJ5djU1d1VIVEhDdSI7fQ==', 1693708664),
-('rqZLeL3vlR0F6xccFilXYcweqFzdnrx0kFgfhj5o', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaURWN1BRZVBzZ3A5Y2RhMjkzSUhEVWpJMU5qUFRtOUpTUWhIeUdSdyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDI6Imh0dHA6Ly9zY2hvb2wudGVzdC9hY2NvdW50cy9vdGhlci9jb3N0L2FkZCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693681280);
+('5RORgBkOIgKEbykR6yhRtWMM0Nk9IKOkw7QJYzOH', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicWhEcmtaZ0xvR29rd2c0aXdXS2pWVU5kM0tnSWZpUUFnUm9XVmR5ciI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693933886),
+('INRP4tsf2KnwDKM903p81x2PG3Rm8GmcoBSCnOan', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiU2VsbmJqek40dFdTWjRRbEN6TUtBY2hZeDFKS1NlNndoWmw2UHFERyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6ODc6Imh0dHA6Ly9zY2hvb2wudGVzdC9yZXBvcnRzL21vbnRobHkvcHJvZml0L3BkZj9lbmRfZGF0ZT0yMDIzLTA5LTI5JnN0YXJ0X2RhdGU9MjAyMy0wNy0wMyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693845166),
+('k1SVqc3GOG1LddnTKRfN6AjHdfdyQjxzRq9g0Do5', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNWVKcHVwSDNzS1YwZmJmMUNmd1BJT2J0SjlramJKemJYUnhnanFCdiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDY6Imh0dHA6Ly9zY2hvb2wudGVzdC9yZXBvcnRzL21vbnRobHkvcHJvZml0L3ZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693781152),
+('U0Tn8JS7q8hC8NEXu70rns4sdpB9VBvdRu2dWdeb', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoib2lMYmVjb2c1bGVkZDlWSk9uWWx3YTZwS1lpOWdLZ0RydW9XSWh3dSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTQ5OiJodHRwOi8vc2Nob29sLnRlc3QvcmVwb3J0cy9tYXJrL3NoZWV0L2dlbmVyYXRlL2dldD9fdG9rZW49b2lMYmVjb2c1bGVkZDlWSk9uWWx3YTZwS1lpOWdLZ0RydW9XSWh3dSZjbGFzc19pZD0xJmV4YW1fdHlwZV9pZD0xJmlkX25vPTIwMTkwMDEyJnllYXJfaWQ9MSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693958352),
+('XoIICYpwc0IW2x2XQKS2aXj0dOxzWfY3zo4o4zG1', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWVk0TDhYSGIzR0FhVHJRM2p5S3oxcGVSSUk5WlV4SXFEQzc3aFRuYiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTE6Imh0dHA6Ly9zY2hvb2wudGVzdC9yZXBvcnRzL21hcmsvc2hlZXQvZ2VuZXJhdGUvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693972646);
 
 -- --------------------------------------------------------
 
@@ -996,19 +1009,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `account_employee_salaries`
 --
 ALTER TABLE `account_employee_salaries`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `account_other_costs`
 --
 ALTER TABLE `account_other_costs`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `account_student_fees`
 --
 ALTER TABLE `account_student_fees`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `assign_students`
