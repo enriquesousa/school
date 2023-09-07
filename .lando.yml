@@ -1,0 +1,52 @@
+name: school
+recipe: laravel
+config:
+  webroot: ./public
+  php: '8.2'
+  via: nginx
+  database: mysql
+  cache: redis
+
+services:
+
+  node:
+    type: node:18
+    scanner: false
+    ports:
+      - 3009:3009
+    build:
+      - npm install
+
+  mail:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+
+  phpmyadmin:
+    type: phpmyadmin
+
+tooling:
+  migrate:
+    service: appserver
+    cmd: php artisan migrate
+    description: php artisan migrate
+  pa:
+    service: appserver
+    cmd: php artisan
+    description: php artisan
+  npm:
+    service: node
+    cmd: npm
+  dev:
+    service: node
+    cmd: npm run dev
+    description: npm run dev
+  build:
+    service: node
+    cmd: npm run build
+    description: npm run build
+
+proxy:
+  mail:
+    - mail.school.lndo.site
