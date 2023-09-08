@@ -24,6 +24,7 @@
     "tabsColor.activeTab": {
         "backgroundColor": "yellow",
         "fontColor": "black"
-    }
+    },
+
 
 }
