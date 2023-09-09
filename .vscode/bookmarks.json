@@ -449,6 +449,16 @@
 					"label": "form con el metodo GET"
 				}
 			]
+		},
+		{
+			"path": "resources/views/backend/report/mark_sheet/mark_sheet_pdf.blade.php",
+			"bookmarks": [
+				{
+					"line": 108,
+					"column": 72,
+					"label": "number_format money o numero en vista paar poder hacer operaciones"
+				}
+			]
 		}
 	]
 }

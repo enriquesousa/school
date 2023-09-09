@@ -24,7 +24,7 @@
 
                         <div class="box-body" style="border: solid 1px; padding: 10px;">
 
-                            <!-- Row 1 -->
+                            <!-- Row 1 - Encabezado-->
                             <div class="row">
 
                                 <div style="float: right" class="col-md-2 text-center">
@@ -49,6 +49,75 @@
 
                             </div>
 
+                            <!-- Row 2 - Contenido Tabla -->
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    
+                                    <table border="1" style="border-color: #ffffff;" width="100%" cellpadding="8" cellspacing="2">
+    
+                                        @php
+                                            $assign_student = App\Models\AssignStudent::where('year_id',$allMarks['0']->year_id)->where('class_id',$allMarks['0']->class_id)->first();
+                                        @endphp
+    
+                                        <tr>
+                                            <td width="50%">ID Estudiante</td>
+                                            <td width="50%">{{ $allMarks['0']['id_no'] }}</td>
+                                        </tr>
+    
+                                        <tr>
+                                            <td width="50%">Rol</td>
+                                            <td width="50%">{{ $assign_student->roll }}</td>
+                                        </tr>
+    
+                                        <tr>
+                                            <td width="50%">Nombre</td>
+                                            <td width="50%">{{ $allMarks['0']['student']['name'] }}</td>
+                                        </tr>
+    
+                                        <tr>
+                                            <td width="50%">Clase</td>
+                                            <td width="50%">{{ $allMarks['0']['student_class']['name'] }}</td>
+                                        </tr>
+    
+                                        <tr>
+                                            <td width="50%">Sesión - Año</td>
+                                            <td width="50%">{{ $allMarks['0']['year']['name'] }}</td>
+                                        </tr>
+    
+                                    </table>
+
+                                </div>
+                                
+                                <div class="col-md-6">
+
+                                    <table border="1" style="border-color: #ffffff;" width="100%" cellpadding="8" cellspacing="2">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Grado Letra</th>
+                                                <th>Intervalo</th>
+                                                <th>Puntos Calificación</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            @foreach($allGrades as $mark)
+                                                <tr>
+                                                    <td>{{ $mark->grade_name }}</td>
+                                                    <td>{{ $mark->start_marks }} - {{ $mark->end_marks }}</td>
+                                                    <td>{{ number_format((float)$mark->grade_point,2) }} - {{ ($mark->grade_point == 5)?(number_format((float)$mark->grade_point,2)):(number_format((float)$mark->grade_point+1,2) - (float)0.01) }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+    
+                                        
+    
+                                    </table>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
