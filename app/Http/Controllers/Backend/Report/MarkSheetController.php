@@ -69,7 +69,7 @@ class MarkSheetController extends Controller
             //         ]
             //     ]
             //     ]
-
+            
             $allGrades = MarksGrade::all();
             return view('backend.report.mark_sheet.mark_sheet_pdf', compact('allMarks', 'allGrades', 'count_reprobados'));
 
@@ -83,9 +83,6 @@ class MarkSheetController extends Controller
             return redirect()->back()->with($notification);
 
         }
-
-
-
 
 
     }
