@@ -68,11 +68,12 @@ class AttendanceReportController extends Controller
             // ]
             // ]
 
-            $data['absents'] = EmployeeAttendance::with(['user'])->where('attend_status', 'Ausente')->get()->count();
+            $data['absents'] = EmployeeAttendance::with(['user'])->where($where)->where('attend_status', 'Ausente')->get()->count();
 
-            $data['leaves'] = EmployeeAttendance::with(['user'])->where('attend_status', 'Permiso')->get()->count();
+            $data['leaves'] = EmployeeAttendance::with(['user'])->where($where)->where('attend_status', 'Permiso')->get()->count();
 
             $data['month'] = date("m-Y", strtotime($request->date));
+            $data['fecha'] = date("d-m-Y", strtotime($request->date));
 
             $pdf = PDF::loadView('backend.report.attendance_report.attendance_report_pdf', $data);
             return $pdf->stream('documento.pdf');
