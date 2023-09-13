@@ -24,7 +24,7 @@
 
                         <div class="box-body">
 
-                            <form method="GET"" action="{{ route('report.mark-sheet.get') }}" target="_blank">
+                            <form method="GET"" action="{{ route('report.attendance.get') }}" target="_blank">
                             @csrf
 
                                 {{-- Row 1 --}}

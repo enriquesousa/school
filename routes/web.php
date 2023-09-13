@@ -314,6 +314,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Attendance Report - Reporte de Asistencia
         Route::get('/attendance/report/view', [AttendanceReportController::class, 'AttendanceReportView'])->name('attendance.report.view');
+        Route::get('/attendance/report/get', [AttendanceReportController::class, 'AttendanceReportGet'])->name('report.attendance.get');
 
     });
 
