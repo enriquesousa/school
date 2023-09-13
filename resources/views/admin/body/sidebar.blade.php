@@ -173,6 +173,7 @@
                 <ul class="treeview-menu">
                      <li class="{{ ($route == 'monthly.profit.view') ? 'active' : '' }}"><a href="{{ route('monthly.profit.view') }}"><i class="ti-more"></i>Ganancias por Mes/Año</a></li>
                      <li class="{{ ($route == 'mark.sheet.generate.view') ? 'active' : '' }}"><a href="{{ route('mark.sheet.generate.view') }}"><i class="ti-more"></i>Reporte de Calificaciones</a></li>
+                     <li class="{{ ($route == 'attendance.report.view') ? 'active' : '' }}"><a href="{{ route('attendance.report.view') }}"><i class="ti-more"></i>Reporte de Asistencias</a></li>
                 </ul>
             </li>
 

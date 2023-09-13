@@ -1405,7 +1405,9 @@ Listo!
 
 # S52 - Employee Attendance Report
 ## 390. Employee Attendance Report Part 1
+Listo!
 ## 391. Employee Attendance Report Part 2
+
 ## 392. Employee Attendance Report Part 3
 
 # S53 - Manage Students Result

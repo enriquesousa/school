@@ -37,8 +37,10 @@ use App\Http\Controllers\Backend\Marks\GradeController;
 use App\Http\Controllers\Backend\Account\StudentFeeController;
 use App\Http\Controllers\Backend\Account\AccountSalaryController;
 use App\Http\Controllers\Backend\Account\OtherCostController;
+
 use App\Http\Controllers\Backend\Report\ProfitController;
 use App\Http\Controllers\Backend\Report\MarkSheetController;
+use App\Http\Controllers\Backend\Report\AttendanceReportController;
 
 
 
@@ -310,6 +312,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/mark/sheet/generate/view', [MarkSheetController::class, 'MarkSheetGenerateView'])->name('mark.sheet.generate.view');
         Route::get('/mark/sheet/generate/get', [MarkSheetController::class, 'MarkSheetGenerateGet'])->name('report.mark-sheet.get');
 
+        // Attendance Report - Reporte de Asistencia
+        Route::get('/attendance/report/view', [AttendanceReportController::class, 'AttendanceReportView'])->name('attendance.report.view');
 
     });
 
