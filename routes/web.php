@@ -41,6 +41,8 @@ use App\Http\Controllers\Backend\Account\OtherCostController;
 use App\Http\Controllers\Backend\Report\ProfitController;
 use App\Http\Controllers\Backend\Report\MarkSheetController;
 use App\Http\Controllers\Backend\Report\AttendanceReportController;
+use App\Http\Controllers\Backend\Report\ResultReportController;
+
 
 
 
@@ -315,6 +317,10 @@ Route::group(['middleware' => 'auth'], function () {
         // Attendance Report - Reporte de Asistencia
         Route::get('/attendance/report/view', [AttendanceReportController::class, 'AttendanceReportView'])->name('attendance.report.view');
         Route::get('/attendance/report/get', [AttendanceReportController::class, 'AttendanceReportGet'])->name('report.attendance.get');
+
+        // Student Result Report - Reporte de Resultados Estudiantes
+        Route::get('/student/result/view', [ResultReportController::class, 'StudentResultView'])->name('student.result.view');
+        Route::get('/student/result/get', [ResultReportController::class, 'StudentResultGet'])->name('report.student.result.get');
 
     });
 

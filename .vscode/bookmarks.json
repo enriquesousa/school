@@ -459,6 +459,16 @@
 					"label": "number_format money o numero en vista paar poder hacer operaciones"
 				}
 			]
+		},
+		{
+			"path": "app/Http/Controllers/Backend/Report/AttendanceReportController.php",
+			"bookmarks": [
+				{
+					"line": 36,
+					"column": 8,
+					"label": "check si la coleccion esta vacia o tiene datos empty"
+				}
+			]
 		}
 	]
 }

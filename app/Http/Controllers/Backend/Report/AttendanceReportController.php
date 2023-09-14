@@ -33,7 +33,14 @@ class AttendanceReportController extends Controller
         }
 
         $singleAttendance = EmployeeAttendance::with('user')->where($where)->get();
-        if ($singleAttendance == true) {
+        // dd($singleAttendance->toArray());
+        // if ($singleAttendance->isNotEmpty()) {
+        //     dd($singleAttendance);
+        // } else {
+        //     dd('No hay datos');
+        // }
+
+        if ($singleAttendance->isNotEmpty()) {
 
             $data['allData'] = EmployeeAttendance::with('user')->where($where)->get();
 
@@ -88,8 +95,6 @@ class AttendanceReportController extends Controller
             return redirect()->back()->with($notification);
 
         }
-
-
 
     }
 
