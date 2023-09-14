@@ -1415,8 +1415,9 @@ Listo!
 ## 393. Students Result Part 1
 Listo!
 ## 394. Students Result Part 2
-
+Listo!
 ## 395. Students Result Part 3
+
 
 # S54 - Manage Students ID Card Generate
 ## 396. Students ID Card Generate Part 1
