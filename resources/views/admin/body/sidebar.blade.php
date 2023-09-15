@@ -80,7 +80,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="{{ ($route == 'student.class.view') ? 'active' : '' }}"><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Clases</a></li>
-                    <li class="{{ ($route == 'student.year.view') ? 'active' : '' }}"><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Años</a></li>
+                    <li class="{{ ($route == 'student.year.view') ? 'active' : '' }}"><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Periodos</a></li>
                     <li class="{{ ($route == 'student.group.view') ? 'active' : '' }}"><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Grupos</a></li>
                     <li class="{{ ($route == 'student.shift.view') ? 'active' : '' }}"><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Horario</a></li>
                     <li class="{{ ($route == 'fee.category.view') ? 'active' : '' }}"><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Categoría de Cobro</a></li>

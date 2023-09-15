@@ -71,7 +71,7 @@
 
         {{-- Datos Encabezado --}}
         <tr>
-            <td width="50%"><h4>Año Escolar</h4>{{ $allData[0]->year->name }}</td>
+            <td width="50%"><h4>Periodo Escolar</h4>{{ $allData[0]->year->name }}</td>
             <td width="50%"><h4>Clase</h4>{{ $allData[0]->student_class->name }}</td>
         </tr>
 

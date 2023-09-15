@@ -30,6 +30,7 @@
                                             <th width="5%">Serie</th>
                                             <th>Nombre</th>
                                             <th>ID</th>
+                                            <th>Designación</th>
                                             <th>Celular</th>
                                             <th>Sexo</th>
                                             <th>Fecha Ingreso</th>
@@ -47,6 +48,7 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->id_no }}</td>
+                                            <td>{{ $item->designation->name }}</td>
                                             <td>{{ $item->mobile }}</td>
                                             <td>{{ $item->gender }}</td>
                                             <td>{{ $item->join_date }}</td>

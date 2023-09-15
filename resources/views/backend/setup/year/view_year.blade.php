@@ -15,15 +15,25 @@
 
                     {{-- Lista de Usuarios --}}
                     <div class="box">
+
                         <div class="box-header with-border">
 
-                            <h3 class="box-title">Estudiantes - Lista por Años</h3>
+                            {{-- titulo --}}
+                            <h3 class="box-title">Configuración - Periodos Escolares</h3>
+                            <h6 class="box-subtitle">Para agregar los <a class="text-warning" href="#">periodos escolares </a> Ejemplo pueden ser: por bimestre, trimestre, semestre o anual.
+                            </h6>
 
                             {{-- botón agregar usuario --}}
                             <a href="{{ route('student.year.add') }}" class="btn btn-rounded btn-success mb-5"
-                                style="float: right;">Agregar Año</a>
+                                style="float: right;">Agregar Periodo</a>
 
                         </div>
+                            
+                        <div class="box-header with-border">
+                            <h4 class="box-subtitle">Lista de Periodos Capturados</h4>
+                        </div>
+
+
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
