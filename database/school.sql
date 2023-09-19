@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 06, 2023 at 09:53 AM
+-- Generation Time: Sep 19, 2023 at 09:47 AM
 -- Server version: 8.0.34-0ubuntu0.20.04.1
 -- PHP Version: 8.2.10
 
@@ -154,7 +154,8 @@ INSERT INTO `assign_students` (`id`, `student_id`, `roll`, `class_id`, `year_id`
 (19, 26, NULL, 2, 1, 1, 2, '2023-08-30 18:43:18', '2023-08-30 18:43:18'),
 (20, 11, NULL, 3, 1, 1, 3, '2023-08-30 18:45:03', '2023-08-30 18:45:03'),
 (21, 12, NULL, 3, 1, 3, 3, '2023-08-30 18:45:54', '2023-08-30 18:45:54'),
-(22, 27, NULL, 1, 1, 2, 2, '2023-08-30 18:59:00', '2023-08-30 18:59:00');
+(22, 27, NULL, 1, 1, 2, 2, '2023-08-30 18:59:00', '2023-08-30 18:59:00'),
+(23, 27, NULL, 1, 5, 1, 1, '2023-09-15 18:21:35', '2023-09-15 18:21:35');
 
 -- --------------------------------------------------------
 
@@ -189,7 +190,9 @@ INSERT INTO `assign_subjects` (`id`, `class_id`, `subject_id`, `full_mark`, `pas
 (13, 3, 6, 100, 60, 100, '2023-08-03 00:40:20', '2023-08-03 00:40:20'),
 (14, 4, 1, 100, 60, 100, '2023-08-03 00:41:22', '2023-08-03 00:41:22'),
 (15, 4, 2, 100, 60, 100, '2023-08-03 00:41:22', '2023-08-03 00:41:22'),
-(20, 1, 1, 100, 70, 100, '2023-08-03 05:19:16', '2023-08-03 05:19:16');
+(21, 1, 1, 100, 70, 100, '2023-09-14 16:27:43', '2023-09-14 16:27:43'),
+(22, 1, 3, 100, 70, 80, '2023-09-14 16:27:43', '2023-09-14 16:27:43'),
+(23, 1, 5, 100, 70, 80, '2023-09-14 16:27:43', '2023-09-14 16:27:43');
 
 -- --------------------------------------------------------
 
@@ -255,7 +258,8 @@ INSERT INTO `discount_students` (`id`, `assign_student_id`, `fee_category_id`, `
 (19, 19, 1, 5, '2023-08-30 18:43:18', '2023-08-30 18:43:18'),
 (20, 20, 1, 5, '2023-08-30 18:45:03', '2023-08-30 18:45:03'),
 (21, 21, 1, 5, '2023-08-30 18:45:54', '2023-08-30 18:45:54'),
-(22, 22, 1, 15, '2023-08-30 18:59:00', '2023-08-30 18:59:00');
+(22, 22, 1, 15, '2023-08-30 18:59:00', '2023-08-30 18:59:00'),
+(23, 23, 1, 15, '2023-09-15 18:21:35', '2023-09-15 18:21:35');
 
 -- --------------------------------------------------------
 
@@ -604,7 +608,8 @@ INSERT INTO `school_subjects` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (2, 'Curso de Matematicas II', '2023-08-02 05:22:17', '2023-08-02 05:22:17'),
 (3, 'Fisica I', '2023-08-02 05:22:27', '2023-08-02 05:22:27'),
 (5, 'Español I', '2023-08-03 00:08:45', '2023-08-03 00:08:45'),
-(6, 'Musica I', '2023-08-03 00:09:09', '2023-08-03 00:09:09');
+(6, 'Musica I', '2023-08-03 00:09:09', '2023-08-03 00:09:09'),
+(7, 'Fisica II', '2023-09-14 16:15:17', '2023-09-14 16:15:17');
 
 -- --------------------------------------------------------
 
@@ -626,11 +631,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('5RORgBkOIgKEbykR6yhRtWMM0Nk9IKOkw7QJYzOH', NULL, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoicWhEcmtaZ0xvR29rd2c0aXdXS2pWVU5kM0tnSWZpUUFnUm9XVmR5ciI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9zY2hvb2wudGVzdC9sb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693933886),
-('INRP4tsf2KnwDKM903p81x2PG3Rm8GmcoBSCnOan', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiU2VsbmJqek40dFdTWjRRbEN6TUtBY2hZeDFKS1NlNndoWmw2UHFERyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6ODc6Imh0dHA6Ly9zY2hvb2wudGVzdC9yZXBvcnRzL21vbnRobHkvcHJvZml0L3BkZj9lbmRfZGF0ZT0yMDIzLTA5LTI5JnN0YXJ0X2RhdGU9MjAyMy0wNy0wMyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693845166),
-('k1SVqc3GOG1LddnTKRfN6AjHdfdyQjxzRq9g0Do5', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNWVKcHVwSDNzS1YwZmJmMUNmd1BJT2J0SjlramJKemJYUnhnanFCdiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDY6Imh0dHA6Ly9zY2hvb2wudGVzdC9yZXBvcnRzL21vbnRobHkvcHJvZml0L3ZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1693781152),
-('U0Tn8JS7q8hC8NEXu70rns4sdpB9VBvdRu2dWdeb', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoib2lMYmVjb2c1bGVkZDlWSk9uWWx3YTZwS1lpOWdLZ0RydW9XSWh3dSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTQ5OiJodHRwOi8vc2Nob29sLnRlc3QvcmVwb3J0cy9tYXJrL3NoZWV0L2dlbmVyYXRlL2dldD9fdG9rZW49b2lMYmVjb2c1bGVkZDlWSk9uWWx3YTZwS1lpOWdLZ0RydW9XSWh3dSZjbGFzc19pZD0xJmV4YW1fdHlwZV9pZD0xJmlkX25vPTIwMTkwMDEyJnllYXJfaWQ9MSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693958352),
-('XoIICYpwc0IW2x2XQKS2aXj0dOxzWfY3zo4o4zG1', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWVk0TDhYSGIzR0FhVHJRM2p5S3oxcGVSSUk5WlV4SXFEQzc3aFRuYiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTE6Imh0dHA6Ly9zY2hvb2wudGVzdC9yZXBvcnRzL21hcmsvc2hlZXQvZ2VuZXJhdGUvdmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkaFgxeTFqLjNsa08zWlBiblk5dERpdU9BdEIuVzVWTE5JRmR6Z2lzRGhCeXY1NXdVSFRIQ3UiO30=', 1693972646);
+('CEq6qujVbfx1niCIfwnZrjsEUp5Hf9YF100cVLYS', 1, '127.0.0.1', 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiR25wdVZQVUlBS3RTdGJTWEk4MTFmT0dmcXFHd2xrczlpRGhaY0hJWCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDM6Imh0dHA6Ly9zY2hvb2wudGVzdC9zZXR1cHMvc3R1ZGVudC95ZWFyL3ZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGhYMXkxai4zbGtPM1pQYm5ZOXREaXVPQXRCLlc1VkxOSUZkemdpc0RoQnl2NTV3VUhUSEN1Ijt9', 1694821138);
 
 -- --------------------------------------------------------
 
@@ -650,10 +651,10 @@ CREATE TABLE `student_classes` (
 --
 
 INSERT INTO `student_classes` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Class Uno', '2023-07-31 10:01:08', '2023-07-31 10:01:08'),
-(2, 'Clase Dos', '2023-07-31 10:02:11', '2023-07-31 10:02:11'),
-(3, 'Clase Tres', '2023-07-31 10:02:22', '2023-07-31 10:02:22'),
-(4, 'Clase Cuatro', '2023-08-03 00:07:58', '2023-08-30 18:36:26');
+(1, 'Metematicas', '2023-07-31 10:01:08', '2023-09-15 18:18:59'),
+(2, 'Arte', '2023-07-31 10:02:11', '2023-09-15 18:19:06'),
+(3, 'Musica', '2023-07-31 10:02:22', '2023-09-15 18:19:14'),
+(4, 'Informatica', '2023-08-03 00:07:58', '2023-09-15 18:19:33');
 
 -- --------------------------------------------------------
 
@@ -673,10 +674,10 @@ CREATE TABLE `student_groups` (
 --
 
 INSERT INTO `student_groups` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Artes', '2023-07-31 10:04:02', '2023-07-31 10:06:18'),
-(2, 'Matematicas', '2023-07-31 10:04:10', '2023-07-31 10:04:10'),
-(3, 'Grupo 3 - Musica', '2023-08-06 08:42:28', '2023-08-06 08:42:28'),
-(4, 'Grupo 4 - Enfermeria', '2023-08-06 08:43:04', '2023-08-06 08:43:04');
+(1, 'Primero A', '2023-07-31 10:04:02', '2023-09-15 18:19:46'),
+(2, 'Primero B', '2023-07-31 10:04:10', '2023-09-15 18:19:56'),
+(3, 'Segundo A', '2023-08-06 08:42:28', '2023-09-15 18:20:04'),
+(4, 'Tercero A', '2023-08-06 08:43:04', '2023-09-15 18:20:17');
 
 -- --------------------------------------------------------
 
@@ -705,7 +706,7 @@ INSERT INTO `student_marks` (`id`, `student_id`, `id_no`, `year_id`, `class_id`,
 (4, 7, '20210007', 3, 4, 14, 1, 80, '2023-08-25 01:56:33', '2023-08-25 01:56:33'),
 (5, 16, '20210016', 3, 4, 14, 1, 75, '2023-08-25 01:56:33', '2023-08-25 01:56:33'),
 (6, 11, '20190011', 1, 1, 20, 1, 50, '2023-08-26 18:32:30', '2023-08-26 18:32:30'),
-(7, 12, '20190012', 1, 1, 20, 1, 60, '2023-08-26 18:32:30', '2023-08-26 18:32:30'),
+(7, 12, '20190012', 1, 1, 20, 1, 90, '2023-08-26 18:32:30', '2023-08-26 18:32:30'),
 (8, 26, '20190020', 1, 1, 20, 1, 70, '2023-08-26 18:32:30', '2023-08-26 18:32:30');
 
 -- --------------------------------------------------------
@@ -751,7 +752,11 @@ INSERT INTO `student_years` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, '2019', '2023-07-31 10:02:34', '2023-07-31 10:02:34'),
 (2, '2020', '2023-07-31 10:02:44', '2023-07-31 10:02:44'),
 (3, '2021', '2023-07-31 10:02:51', '2023-07-31 10:02:51'),
-(4, '2022', '2023-07-31 10:02:56', '2023-07-31 10:02:56');
+(4, '2022', '2023-07-31 10:02:56', '2023-07-31 10:02:56'),
+(5, 'Trimestre 1-2023  (1/ENE/23 a 31/MAR/23)', '2023-09-15 17:54:17', '2023-09-15 18:05:35'),
+(6, 'Trimestre 2-2023 (1/ABR/23 a 30/JUN/23)', '2023-09-15 17:55:24', '2023-09-15 18:05:52'),
+(7, 'Trimestre 3-2023 (1/JUL/23 a 29/SEP/23)', '2023-09-15 17:59:53', '2023-09-15 18:06:44'),
+(8, 'Trimestre 4-2023 (1/OCT/23 a 31/DIC/23)', '2023-09-15 18:00:30', '2023-09-15 18:06:59');
 
 -- --------------------------------------------------------
 
@@ -812,7 +817,7 @@ INSERT INTO `users` (`id`, `usertype`, `name`, `email`, `email_verified_at`, `pa
 (18, 'Student', 'Ignatius Sweeney', 'ignatius@mailinator.com', NULL, '$2y$10$8nMPmDsQFpDh6F8Aiw4BbenkqZDJ4SiLD38.B5zxE4ip96n.PSqtG', '(664) 567-6666', 'Eu aut deleniti quas', 'Male', '20230812221693.jpg', 'Allen Sanford', 'Upton Hanson', 'ateo', '20220018', '1976-09-09', '5323', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-13 05:16:55', '2023-08-13 05:16:55'),
 (19, 'Student', 'Judah Velasquez', 'judah@mailinator.com', NULL, '$2y$10$tug25s93aF1f5C/UyclmeeeFTKv6nD1cEQwDIBn5Cy8BbwbBS66aa', NULL, 'Sit officia aut ad q', 'Male', '20230813145015.jpg', 'April Barlow', 'Branden Daugherty', 'católico', '20200019', '1979-04-13', '9638', NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-08-13 21:50:42', '2023-08-13 21:50:42'),
 (20, 'Employee', 'Oralia Cooke', 'tyfedin@mailinator.com', NULL, '$2y$10$ihlgrkLv56CZo/66xiZRbuHEBzo.gON3aDWcBUPBoVRWT9DCrhofS', '(664) 456-5456', 'Vel id do quasi acc', 'Female', '202308162333yangyi-shi-ee-student-2-compressed-Cropped-293x228.jpg', 'Jose Laurel Jackson', 'Maria Anne Roberson', 'ateo', '2022120001', '2008-01-25', '3590', NULL, '2022-12-22', 4, 3500, 1, NULL, NULL, NULL, '2023-08-15 23:39:09', '2023-08-18 17:18:45'),
-(21, 'Employee', 'Austin Santana', 'livyjelu@mailinator.com', NULL, '$2y$10$KgkTq/uhsGayTjQaVxPTle75mHm95h86hoy1wHTiIFnnsMtH5G9Nm', '(661) 789-8789', 'In sit placeat mol', 'Male', '202308151643student-profile-javon-nathaniel.jpg', 'Macaulay Jacobson', 'Angela Morales', 'ateo', '2018020021', '1987-02-28', '1613', NULL, '2018-02-16', 5, 4750, 1, NULL, NULL, NULL, '2023-08-15 23:43:38', '2023-08-18 18:01:27'),
+(21, 'Employee', 'Austin Santana', 'livyjelu@mailinator.com', NULL, '$2y$10$KgkTq/uhsGayTjQaVxPTle75mHm95h86hoy1wHTiIFnnsMtH5G9Nm', '(661) 789-8789', 'In sit placeat mol', 'Male', '202308151643student-profile-javon-nathaniel.jpg', 'Macaulay Jacobson', 'Angela Morales', 'ateo', '2018020021', '1987-02-28', '1613', NULL, '2018-02-16', 4, 4750, 1, NULL, NULL, NULL, '2023-08-15 23:43:38', '2023-09-14 16:59:41'),
 (22, 'Employee', 'Rebecca Pace', 'rebeca_li@mailinator.com', NULL, '$2y$10$pl7..u.yFNwTgw9QZ8ob0ON7d7doke50ktRqFF9yTKXhB4ZTH04Em', '(664) 565-4566', 'Sit aut iste dolorem', 'Female', '202308191821student-profile.jpg', 'Virginia Daniels', 'Zeph Mccray', 'católico', '2018060022', '2006-04-10', '7997', NULL, '2018-06-03', 5, 2500, 1, NULL, NULL, NULL, '2023-08-20 01:21:30', '2023-08-20 01:21:30'),
 (23, 'Employee', 'Yuli Stout', 'mekezigyt@mailinator.com', NULL, '$2y$10$slRSfp9TPtmXzB/MOWTvZ.yX4aZq5NCtDoFC2Jf3tS5a7Z1pKNwZ6', '(664) 888-9889', 'Sed explicabo Illo', 'Male', '202308220936patrick2.jpg', 'Pascale Castro', 'Raphael Newton', 'cristiano', '2011060023', '1994-10-27', '543', NULL, '2011-06-24', 3, 3600, 1, NULL, NULL, NULL, '2023-08-22 16:36:21', '2023-08-22 16:36:21'),
 (24, 'Employee', 'Susan Raymond', 'hijybyxuh@mailinator.com', NULL, '$2y$10$18KHvJQny.Of81zAXjjTAOwbZG1e8Nn4ymxmIKOXt5E/a4sAErbZ2', '(664) 565-4568', 'Non sunt et sed ad', 'Female', '202308220936Zoe-Colman-original-1.jpg', 'Melyssa Poole', 'Jocelyn Ramsey', 'ateo', '1993010024', '1979-04-02', '7501', NULL, '1993-01-16', 5, 2300, 1, NULL, NULL, NULL, '2023-08-22 16:36:58', '2023-08-22 16:36:58'),
@@ -1027,13 +1032,13 @@ ALTER TABLE `account_student_fees`
 -- AUTO_INCREMENT for table `assign_students`
 --
 ALTER TABLE `assign_students`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `assign_subjects`
 --
 ALTER TABLE `assign_subjects`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `designations`
@@ -1045,7 +1050,7 @@ ALTER TABLE `designations`
 -- AUTO_INCREMENT for table `discount_students`
 --
 ALTER TABLE `discount_students`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `employee_attendances`
@@ -1117,7 +1122,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `school_subjects`
 --
 ALTER TABLE `school_subjects`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `student_classes`
@@ -1147,7 +1152,7 @@ ALTER TABLE `student_shifts`
 -- AUTO_INCREMENT for table `student_years`
 --
 ALTER TABLE `student_years`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`

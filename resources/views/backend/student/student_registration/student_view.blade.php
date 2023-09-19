@@ -27,10 +27,10 @@
                                     {{-- Select Año --}}
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <h5>Año&nbsp;<span class="text-danger"></span></h5>
+                                            <h5>Periodo&nbsp;<span class="text-danger"></span></h5>
                                             <div class="controls">
                                                 <select name="year_id" required="" class="form-control">
-                                                    <option value="" selected="" disabled="">Seleccionar Año</option>
+                                                    <option value="" selected="" disabled="">Seleccionar Periodo</option>
                                                     @foreach ($years as $item)
                                                         <option value="{{ $item->id }}" {{ (@$year_id == $item->id) ? 'selected' : '' }}>{{ $item->name }}</option>
                                                     @endforeach

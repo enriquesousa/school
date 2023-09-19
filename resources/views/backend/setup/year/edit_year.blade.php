@@ -9,11 +9,13 @@
             <!-- Basic Forms -->
             <div class="box">
 
-                <div class="box-header with-border">
-                    <h4 class="box-title">Editar Año - Estudiante</h4>
-                    <h6 class="box-subtitle">Para editar Año a estudiante en la <a class="text-warning"
-                            href="#">base de datos </a>
+                <<div class="box-header with-border">
+                    <h4 class="box-title">Editar Periodo de Clases</h4>
+                    <h6 class="box-subtitle">Para Editar un periodo de clases en la 
+                        <a class="text-warning" href="#">base de datos </a>
+                        Ejemplos: Trimestre 1 - (1/ENE/23 a 31/MAR/23), etc..
                     </h6>
+
                 </div>
 
                 <!-- /.box-header -->
@@ -27,11 +29,11 @@
                                 <div class="row">
                                     <div class="col-12">
 
-                                        {{-- Editar Año --}}
+                                        {{-- Editar Año Periodo --}}
                                         <div class="form-group">
-                                            <h5>Edite Año <span class="text-danger">*</span></h5>
+                                            <h5>Edite Periodo <span class="text-danger">*</span></h5>
                                             <div class="controls">
-                                                <input type="text" name="name" class="form-control" data-inputmask="'mask':[ '9999']" data-mask="" value="{{ $editData->name }}" autofocus>
+                                                <input type="text" name="name" class="form-control" value="{{ $editData->name }}" autofocus>
                                                 @error('name')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
