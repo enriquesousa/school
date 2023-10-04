@@ -144,7 +144,7 @@
 			"path": "resources/views/backend/setup/year/add_year.blade.php",
 			"bookmarks": [
 				{
-					"line": 35,
+					"line": 33,
 					"column": 0,
 					"label": "input mask año 4 digitos en add_year.blade.php"
 				}

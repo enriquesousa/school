@@ -24,7 +24,9 @@
 
                         <div class="box-body">
 
-                            <form method="GET"" action="{{ route('report.student.result.get') }}" target="_blank">
+                            {{-- usar clase target="_blank" si queremos generar reporte pdf en otra ventana --}}
+                            {{-- <form method="GET"" action="{{ route('report.student.result.get') }}" target="_blank"> --}}
+                            <form method="GET"" action="{{ route('report.student.result.get') }}" target="">
                             @csrf
 
                                 {{-- Row 1 --}}
